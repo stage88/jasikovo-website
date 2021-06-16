@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Global, css } from '@emotion/react';
-import { lighten } from 'polished';
+import { darken, lighten } from 'polished';
 
 // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error
 // @ts-ignore
@@ -16,7 +16,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
   return (
     <div className={props.className}>
       <Helmet>
-        <link rel="icon" href={favicon} type="image/x-icon" />
+        <link rel="icon" href={favicon as string} type="image/x-icon" />
       </Helmet>
       <Global
         styles={css`
@@ -305,7 +305,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
             padding: 0;
             height: 1px;
             border: 0;
-            border-top: 1px solid ${lighten('0.1', colors.lightgrey)};
+            border-top: 1px solid ${darken('0.2', colors.lightgrey)};
           }
 
           audio,

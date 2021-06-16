@@ -2,7 +2,7 @@ export interface WebsiteConfig {
   title: string;
   description: string;
   coverImage?: string;
-  logo: string;
+  logo?: string;
   /**
    * Specifying a valid BCP 47 language helps screen readers announce text properly.
    * See: https://dequeuniversity.com/rules/axe/2.2/valid-lang
@@ -46,23 +46,29 @@ export interface WebsiteConfig {
    * Appears alongside the footer, after the credits
    */
   footer?: string;
+  /**
+  /**
+   * Link for footer content
+   */
+  footerLink?: string;
 }
 
 const config: WebsiteConfig = {
-  title: 'Ghost',
-  description: 'The professional publishing platform',
-  coverImage: 'img/blog-cover.png',
-  logo: 'img/ghost-logo.png',
+  title: 'Jasikovo',
+  description: 'Daleko, daleko i jos dalje ...',
+  coverImage: 'img/blog-cover.jpg',
+  logo: 'img/site-logo.png',
   lang: 'en',
-  siteUrl: 'https://gatsby-casper.netlify.com',
-  facebook: 'https://www.facebook.com/ghost',
-  twitter: 'https://twitter.com/tryghost',
-  showSubscribe: true,
-  mailchimpAction: 'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
-  mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
-  mailchimpEmailFieldName: 'MERGE0',
+  siteUrl: 'https://jasikovo.com',
+  facebook: 'https://www.facebook.com/groups/172634805356',
+  // twitter: 'https://twitter.com/tryghost',
+  showSubscribe: false,
+  // mailchimpAction: 'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
+  // mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
+  // mailchimpEmailFieldName: 'MERGE0',
   googleSiteVerification: 'GoogleCode',
-  footer: 'is based on Gatsby Casper',
+  footer: 'theme by Sam Ilic',
+  footerLink: 'https://github.com/stage88/jasikovo-website',
 };
 
 export default config;

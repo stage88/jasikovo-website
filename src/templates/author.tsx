@@ -352,7 +352,7 @@ const AuthHeaderContent = styled.div`
   justify-content: center;
   margin: 5px 0 0 30px;
   @media (max-width: 500px) {
-    align-items: center;
+    /* align-items: center; */
     margin: 16px 0 0 0;
   }
 `;
@@ -361,7 +361,7 @@ const AuthHeaderContent = styled.div`
 const AuthorProfileBioImage = css`
   z-index: 10;
   flex-shrink: 0;
-  margin: -4px 0 0;
+  margin: -4px 2rem 0;
   width: 110px;
   height: 110px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;

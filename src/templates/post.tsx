@@ -181,7 +181,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
       <Wrapper css={PostTemplate}>
         <header className="site-header">
           <div css={[outer, SiteNavMain]}>
-            <div css={inner}>
+            <div css={[NavPost, inner]}>
               <SiteNav isPost post={post.frontmatter} />
             </div>
           </div>
@@ -276,6 +276,13 @@ export const PostFull = css`
   z-index: 50;
 `;
 
+export const NavPost = css`
+  @media (max-width: 980px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+`;
+
 export const NoImage = css`
   .post-full-content {
     padding-top: 0;
@@ -290,12 +297,12 @@ export const NoImage = css`
 export const PostFullHeader = styled.header`
   position: relative;
   margin: 0 auto;
-  padding: 70px 170px 50px;
+  padding: 70px 0 50px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 
   @media (max-width: 1170px) {
-    padding: 60px 11vw 50px;
+    padding: 60px 6vw 50px;
   }
 
   @media (max-width: 800px) {
@@ -420,7 +427,7 @@ export const PostFullTitle = styled.h1`
 
 const PostFullImage = styled.figure`
   margin: 25px 0 50px;
-  height: 800px;
+  height: auto;
   background: ${colors.lightgrey} center center;
   background-size: cover;
   border-radius: 5px;
@@ -434,17 +441,17 @@ const PostFullImage = styled.figure`
   }
 
   @media (max-width: 800px) {
-    height: 400px;
+    height: 100%;
   }
   @media (max-width: 500px) {
     margin-bottom: 4vw;
-    height: 350px;
+    height: 100%;
   }
 `;
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
-    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+    logo: file(relativePath: { eq: "img/site-logo.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed

@@ -1,3 +1,9 @@
-- id: speeches
-  description: Some of the greatest words ever spoken.
-  image: img/speeches-cover.jpg
+- id: General
+  description: All the contents.
+  image: img/tag-general.jpg
+- id: Serbia
+  description: Pictures from the homeland.
+  image: img/tag-serbia.jpg
+- id: Australia
+  description: Pictures from Australia.
+  image: img/tag-australia.jpg

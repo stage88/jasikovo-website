@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import { darken } from 'polished';
 import React from 'react';
 
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import { colors } from '../../styles/colors';
@@ -10,6 +10,8 @@ import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
 import { Twitter } from '../icons/twitter';
+import { Hamburger } from '../icons/hamburger';
+import { Close } from '../icons/close';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
@@ -21,14 +23,87 @@ interface SiteNavProps {
 
 interface SiteNavState {
   showTitle: boolean;
+  isMenuOpen: boolean;
 }
+
+const MenuItems: React.FC<{ styles: SerializedStyles }> = ({ styles }) => (
+  <ul css={styles} role="menu">
+    <li role="menuitem">
+      <Link to="/" activeClassName="nav-current">
+        Home
+      </Link>
+    </li>
+    <li role="menuitem">
+      <Link to="/history" activeClassName="nav-current">
+        History
+      </Link>
+    </li>
+    <li role="menuitem">
+      <Link to="/galery" activeClassName="nav-current">
+        Galery
+      </Link>
+    </li>
+    <li role="menuitem">
+      <Link to="/videos" activeClassName="nav-current">
+        Videos
+      </Link>
+    </li>
+    <li role="menuitem">
+      <Link to="/where-is-jasikovo" activeClassName="nav-current">
+        Where Is Jasikovo
+      </Link>
+    </li>
+    <li role="menuitem">
+      <Link to="/family-tree" activeClassName="nav-current">
+        Family Tree
+      </Link>
+    </li>
+    <li role="menuitem">
+      <Link to="/about" activeClassName="nav-current">
+        About
+      </Link>
+    </li>
+    {/* <li role="menuitem">
+      <Link to="/tags/getting-started/" activeClassName="nav-current">Getting Started</Link>
+    </li> */}
+  </ul>
+);
+
+const SocialLinkItems: React.FC = () => (
+  <>
+    {config.facebook && (
+      <a
+        className="social-link social-link-fb"
+        css={[SocialLink, SocialLinkFb]}
+        href={config.facebook}
+        target="_blank"
+        title="Facebook"
+        rel="noopener noreferrer"
+      >
+        <Facebook />
+      </a>
+    )}
+    {config.twitter && (
+      <a
+        className="social-link social-link-twitter"
+        css={SocialLink}
+        href={config.twitter}
+        title="Twitter"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Twitter />
+      </a>
+    )}
+  </>
+);
 
 class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
   subscribe = React.createRef<SubscribeModal>();
   titleRef = React.createRef<HTMLSpanElement>();
   lastScrollY = 0;
   ticking = false;
-  state = { showTitle: false };
+  state = { showTitle: false, isMenuOpen: false };
 
   openModal = () => {
     if (this.subscribe.current) {
@@ -88,17 +163,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
           <SiteNavLeft className="site-nav-left">
             {!isHome && <SiteNavLogo />}
             <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
-              <ul css={NavStyles} role="menu">
-                <li role="menuitem">
-                  <Link to="/" activeClassName="nav-current">Home</Link>
-                </li>
-                <li role="menuitem">
-                  <Link to="/about" activeClassName="nav-current">About</Link>
-                </li>
-                <li role="menuitem">
-                  <Link to="/tags/getting-started/" activeClassName="nav-current">Getting Started</Link>
-                </li>
-              </ul>
+              <MenuItems styles={NavStyles} />
               {isPost && (
                 <NavPostTitle ref={this.titleRef} className="nav-post-title">
                   {post.title}
@@ -107,35 +172,41 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
             </SiteNavContent>
           </SiteNavLeft>
           <SiteNavRight>
+            <HamburgerMenu>
+              <a
+                css={HamburgerIcon}
+                onClick={() => {
+                  this.setState(s => ({ isMenuOpen: !s.isMenuOpen }));
+                }}
+              >
+                <Hamburger />
+              </a>
+            </HamburgerMenu>
             <SocialLinks>
-              {config.facebook && (
-                <a
-                  className="social-link-fb"
-                  css={[SocialLink, SocialLinkFb]}
-                  href={config.facebook}
-                  target="_blank"
-                  title="Facebook"
-                  rel="noopener noreferrer"
-                >
-                  <Facebook />
-                </a>
-              )}
-              {config.twitter && (
-                <a
-                  css={SocialLink}
-                  href={config.twitter}
-                  title="Twitter"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Twitter />
-                </a>
-              )}
+              <SocialLinkItems />
             </SocialLinks>
-            {config.showSubscribe && (
-              <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
-            )}
+            {config.showSubscribe && <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>}
           </SiteNavRight>
+
+          {this.state.isMenuOpen && (
+            <SiteNavOverlay>
+              <div className="top-content">
+                <SiteNavLogo />
+                <a
+                  className="close"
+                  onClick={() => {
+                    this.setState(s => ({ isMenuOpen: !s.isMenuOpen }));
+                  }}
+                >
+                  <Close />
+                </a>
+              </div>
+              <SiteNavContent>
+                <MenuItems styles={NavStylesOverlay} />
+                <SocialLinkItems />
+              </SiteNavContent>
+            </SiteNavOverlay>
+          )}
         </nav>
       </>
     );
@@ -151,7 +222,7 @@ export const SiteNavMain = css`
   /* background: color(var(--darkgrey) l(-5%)) */
   background: ${darken('0.05', colors.darkgrey)};
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     padding-right: 0;
     padding-left: 0;
   }
@@ -166,6 +237,66 @@ const SiteNavStyles = css`
   overflow-y: hidden;
   height: 64px;
   font-size: 1.3rem;
+`;
+
+const SiteNavOverlay = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2000;
+  background-color: #000;
+  padding: 2.5vw 2.5vw 5vw 5vw;
+
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+
+  .top-content {
+    display: flex;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .site-nav-logo {
+    margin-bottom: 1rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+
+    img {
+      height: 44px;
+    }
+  }
+
+  .close {
+    svg {
+      height: 52px;
+      width: auto;
+    }
+  }
+
+  .social-link {
+    display: flex;
+    padding: 1.5rem 0;
+
+    svg {
+      height: 32px;
+      width: auto;
+    }
+  }
 `;
 
 const SiteNavLeft = styled.div`
@@ -184,9 +315,9 @@ const SiteNavLeft = styled.div`
 
   -ms-overflow-scrolling: touch;
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     margin-right: 0;
-    padding-left: 5vw;
+    /* padding-left: 5vw; */
   }
 `;
 
@@ -244,6 +375,45 @@ const NavStyles = css`
   .nav-current {
     opacity: 1;
   }
+
+  @media (max-width: 980px) {
+    display: none;
+  }
+`;
+
+const NavStylesOverlay = css`
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 2rem -12px;
+  padding: 0;
+  list-style: none;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+  li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  li a {
+    position: relative;
+    display: block;
+    padding: 12px 12px;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.35s ease-in-out;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  li a:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  .nav-current {
+    opacity: 1;
+  }
 `;
 
 const SiteNavRight = styled.div`
@@ -253,16 +423,16 @@ const SiteNavRight = styled.div`
   justify-content: flex-end;
   padding: 10px 0;
   height: 64px;
-
-  @media (max-width: 700px) {
-    display: none;
-  }
 `;
 
 const SocialLinks = styled.div`
   flex-shrink: 0;
   display: flex;
   align-items: center;
+
+  @media (max-width: 980px) {
+    display: none;
+  }
 `;
 
 const SubscribeButton = styled.a`
@@ -279,6 +449,10 @@ const SubscribeButton = styled.a`
     text-decoration: none;
     opacity: 1;
     cursor: pointer;
+  }
+
+  @media (max-width: 980px) {
+    display: none;
   }
 `;
 
@@ -315,6 +489,18 @@ const HideNav = css`
     opacity: 1;
     transform: translateY(0);
   }
+`;
+
+const HamburgerMenu = styled.div`
+  padding-top: 1rem;
+  /* margin-right: 5vw; */
+  @media (min-width: 980px) {
+    display: none;
+  }
+`;
+
+const HamburgerIcon = css`
+  /* margin-right: 5vw; */
 `;
 
 export default SiteNav;

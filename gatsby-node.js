@@ -1,4 +1,7 @@
-/* eslint-disable @typescript-eslint/restrict-plus-operands, @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
 const path = require('path');
 const _ = require('lodash');
 
@@ -122,12 +125,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create paginated index
   // TODO: new pagination
-  const postsPerPage = 1000;
+  const postsPerPage = 10;
   const numPages = Math.ceil(posts.length / postsPerPage);
 
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? '/' : `/${i + 1}`,
+      path: i === 0 ? '/' : `/page-${i + 1}`,
       component: path.resolve('./src/templates/index.tsx'),
       context: {
         limit: postsPerPage,

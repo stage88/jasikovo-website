@@ -13,8 +13,8 @@ export interface PaginationProps {
 const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, numPages }) => {
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? '/' : (currentPage - 1).toString();
-  const nextPage = (currentPage + 1).toString();
+  const prevPage = currentPage - 1 === 1 ? '/' : `/page-${(currentPage - 1)}`;
+  const nextPage = `/page-${(currentPage + 1)}`;
 
   return (
     <nav css={navCss}>
@@ -27,7 +27,7 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
         )}
 
         {Array.from({ length: numPages }, (_, i) => (
-          <Link key={`pagination-number${i + 1}`} className={i + 1 === currentPage ? 'active' : ''} to={`/${i === 0 ? '' : i + 1}`}>
+          <Link key={`pagination-number${i + 1}`} className={i + 1 === currentPage ? 'active' : ''} to={`/${i === 0 ? '' : `page-${i + 1}`}`}>
             {i + 1}
           </Link>
         ))}
@@ -76,6 +76,13 @@ const navCss = css`
 
     &:hover {
       text-decoration: none;
+    }
+
+    @media (max-width: 610px) {
+      min-width: 30px;
+      font-size: 70%;
+      padding: 4px 6px;
+      margin: 0 2px;
     }
   }
 `;

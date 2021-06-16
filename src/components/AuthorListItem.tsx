@@ -223,15 +223,15 @@ const AuthorAvatar = css`
   display: block;
   overflow: hidden;
   margin: 0 -4px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border: #fff 2px solid;
   border-radius: 100%;
   transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99) 700ms;
 
   @media (max-width: 500px) {
-    width: 36px;
-    height: 36px;
+    width: 43px;
+    height: 43px;
   }
 
   @media (prefers-color-scheme: dark) {

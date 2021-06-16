@@ -41,7 +41,7 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
             <section style={{ textAlign: 'center' }}>
               <ErrorCode>404</ErrorCode>
               <ErrorDescription>Page not found</ErrorDescription>
-              <Link css={ErrorLink} to="">
+              <Link css={ErrorLink} to="/">
                 Go to the front page →
               </Link>
             </section>
@@ -60,7 +60,11 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(limit: 3, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      limit: 3, 
+      filter: { frontmatter: { draft: { ne: true } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           frontmatter {
@@ -103,7 +107,7 @@ export const pageQuery = graphql`
 `;
 
 const ErrorContent = css`
-  padding: 14vw 4vw 6vw;
+  padding: 4vw 4vw 6vw;
 
   @media (max-width: 800px) {
     padding-top: 24vw;

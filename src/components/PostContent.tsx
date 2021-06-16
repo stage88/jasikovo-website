@@ -32,7 +32,7 @@ const PostContent: React.FC<PostContentProps> = ({ htmlAst }) => {
 export const PostFullContent = styled.section`
   position: relative;
   margin: 0 auto;
-  padding: 0 170px 6vw;
+  padding: 0 0 6vw;
   min-height: 230px;
   font-family: Georgia, serif;
   font-size: 2rem;
@@ -40,7 +40,7 @@ export const PostFullContent = styled.section`
   background: #fff;
 
   @media (max-width: 1170px) {
-    padding: 0 11vw;
+    padding: 0 6vw;
   }
   @media (max-width: 800px) {
     padding: 0 5vw;
@@ -470,7 +470,7 @@ export const PostFullContent = styled.section`
     hr {
       /* border-top-color: color(var(--darkmode) l(+8%)); */
       /* border-top-color: ${lighten('0.08', colors.darkmode)}; */
-      border-top-color: #17191c;
+      border-top-color: #777;
     }
 
     hr:after {
