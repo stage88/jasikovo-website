@@ -1,5 +1,6 @@
 export interface WebsiteConfig {
   title: string;
+  tagline: string;
   description: string;
   coverImage?: string;
   logo?: string;
@@ -55,18 +56,19 @@ export interface WebsiteConfig {
 
 const config: WebsiteConfig = {
   title: 'Jasikovo',
-  description: 'Daleko, daleko i jos dalje ...',
+  tagline: 'Daleko, daleko i jos dalje ...',
+  description: 'This is a site about a town called Jasikovo in eastern Serbia - Ovo je sajt o selu Jasikovo u istočnoj Srbiji.',
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/site-logo.png',
   lang: 'en',
   siteUrl: 'https://jasikovo.com',
-  facebook: 'https://www.facebook.com/groups/172634805356',
+  facebook: 'https://www.facebook.com/ljuba.ilic.jasikovo',
   // twitter: 'https://twitter.com/tryghost',
   showSubscribe: false,
   // mailchimpAction: 'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
   // mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
   // mailchimpEmailFieldName: 'MERGE0',
-  googleSiteVerification: 'GoogleCode',
+  // googleSiteVerification: 'GoogleCode',
   footer: 'theme by Sam Ilic',
   footerLink: 'https://github.com/stage88/jasikovo-website',
 };

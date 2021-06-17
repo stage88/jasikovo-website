@@ -18,6 +18,7 @@ import {
 } from '../styles/shared';
 import { NoImage, PostFull, PostFullHeader, PostFullTitle } from '../templates/post';
 import { colors } from '../styles/colors';
+import config from '../website-config';
 
 const PageTemplate = css`
   .site-main {
@@ -41,7 +42,8 @@ interface Props {
 const Page: React.FC<Props> = ({ title, children }) => (
   <IndexLayout>
     <Helmet>
-      <title>{title}</title>
+      <html lang={config.lang} />
+      <title>{title} - {config.title}</title>      
     </Helmet>
     <Wrapper css={PageTemplate}>
       <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>

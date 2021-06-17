@@ -11,14 +11,10 @@ Greg visited Jasikovo / Serbia in July and August last year, he loves our landsc
 
 He says he will come in the future. He made many friends, and made a donation to complete the church.
 
-Click on the image to open the image album.
-
 --------
 
 Greg je jula i avgusta meseca prosle godine gostovao u Jasikovo/Srbija, voli ove nase predele, nase obicaje, nase ljude, prase na raznju, rakiju i Zajecarsko pivo.
 
 Kaze da ce i ubuduce da dolazi. Stekao je puno prijatelja, i dao je donaciju za zavrsetak crkve.
-
-Klikni na sliku da bi otvorio album sa slikama.
 
 https://picasaweb.google.com/116722993080592421923/MrGregWheelerInSerbia2012

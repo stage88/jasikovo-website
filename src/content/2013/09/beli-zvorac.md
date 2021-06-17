@@ -7,10 +7,10 @@ date: '2013-09-29T10:00:00.000Z'
 draft: false
 ---
 
-Click on the picture to open the album.
+Click on the link to open the album.
 
 ------
 
-Kliknite na sliku da biste otvorili album.
+Kliknite na link da biste otvorili album.
 
 https://picasaweb.google.com/116722993080592421923/BELIZVORACIstocnaSrbija2013
