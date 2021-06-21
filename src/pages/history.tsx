@@ -138,7 +138,7 @@ const History: React.FC = () => (
       </p>
       <ul>
         <li>
-          <a href="http://www.muzej-mpek.org.yu">http://www.muzej-mpek.org.yu</a>
+          <a href="http://www.muzejmajdanpek.com">http://www.muzejmajdanpek.com</a>
         </li>
       </ul>
     </>
