@@ -1,5 +1,5 @@
 ---
-title: 'Jasikovo Cemetery - Jasikovacko Groblje'
+title: 'Leskovo Old Photos - Stare Slike Iz Sela Leskova'
 author: [Ljubomir Ilic]
 tags: [Serbia, General]
 image: img/leskovo.jpg

@@ -57,7 +57,7 @@ export interface WebsiteConfig {
 const config: WebsiteConfig = {
   title: 'Jasikovo',
   tagline: 'Daleko, daleko i jos dalje ...',
-  description: 'This is a site about a town called Jasikovo in eastern Serbia - Ovo je sajt o selu Jasikovo u istočnoj Srbiji.',
+  description: 'This is a site about a town called Jasikovo in eastern Serbia - Ovo je sajt o selu Jasikovu u istočnoj Srbiji.',
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/site-logo.png',
   lang: 'en',

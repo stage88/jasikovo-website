@@ -164,7 +164,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___sticky, frontmatter___date], order: [ASC, DESC] }
       filter: { frontmatter: { draft: { ne: true } } }
       limit: $limit
       skip: $skip
@@ -177,6 +177,7 @@ export const pageQuery = graphql`
             tags
             draft
             excerpt
+            sticky
             image {
               childImageSharp {
                 fluid(maxWidth: 3720) {
