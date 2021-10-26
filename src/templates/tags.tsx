@@ -34,7 +34,7 @@ interface TagTemplateProps {
     allTagYaml: {
       edges: Array<{
         node: {
-          id: string;
+          yamlId: string;
           description: string;
           image?: {
             childImageSharp: {
@@ -57,7 +57,7 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
   const tag = pageContext.tag ? pageContext.tag : '';
   const { edges, totalCount } = data.allMarkdownRemark;
   const tagData = data.allTagYaml.edges.find(
-    n => n.node.id.toLowerCase() === tag.toLowerCase(),
+    n => n.node.yamlId.toLowerCase() === tag.toLowerCase(),
   );
 
   return (
@@ -136,7 +136,7 @@ export const pageQuery = graphql`
     allTagYaml {
       edges {
         node {
-          id
+          yamlId
           description
           image {
             childImageSharp {
@@ -170,7 +170,7 @@ export const pageQuery = graphql`
               }
             }
             author {
-              id
+              yamlId
               bio
               avatar {
                 children {

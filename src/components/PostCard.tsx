@@ -66,8 +66,8 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
             <span>
               {post.frontmatter.author.map((author, index) => {
                 return (
-                  <React.Fragment key={author.id}>
-                    <Link to={`/author/${_.kebabCase(author.id)}/`}>{author.id}</Link>
+                  <React.Fragment key={author.yamlId}>
+                    <Link to={`/author/${_.kebabCase(author.yamlId)}/`}>{author.yamlId}</Link>
                     {post.frontmatter.author.length - 1 > index && ', '}
                   </React.Fragment>
                 );

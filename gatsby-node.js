@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
               }
               author {
-                id
+                yamlId
                 bio
                 avatar {
                   children {
@@ -108,7 +108,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allAuthorYaml {
         edges {
           node {
-            id
+            yamlId
           }
         }
       }
@@ -191,10 +191,10 @@ exports.createPages = async ({ graphql, actions }) => {
   const authorTemplate = path.resolve('./src/templates/author.tsx');
   result.data.allAuthorYaml.edges.forEach(edge => {
     createPage({
-      path: `/author/${_.kebabCase(edge.node.id)}/`,
+      path: `/author/${_.kebabCase(edge.node.yamlId)}/`,
       component: authorTemplate,
       context: {
-        author: edge.node.id,
+        author: edge.node.yamlId,
       },
     });
   });

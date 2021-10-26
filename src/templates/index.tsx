@@ -186,7 +186,7 @@ export const pageQuery = graphql`
               }
             }
             author {
-              id
+              yamlId
               bio
               avatar {
                 children {

@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: 'https://jasikovo.com', // full path to blog - no ending slash
   },
   mapping: {
-    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml.yamlId',
   },
   plugins: [
     'gatsby-plugin-sitemap',
