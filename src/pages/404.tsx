@@ -62,8 +62,8 @@ export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       limit: 3, 
-      filter: { frontmatter: { draft: { ne: true } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { draft: { ne: true } } },
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

@@ -451,7 +451,7 @@ const PostFullImage = styled.figure`
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
-    logo: file(relativePath: { eq: "img/site-logo.png" }) {
+    logo: file(relativePath: { eq: "content/img/site-logo.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed
@@ -498,7 +498,7 @@ export const query = graphql`
     relatedPosts: allMarkdownRemark(
       filter: { frontmatter: { tags: { in: [$primaryTag] }, draft: { ne: true } } }
       limit: 5
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       totalCount
       edges {

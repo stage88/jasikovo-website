@@ -23,8 +23,8 @@ const About: React.FC = () => (
     <p>Idea and photos:</p>
 
     <ul>
-      <li>Ljubomir – Ljubisa – Ljuba – ILIC</li>
-      <li>Svetlana – Tanja – ILIC</li>
+      <li>Ljubomir - Ljubisa - Ljuba - ILIC</li>
+      <li>Svetlana - Tanja - ILIC</li>
     </ul>
 
     <hr />
@@ -37,7 +37,7 @@ const About: React.FC = () => (
 
     <p>
       Trenutno zivimo i radimo u Australiji. Koliko dugo, jos za sada ne znamo. Zelja za povratkom
-      je velika, pa tesimo sebe – jednog dana!
+      je velika, pa tesimo sebe - jednog dana!
     </p>
 
     <p>
@@ -48,8 +48,8 @@ const About: React.FC = () => (
     <p>Ideja i foto snimci:</p>
 
     <ul>
-      <li>Ljubomir – Ljubisa – Ljuba – ILIC</li>
-      <li>Svetlana – Tanja – ILIC</li>
+      <li>Ljubomir - Ljubisa - Ljuba - ILIC</li>
+      <li>Svetlana - Tanja - ILIC</li>
     </ul>
   </Page>
 );

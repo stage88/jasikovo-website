@@ -1,5 +1,5 @@
 ---
-title: 'Felix Romuliana – Imperial Palace III-IV Century'
+title: 'Felix Romuliana - Imperial Palace III-IV Century'
 author: [Ljubomir Ilic]
 tags: [Serbia, General]
 image: img/gamzigrad.jpg

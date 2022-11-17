@@ -159,7 +159,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/KANjONCRNEReke2013">
-                KANjON CRNE Reke – 2013
+                KANjON CRNE Reke - 2013
               </a>
             </div>
             <MetaContent>
@@ -188,7 +188,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/HOMOLjEBiger2013">
-                HOMOLjE – Biger – 2013
+                HOMOLjE - Biger - 2013
               </a>
             </div>
             <MetaContent>
@@ -217,7 +217,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/KrupajaVelikiBukLisineSrbija2013">
-                Krupaja – Veliki Buk – Lisine — Srbija 2013
+                Krupaja - Veliki Buk - Lisine — Srbija 2013
               </a>
             </div>
             <MetaContent>
@@ -246,7 +246,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/BELIZVORACIstocnaSrbija2013">
-                BELIZVORAC – Istocna Srbija 2013
+                BELIZVORAC - Istocna Srbija 2013
               </a>
             </div>
             <MetaContent>
@@ -333,7 +333,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/HomoljskoPoselo2012">
-                Homoljsko Poselo – 2012
+                Homoljsko Poselo - 2012
               </a>
             </div>
             <MetaContent>
@@ -362,7 +362,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/ATOMIKInEASTSERBIAJasikovo2012">
-                ATOMIK in EAST SERBIA – Jasikovo 2012
+                ATOMIK in EAST SERBIA - Jasikovo 2012
               </a>
             </div>
             <MetaContent>
@@ -391,7 +391,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/MrGregWheelerInSerbia2012">
-                Mr. Greg Wheeler in Serbia – 2012
+                Mr. Greg Wheeler in Serbia - 2012
               </a>
             </div>
             <MetaContent>
@@ -420,7 +420,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/ATOMIK4WD">
-                ATOMIK – 4WD
+                ATOMIK - 4WD
               </a>
             </div>
             <MetaContent>
@@ -477,7 +477,7 @@ const Galery: React.FC = () => (
         <Description>
           <div>
             <div>
-              <a href="https://picasaweb.google.com/116722993080592421923/Lipa2011">Lipa – 2011</a>
+              <a href="https://picasaweb.google.com/116722993080592421923/Lipa2011">Lipa - 2011</a>
             </div>
             <MetaContent>
               <div>Location: East Serbia</div>
@@ -534,7 +534,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/FishingCompetition2010MulwalaLake">
-                Fishing competition – 2010, Mulwala Lake
+                Fishing competition - 2010, Mulwala Lake
               </a>
             </div>
             <MetaContent>
@@ -563,7 +563,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/Condobolin2010">
-                Condobolin – 2010
+                Condobolin - 2010
               </a>
             </div>
             <MetaContent>
@@ -592,7 +592,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/BIGERIzvorRekeJAGNILA">
-                BIGER – izvor reke JAGNILA
+                BIGER - izvor reke JAGNILA
               </a>
             </div>
             <MetaContent>
@@ -621,7 +621,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/HramSvProrokIlija">
-                Hram – Sv. Prorok Ilija
+                Hram - Sv. Prorok Ilija
               </a>
             </div>
             <MetaContent>
@@ -679,7 +679,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/IRENAIJASMINVENCANjE15082010JASIKOVOZAGUBICA">
-                IRENA i JASMIN – VENCANjE, 15.08.2010 JASIKOVO-ZAGUBICA
+                IRENA i JASMIN - VENCANjE, 15.08.2010 JASIKOVO-ZAGUBICA
               </a>
             </div>
             <MetaContent>
@@ -737,7 +737,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/SladjanSamILICJasikovoHoliday2010">
-                Sladjan-Sam ILIC –Jasikovo Holiday 2010
+                Sladjan-Sam ILIC -Jasikovo Holiday 2010
               </a>
             </div>
             <MetaContent>
@@ -795,7 +795,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/JASIKOVCANIAleksandarAcaTAUZ">
-                JASIKOVCANI – Aleksandar Aca TAUZ
+                JASIKOVCANI - Aleksandar Aca TAUZ
               </a>
             </div>
             <MetaContent>
@@ -935,7 +935,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/TheMitsubitshiTritonDriveTest">
-                The Mitsubitshi – Triton drive test
+                The Mitsubitshi - Triton drive test
               </a>
             </div>
             <MetaContent>
@@ -964,7 +964,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/CherryFestivalYoung2009">
-                Cherry Festival – Young 2009
+                Cherry Festival - Young 2009
               </a>
             </div>
             <MetaContent>
@@ -993,7 +993,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/SpringShowCanberraAustralia">
-                Spring Show – Canberra+Australia
+                Spring Show - Canberra+Australia
               </a>
             </div>
             <MetaContent>
@@ -1051,7 +1051,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/IVANInAUSTRALIAMay2009AlbumNo2">
-                I V A N in AUSTRALIA – May 2009.- Album no-2
+                I V A N in AUSTRALIA - May 2009.- Album no-2
               </a>
             </div>
             <MetaContent>
@@ -1080,7 +1080,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/IVANInAUSTRALIAMay20091stAlbum">
-                I V A N in AUSTRALIA – May 2009-1st Album
+                I V A N in AUSTRALIA - May 2009-1st Album
               </a>
             </div>
             <MetaContent>
@@ -1109,7 +1109,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/TamaraISrdjanSvadba2May2009">
-                Tamara i Srdjan – Svadba 2.may.2009
+                Tamara i Srdjan - Svadba 2.may.2009
               </a>
             </div>
             <MetaContent>
@@ -1196,7 +1196,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/Summernats2009">
-                Summernats – 2009
+                Summernats - 2009
               </a>
             </div>
             <MetaContent>
@@ -1310,7 +1310,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/Jasikovo2008October05">
-                Jasikovo – 2008.october.05 –
+                Jasikovo - 2008.october.05 -
               </a>
             </div>
             <MetaContent>
@@ -1339,7 +1339,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/PotajnicaSelisteHomolje">
-                Potajnica – Seliste(Homolje)
+                Potajnica - Seliste(Homolje)
               </a>
             </div>
             <MetaContent>
@@ -1397,7 +1397,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/Jasikovo2008Septembar21">
-                Jasikovo – 2008.septembar.21 –
+                Jasikovo - 2008.septembar.21 -
               </a>
             </div>
             <MetaContent>
@@ -1455,7 +1455,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/JasikovoItaly2008August30September12">
-                Jasikovo – Italy. – 2008.august.30—september.12.-
+                Jasikovo - Italy. - 2008.august.30—september.12.-
               </a>
             </div>
             <MetaContent>
@@ -1513,7 +1513,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/2Jasikovo2008August2324LazarevKanjonDvaDanaSaPrirodomDanDrugi">
-                2-Jasikovo – 2008.august.23-24 – Lazarev Kanjon-dva dana sa prirodom,- Dan drugi.-
+                2-Jasikovo - 2008.august.23-24 - Lazarev Kanjon-dva dana sa prirodom,- Dan drugi.-
               </a>
             </div>
             <MetaContent>
@@ -1542,7 +1542,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/1Jasikovo2008August2324LazarevKanjonDvaDanaSaPrirodomDanPrvi">
-                1-Jasikovo – 2008.august.23-24 – Lazarev Kanjon-dva dana sa prirodom,- Dan prvi.-
+                1-Jasikovo - 2008.august.23-24 - Lazarev Kanjon-dva dana sa prirodom,- Dan prvi.-
               </a>
             </div>
             <MetaContent>
@@ -1600,7 +1600,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/Jasikovo2008August03PeOgashuMoriLaShosh">
-                Jasikovo – 2008.august.03 – Pe Ogashu Mori la Shosh
+                Jasikovo - 2008.august.03 - Pe Ogashu Mori la Shosh
               </a>
             </div>
             <MetaContent>
@@ -1629,7 +1629,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/VASARUHOMOLJUZagubica2082008">
-                VASAR u HOMOLJU – Zagubica 2.08.2008
+                VASAR u HOMOLJU - Zagubica 2.08.2008
               </a>
             </div>
             <MetaContent>
@@ -1716,7 +1716,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/CaptainsFlatBushMotorbikeRacingNSWAustralia">
-                Captains Flat (Bush Motorbike racing)–NSW-Australia
+                Captains Flat (Bush Motorbike racing)-NSW-Australia
               </a>
             </div>
             <MetaContent>
@@ -1745,11 +1745,11 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/LowdenForestPark2008NSWAustralia">
-                Lowden Forest Park 2008–NSW-Australia
+                Lowden Forest Park 2008-NSW-Australia
               </a>
             </div>
             <MetaContent>
-              <div>Location: Lowden Forest Park–NSW-Australia</div>
+              <div>Location: Lowden Forest Park-NSW-Australia</div>
               <div>Published: 6/04/2008 9:40:55 PM</div>
               <div>Number of Photos in Album: 66</div>
             </MetaContent>
@@ -1774,7 +1774,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/GoorooyarrooNatureReserveACTAustralia">
-                Goorooyarroo Nature Reserve–ACT-Australia
+                Goorooyarroo Nature Reserve-ACT-Australia
               </a>
             </div>
             <MetaContent>
@@ -1861,7 +1861,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/MolongloGorgeQueanbeyanAustralia">
-                Molonglo Gorge–Queanbeyan-Australia
+                Molonglo Gorge-Queanbeyan-Australia
               </a>
             </div>
             <MetaContent>
@@ -1914,7 +1914,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/WamboinNSWAustralia">
-                Wamboin–NSW-Australia
+                Wamboin-NSW-Australia
               </a>
             </div>
             <MetaContent>
@@ -1972,7 +1972,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/BrindabellaValleyNSWAustralia2007">
-                Brindabella valley–NSW-Australia 2007
+                Brindabella valley-NSW-Australia 2007
               </a>
             </div>
             <MetaContent>
@@ -2025,7 +2025,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/MurrumbatemanFarmsShow2006NSWAustralia">
-                Murrumbateman Farms Show 2006–NSW-Australia
+                Murrumbateman Farms Show 2006-NSW-Australia
               </a>
             </div>
             <MetaContent>
@@ -2054,7 +2054,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/FloriadCanberraACTAustralia">
-                Floriad Canberra–ACT-Australia
+                Floriad Canberra-ACT-Australia
               </a>
             </div>
             <MetaContent>
@@ -2087,7 +2087,7 @@ const Galery: React.FC = () => (
               </a>
             </div>
             <MetaContent>
-              <div>Location: ACT &amp; NSW – Australia</div>
+              <div>Location: ACT &amp; NSW - Australia</div>
               <div>Published: 10/07/2006 10:35:34 PM</div>
               <div>Number of Photos in Album: 78</div>
             </MetaContent>
@@ -2112,7 +2112,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/ThredboPerisherSnowNSWAustralia">
-                Thredbo &amp; Perisher snow–NSW-Australia
+                Thredbo &amp; Perisher snow-NSW-Australia
               </a>
             </div>
             <MetaContent>
@@ -2145,7 +2145,7 @@ const Galery: React.FC = () => (
               </a>
             </div>
             <MetaContent>
-              <div>Location: ACT &amp; NSW – Australia</div>
+              <div>Location: ACT &amp; NSW - Australia</div>
               <div>Published: 13/05/2006 6:41:27 PM</div>
               <div>Number of Photos in Album: 133</div>
             </MetaContent>
@@ -2170,7 +2170,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/GoogongLondonBridgeArch2006NSWAustralia">
-                Googong &amp; London Bridge Arch 2006–NSW-Australia
+                Googong &amp; London Bridge Arch 2006-NSW-Australia
               </a>
             </div>
             <MetaContent>
@@ -2228,7 +2228,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/Jasikovo2005">
-                Jasikovo – 2005
+                Jasikovo - 2005
               </a>
             </div>
             <MetaContent>
@@ -2257,7 +2257,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/LowdenForestParkNSWAustralia20052007">
-                Lowden Forest Park–NSW-Australia 2005 &amp; 2007
+                Lowden Forest Park-NSW-Australia 2005 &amp; 2007
               </a>
             </div>
             <MetaContent>
@@ -2315,7 +2315,7 @@ const Galery: React.FC = () => (
           <div>
             <div>
               <a href="https://picasaweb.google.com/116722993080592421923/JASIKOVOMAY2000">
-                JASIKOVO – MAY 2000
+                JASIKOVO - MAY 2000
               </a>
             </div>
             <MetaContent>

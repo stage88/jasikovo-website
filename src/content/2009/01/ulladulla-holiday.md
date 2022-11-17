@@ -7,7 +7,7 @@ date: '2009-01-30T10:00:00.000Z'
 draft: false
 ---
 
-Potajnica – 2.10.2008
+Potajnica - 2.10.2008
 [![img](img/potajnica.jpg)](https://picasaweb.google.com/116722993080592421923/PotajnicaSelisteHomolje)
 
 Ulladulla odmor - 30.12.2008              

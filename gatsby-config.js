@@ -96,7 +96,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   filter: { frontmatter: { draft: { ne: true } } }
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { frontmatter: { date: DESC } },
                 ) {
                   edges {
                     node {

@@ -26,7 +26,7 @@ const Videos: React.FC = () => (
   <Page title="Videos">
     <div css={content}>
       <p>
-        <strong>Jasikovo 2015 – DJI Phantom 2 – Video 1</strong>
+        <strong>Jasikovo 2015 - DJI Phantom 2 - Video 1</strong>
       </p>
       <p>
         <div css={videoContainer}>

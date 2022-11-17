@@ -473,7 +473,7 @@ const NavPostTitle = styled.span`
   }
 
   .dash:before {
-    content: '– ';
+    content: '- ';
     opacity: 0.5;
   }
 `;

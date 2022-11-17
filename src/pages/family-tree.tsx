@@ -26,7 +26,7 @@ type PageImageProps = {
   height?: number | undefined;
 } & PageProps;
 
-const ImageWrap: React.FC = ({ children }) => {
+const ImageWrap: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div
       css={css`
@@ -101,7 +101,7 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
           <PageImage name="fti" title="Iljionji" data={data} />
         </ImageWrap>
 
-        <h2>Ilic Family - Iljionji – Ilici</h2>
+        <h2>Ilic Family - Iljionji - Ilici</h2>
 
         <ImageWrap>
           <PageImage name="il" title="Iljionji" data={data} />
@@ -161,14 +161,14 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
         <ImageWrap>
           <PageImage
             name="stana_ilic_petkovic"
-            title="Ljuba (Ilic) Petkovic – Petkonji iz Jasikova"
+            title="Ljuba (Ilic) Petkovic - Petkonji iz Jasikova"
             width={300}
             height={300}
             data={data}
           />
           <PageImage
             name="iljenka_ilic_gicic"
-            title="Iljenka (Ilic) Gicic – Giconji iz Vlaola"
+            title="Iljenka (Ilic) Gicic - Giconji iz Vlaola"
             width={300}
             height={300}
             data={data}
@@ -232,7 +232,7 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
 
         <hr />
 
-        <p>MARIJA i njeni potomci – supruga PETRA ILIC-a.</p>
+        <p>MARIJA i njeni potomci - supruga PETRA ILIC-a.</p>
         <p>
           Marija potice iz susednog sela Vlaola. Posle pogibije njenog prvog supruga Germana Vladica
           iz Vlaola, ona se preudaje za Petra Ilica u Jasikovo. U Vlaole ostavlja dva sina, a u
@@ -243,7 +243,7 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
           godine.
         </p>
 
-        <h2>Marija Stanojevic – Iljionji</h2>
+        <h2>Marija Stanojevic - Iljionji</h2>
 
         <ImageWrap>
           <PageImage name="ma" title="Iljionji" data={data} />
@@ -270,7 +270,7 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
 
         <hr />
 
-        <p>MARIJA Stanojevic (1888 – 1920) – supruga MILANA ILIC-a (1889 – 1957).</p>
+        <p>MARIJA Stanojevic (1888 - 1920) - supruga MILANA ILIC-a (1889 - 1957).</p>
         <p>
           Marija Stanojevic potice iz familije Stanojevic (njena se familija isto zvala Iljionji).
           Na skici je prikazano njeno poreklo i srodnici, kao i njeni potomci.
@@ -284,7 +284,7 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
           (Adamonji) iz Jasikova. Nisu imali potomstvo.
         </p>
 
-        <h2>Marica Stankovic – Georganji i Adamonji</h2>
+        <h2>Marica Stankovic - Georganji i Adamonji</h2>
 
         <ImageWrap>
           <PageImage name="dg" title="Georganji" data={data} />
@@ -308,7 +308,7 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
 
         <hr />
 
-        <p>MARICA Stankovic (1910 – 1938) – supruga JANKA ILIC-a. (1907 – 1998).</p>
+        <p>MARICA Stankovic (1910 - 1938) - supruga JANKA ILIC-a. (1907 - 1998).</p>
         <p>
           Marica Stankovic potice iz familije Stankovic-Georganji. Na skici su prikazani njeni
           srodnici i potomci. Takodje, ovde je prikazano poreklo i srodnici njene majke iz familije
@@ -319,13 +319,13 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
           kasnije zeni Ljubicom Nikolic iz Jasikova. Nisu imali potomstvo.
         </p>
 
-        <h2>Georgonji – family tree - Georgonji – porodicno stablo</h2>
+        <h2>Georgonji - family tree - Georgonji - porodicno stablo</h2>
 
         <ImageWrap>
           <PageImage name="ge" title="Georgonji" data={data} />
           <PageImage
             name="manojlostanadjordjevic"
-            title="Manojlo Djordjevic (1885–1959) , Stana (Peric) Djordjevic iz sela Vlaola (1894–1975)"
+            title="Manojlo Djordjevic (1885-1959) , Stana (Peric) Djordjevic iz sela Vlaola (1894-1975)"
             data={data}
           />
           <PageImage
@@ -352,7 +352,7 @@ const FamilyTree: React.FC<PageProps> = ({ data }) => {
         <hr />
 
         <p>
-          MARICA Djordjevic (1935 – 2001), supruga DIMITRIJA ILIC-a (1929 –), potice iz familije
+          MARICA Djordjevic (1935 - 2001), supruga DIMITRIJA ILIC-a (1929 -), potice iz familije
           Djordjevic-Georgonji.
         </p>
         <p>

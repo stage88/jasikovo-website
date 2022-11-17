@@ -7,7 +7,7 @@ date: '2009-01-13T10:00:00.000Z'
 draft: false
 ---
 
-Milino Krstenje – 9.11.2008.
+Milino Krstenje - 9.11.2008.
 https://picasaweb.google.com/116722993080592421923/MILASChristening
 
 Milin website.

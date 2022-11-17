@@ -27,6 +27,7 @@ import config from '../website-config';
 import { PageContext } from './post';
 
 export interface IndexProps {
+  children: React.ReactNode,
   pageContext: {
     currentPage: number;
     numPages: number;
@@ -145,7 +146,7 @@ const IndexPage: React.FC<IndexProps> = props => {
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
-    logo: file(relativePath: { eq: "img/site-logo.png" }) {
+    logo: file(relativePath: { eq: "content/img/site-logo.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
@@ -164,7 +165,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___sticky, frontmatter___date], order: [ASC, DESC] }
+      sort: [{ frontmatter: { sticky: ASC } }, { frontmatter: { date: DESC } }]
       filter: { frontmatter: { draft: { ne: true } } }
       limit: $limit
       skip: $skip
