@@ -17,4 +17,4 @@ Baba Milja, kako smo je zadnjih godina svi ovde zvali, preminula je 14 Oktobra 2
 
 Ovaj album posvecen je njoj, da bi se svi mi koji smo je poznavali jos jednom podsetili njenog dragog lika.
 
-https://picasaweb.google.com/116722993080592421923/INMemoryMiljaJovanovic20102007
+https://photos.google.com/u/1/share/AF1QipMsmcF6LLFGJurbgp-eJh82_nn__7DhYVNWHNwt48Sm-9zS6pC_DRV1SkVkj2OGBA?key=SFZvNm9mTDZkb3l3TElwUFFtZDBNVjRQakltVjV3

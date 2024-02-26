@@ -17,4 +17,4 @@ Nakon 15 godina Sladjan dolazi u svoje rodno Jasikovo, nazalost samo na mesec da
 
 Na njegovom licu vidimo da je bio prezadovoljan i da je sklopio nova poznansta pa se nadamo da ce ubuduce doci mnogo cesce u svoje rodno Jasikovo.
 
-https://picasaweb.google.com/116722993080592421923/SladjanSamILICJasikovoHoliday2010
+https://photos.google.com/u/1/share/AF1QipMdLJLzbdBCsmlTqKqoi_dsvLP2j2i_lHXpke2xY48Q12Au--VU4XGJlKdYseqbLA?key=ZVNJd2NnaDZuU05hTkExZWJPVkRKb0FZWmJCUnp3

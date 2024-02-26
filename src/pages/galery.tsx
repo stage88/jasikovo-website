@@ -50,7 +50,7 @@ const Galery: React.FC = () => {
               <ImageContent>
                 <div>
                   <a href={album.url} title={album.title} target='_blank'>
-                    <img title={album.title} src={image} style={{ maxWidth: 320 }} />
+                    <img title={album.title} src={image} style={{ width: 320 }} />
                   </a>
                 </div>
               </ImageContent>

@@ -9,4 +9,4 @@ draft: false
 
 Wedding Tamara and Srdjan, Canberra Australia.
 
-https://picasaweb.google.com/116722993080592421923/TamaraISrdjanSvadba2May2009
+<!-- https://picasaweb.google.com/116722993080592421923/TamaraISrdjanSvadba2May2009 -->

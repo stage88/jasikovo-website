@@ -29,7 +29,7 @@ Greetings to all the people of Jasikovo around the world.
 
 ![img](img/img2.jpg)
 
-Postovani i dragi moji Jasikovcani.Od samog pocetka Jasikovo saita imao sam zelju da sve Jasikovcane koji su daleko od naseg rodnog mesta prikazem na ovim prostorima. Zbog vermena i prostora za sada mogu samo na ovakav nacin, da postavim na ovoj stranici Vase slike i tekst koji budete Vi zeleli.
+Postovani i dragi moji Jasikovcani. Od samog pocetka Jasikovo saita imao sam zelju da sve Jasikovcane koji su daleko od naseg rodnog mesta prikazem na ovim prostorima. Zbog vermena i prostora za sada mogu samo na ovakav nacin, da postavim na ovoj stranici Vase slike i tekst koji budete Vi zeleli.
 
 Potrebno je da posaljete slike na moj imeil i sta bi voleli da se napise o Vama.
 

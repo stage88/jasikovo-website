@@ -17,4 +17,4 @@ HELLO!! Posle duzeg vremena evo opet smo tu sa vama.Donosimo puno novih slika iz
 
 Dobrodosli i slobodno pogledajte.
 
-https://picasaweb.google.com/116722993080592421923/BacijaJasikova2010
+https://photos.google.com/u/1/share/AF1QipOnox57FtEblHlSHfh3b8X2M640KHG-vu50MZffjXmtJT2ErFtKPgG996LVP_cOAA?key=N0tVUHlQazlyNktCTWpMYnJnVXBvMEd3ZU1aNVpn

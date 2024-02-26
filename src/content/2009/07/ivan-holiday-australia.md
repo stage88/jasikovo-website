@@ -19,4 +19,4 @@ Ivana mozete posetiti u Boru/Serbia, Nikole Pasica 25 u njegovom Auspuh-Servisu.
 
 Ljuba ILIC
 
-https://picasaweb.google.com/116722993080592421923/IVANInAUSTRALIAMay2009AlbumNo2#
+https://photos.google.com/u/1/share/AF1QipPpqybfXfMzEAKbnFcmHSVCOr_uxYkEkW3gKZlVYDFOWjmJJmEOkEs8UwIFLGD92g?key=QmNaQmlPbXMxOVRJMXBXRGpkUmhXRTVTRkdPS3V3

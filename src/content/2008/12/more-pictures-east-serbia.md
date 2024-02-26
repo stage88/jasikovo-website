@@ -7,11 +7,8 @@ date: '2008-12-14T10:00:00.000Z'
 draft: false
 ---
 
-Lazar’s canyon.  
+Lazar’s canyon. Lazarev kanjon.
 
-https://picasaweb.google.com/116722993080592421923/1Jasikovo2008August2324LazarevKanjonDvaDanaSaPrirodomDanPrvi
+Day one: https://photos.google.com/u/1/share/AF1QipOUJ6raMTZgmaHiNBbBD9v-qHfGg76ImvBjmYzPP4S-UnmEq5QbeKOgFeGrhDFMsg?key=aDR4VXFPdHFRRzJIdWxqMHk3THFMcElWTTVZZ2V3
 
-Lazarev kanjon.
-
-https://picasaweb.google.com/116722993080592421923/2Jasikovo2008August2324LazarevKanjonDvaDanaSaPrirodomDanDrugi
-
+Day two: https://photos.google.com/u/1/share/AF1QipMnFz1Q07U9_d85cqWB4sCPjswx4SDxFIWHa76-mVuY92ervbpIu5cGHZJsa669DQ?key=NU5nWVVGZmdPMFM1cVhqZ3JzYml3a2FFWXFUWUh3

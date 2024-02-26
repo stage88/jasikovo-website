@@ -15,4 +15,4 @@ Za sve one koji zele da upoznaju Australiu i njene predele. O vo je moj pokusaj 
 
 Ljuba ILIC
 
-https://picasaweb.google.com/116722993080592421923/AUSTRALIA2009
+https://photos.google.com/u/1/share/AF1QipM7eAiDMHSu0L_W9zxTmsF9WNriBDyQ25rkrTgAMtI_4nyQ6W8gJywMgf4teFT_Ng?key=SFRuQ0ZVdVotNDQwY2prTHNjUUJnaExoeEExcUx3

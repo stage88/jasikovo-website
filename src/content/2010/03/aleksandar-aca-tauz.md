@@ -15,4 +15,4 @@ Dobrodoso Aleksandre!! Aca je stalni posetilac saita i prvi koji se odazvao na J
 
 Pozdrav za Acu.  alex.tauz@hotmail.com
 
-https://picasaweb.google.com/116722993080592421923/JASIKOVCANIAleksandarAcaTAUZ
+https://photos.google.com/u/1/share/AF1QipNndRYRjfxZ6ybFYXF81ozw2uTJ4TVzWLH_9OEHNvhx5YLJWsxxQiCj05HJoSnRAQ?key=VWlTa01SYkhNVFRyOWVQck5keGN4UVFSUkdnY2JB

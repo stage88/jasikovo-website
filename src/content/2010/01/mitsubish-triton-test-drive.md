@@ -17,4 +17,4 @@ Voleo bih da ovo budu slike iz naseg zavicaja, ali nisam u toj mogucnosti trenut
 
 Ja i uvoj dalekoj zemlji pokusavam da naslikam prirodu i lepotu ove zemlje.
 
-https://picasaweb.google.com/116722993080592421923/TheMitsubitshiTritonDriveTest
+https://photos.google.com/u/1/share/AF1QipPHuCg8fKij4_1Co3b9UhMKFLQ6G4b2xkNiwWSDbicLG8plejDHDFLNGhJ3oh1V4g?key=V1pGTk95UTViSXdveTRyMC1LUTZFRElQZl9JcUdB

@@ -13,4 +13,4 @@ Several photos from the wedding of IRENA and JASMINA Nikolajevic. You can see mo
 
 Nekoliko fotosa sa Vencanja IRENE i JASMINA  Nikolajevica. Vise fotosa sa njihovog vencanja mozete pogledati na Feisbuk - Jasmin Nikolajevic.
 
-https://picasaweb.google.com/116722993080592421923/IRENAIJASMINVENCANjE15082010JASIKOVOZAGUBICA
+https://photos.google.com/u/1/share/AF1QipMr48KH8TwQvYzNSUfsqeBMbYHxAVAwhogi_hKJD-247gHXKAy9NvTw6HPGV81Axw?key=cmhjQWd0Rno1NFNxcVBVMVJPalFxM3VmM1YtdjZn

@@ -15,4 +15,4 @@ Stare slike o Jasikovu i Jasikovcanima. Jasikovcani, preslikajte svoje stare sli
 
 Ljuba Ilic
 
-https://picasaweb.google.com/116722993080592421923/JasikovoIJasikovcaniUStarimSlikama
+https://photos.google.com/u/1/share/AF1QipOhfh_bEVkVoyMDuRn_X5UyEcUUaSGVxmip2bWwNpEsK58QswoTopArjqUvZBgYjA?key=b0ZoQ2RFYXBLYWxWZWJaQ05EMzZQcldsUUQwRW5n

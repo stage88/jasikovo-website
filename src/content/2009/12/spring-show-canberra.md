@@ -13,4 +13,4 @@ A few photos of the Spring Fair in Canberra. It is my pleasure to be able to sho
 
 Nekoliko fotosa Prolecnog sajma u Kanberi. Meni je zadovoljstvo da mogu da vam prikazem deo onoga sta se desava u dalekoj Australiji ovog proleca.
 
-https://picasaweb.google.com/116722993080592421923/SpringShowCanberraAustralia
+https://photos.google.com/u/1/share/AF1QipPpv8gvDfvIN8jMVWHcexQLcNjYbTw0OkA6BaXLFuMx0AFRY-a64m2FKepDV7hEQQ?key=VnFmTjl3T3M3bHdkQmdtV3lHTENzcEYyRFBMQzJn

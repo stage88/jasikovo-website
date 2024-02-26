@@ -21,4 +21,4 @@ Festival Tresanja u Young (Jang) odrzava se svake godine. Okolo Janga ima puno p
 
 Nisam u mogucnosti da Vam ponudim ove lepe tresnje, ali zato uzivajte u ovim lepim fotosima sa predelima Australije.
 
-https://picasaweb.google.com/116722993080592421923/CherryFestivalYoung2009
+https://photos.google.com/u/1/share/AF1QipOEzs3gm8-f1Ic-Y4mGvcuWD65u5MPUwoVx1OkuRgKFVZcL3YVPiVGuNi4VReU12Q?key=NlA5eFpXMERWcDl6VDBXR0JNbjU4LXM3c013eFVR

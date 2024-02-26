@@ -13,7 +13,9 @@ Danas 5.10.2008 je Jesenji vasar u Jasikovo. Ali izgleda da pada kisa! Kisa je p
 
 ![img](img/vasar-51008.jpg)
  
-[![img](img/jas-510081.jpg)](https://picasaweb.google.com/116722993080592421923/Jasikovo2008October05)
+[![img](img/jas-510081.jpg)](https://photos.google.com/u/1/share/AF1QipOBvCLp__4km9PJrKCQJhjESzbqlzjDfAIVYViWDXwAKFoxftzHZ9vdd1G1z67rbQ?key=ZkhfVkRacVowaTNSSHJLRkhZd2QwckJhMzNYNi1R)
+
+https://photos.google.com/u/1/share/AF1QipOBvCLp__4km9PJrKCQJhjESzbqlzjDfAIVYViWDXwAKFoxftzHZ9vdd1G1z67rbQ?key=ZkhfVkRacVowaTNSSHJLRkhZd2QwckJhMzNYNi1R
 
 Od vasara nista. Zato je uvece bila igranka i gostovanje folklorne grupe iz Krivelja.
 
@@ -21,6 +23,8 @@ Jasikova i Krivelja izveli su bogat program. Vise o tome u Galery-Picasaweb ili 
 
 ![img](img/domu-2008.jpg)
  
-[![img](img/jas-510081.jpg)](https://picasaweb.google.com/116722993080592421923/Jasikovo2008Septembar21)
+[![img](img/img-7501-0001.jpg)](https://photos.google.com/u/1/share/AF1QipOjSH4BMalWXjwP_eDmJoXt2iat2u3USjXlRHChps_cAZ7vq209mhAgrSkFlU9nfg?key=bTJSX0loeGUzdHdXX0xUaWd3RmZFWDBXd1lnY2ZR)
+
+https://photos.google.com/u/1/share/AF1QipOjSH4BMalWXjwP_eDmJoXt2iat2u3USjXlRHChps_cAZ7vq209mhAgrSkFlU9nfg?key=bTJSX0loeGUzdHdXX0xUaWd3RmZFWDBXd1lnY2ZR
 
 Dana 21 Septembar 2008 odrzana je proslava Mesne Zajednice i otvaranje renovirane zgrade seoskog Doma Kulture. Kliknite na desnu sliku. Click on the picture.

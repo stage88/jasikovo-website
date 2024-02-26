@@ -7,6 +7,8 @@ date: '2009-08-18T10:00:00.000Z'
 draft: false
 ---
 
-Welcome to Condobolin. More pictures from Australia by Ljuba ILIC
+Welcome to Condobolin. 
 
-https://picasaweb.google.com/116722993080592421923/WELCOMEToCONDOBOLIN
+More pictures from Australia - Condobolin by Ljuba ILIC
+
+https://photos.google.com/u/1/share/AF1QipNNJrF-P-9zFd7xHFQb6uLheAk8JAlx1qhOq8qK3PfCi7gdLN99INryuysuETh50Q?key=Y1NfSFJxQy1SNzZ2R3BmSHYxa05rM0FwOTlaVm53

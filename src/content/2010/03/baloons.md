@@ -15,4 +15,4 @@ Festival sa Balonima. Canberra je grad gde se svakog jutra na nebu mogu videti s
 
 U Martu najvise ih ima. Mnogi se odlucuju da prosetaju iznad grada par sati u balonu.
 
-https://picasaweb.google.com/116722993080592421923/BalloonS
+https://photos.google.com/u/1/share/AF1QipNnYdl_OmgbIIlA2AdF92kApwT4-ctq9_bDrKRdjMUkHQIrVrQQd7kVd5eHfCyi2g?key=bE9OV3hyX1ZNSXRCWHBqalU0R0pnVlZxQ3NLNnBR

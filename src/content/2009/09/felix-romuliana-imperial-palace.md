@@ -17,4 +17,4 @@ Rimljani su nekada davno ostavili dosta traga u nasim krajevima. Felix Romuliana
 
 Za one koji to nemogu neka uzivaju u ovim lepim fotosima koje sam ja naslikao juna 2005 godine. Eto danas im je doslo vreme da budu prikazane svim posetiocima Jasikovo saita.
 
-https://picasaweb.google.com/116722993080592421923/FELIXROMULIANAImperialPalaceIIIIVCentury
+https://photos.google.com/u/1/share/AF1QipMXWJLUnfoMQQCp_A133oBfKAYWo6oRVyPzvIFaviUeILdYncWb5dEUKRPO9KcR5A?key=cjAtNWo3R00yOWVHZ2JfNVZwcDg2azNEakozMXB3

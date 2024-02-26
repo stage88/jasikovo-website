@@ -17,4 +17,4 @@ Par puta godisnje u Kanberi odrzavaju se vatrometi (pucanje u boji, kako to nasi
 
 Fireworks ili Vatromet kako bi ga mi nazvali, odrzan je povodom dana Kanbere.
 
-https://picasaweb.google.com/116722993080592421923/FIREWORKS
+https://photos.google.com/u/1/share/AF1QipOLb_N3-H5zaGGfIocssYDEslMPuoCiojAhbQGJZjQKVDhWymyl7coxcH5Y8_sf5w?key=ZG9BRm82YkZQZ19pMHJRdi1Fem5JQW03U3JTVkN3

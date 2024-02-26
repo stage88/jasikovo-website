@@ -15,4 +15,4 @@ Octombar slike stizu sa malim zakasnjenjem. Nadam se da cete i u ovom albumu nac
 
 Ljuba ILIC
 
-https://picasaweb.google.com/116722993080592421923/OKTOMBARUJASIKOVO
+https://photos.google.com/u/1/share/AF1QipPgB6ASLdVSxELPnLNhdGXzeKC9TUNYTBem0MZqHY5ln161oUxmZJvnctI8ohDT_A?key=MFB0aTJEYU9TeWxfZWxUMm1xT3pMSnRiMVg4a0xB

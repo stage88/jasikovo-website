@@ -21,4 +21,4 @@ Pogledajte i ove, nadam se, da cete naci neku i za sebe.
 
 Ljuba ILIC.
 
-https://picasaweb.google.com/116722993080592421923/AvgustUJASIKOVO2008G
+https://photos.google.com/u/1/share/AF1QipNSOxp35sH-WWUZjE2TX1nwsUksqwBa0HHzv9eC4tOi_aP9gh_9SxT2F0cCw1FhJw?key=c3YtQl9xd0w0ZkMtdENEbEszOEtSanM4S1dQRUxn

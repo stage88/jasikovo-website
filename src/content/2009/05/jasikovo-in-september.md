@@ -15,4 +15,4 @@ Septembarske slike iz 2008 godine. Jedan deo slika iz ovog meseca vec su ranije 
 
 Ljuba ILIC
 
-https://picasaweb.google.com/116722993080592421923/Septembar2008UJasikovo
+https://photos.google.com/u/1/share/AF1QipOPt4-d4LBZkW1W45C6ygsAbOSKjd2QMOlZuzymhPvidLHHpY0w3Hycq3mkS2OF-g?key=ZkpUS1JfemZ3SWR6allqb1N1OUNreGRoT1E5Wkxn
