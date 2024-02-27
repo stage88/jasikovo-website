@@ -17,4 +17,4 @@ Evo jos jednog albuma sa STARIM slikama o Jasikovu i Jasikovcanima.
 
 Moja je zelja uvek bila da se sacuvaju likovi nasih mestana za neka buduca pokolenja.
 
-https://picasaweb.google.com/116722993080592421923/6157229483442159601
+https://photos.google.com/u/1/share/AF1QipOhfh_bEVkVoyMDuRn_X5UyEcUUaSGVxmip2bWwNpEsK58QswoTopArjqUvZBgYjA?key=b0ZoQ2RFYXBLYWxWZWJaQ05EMzZQcldsUUQwRW5n

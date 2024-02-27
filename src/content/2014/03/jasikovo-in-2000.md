@@ -13,4 +13,4 @@ Jasikovo, May 2000, pictures that I then took with an analog-film camera. The fi
 
 Jasikovo, maj 2000, slike koje sam tada slikao analog-film kamerom. Prve slike o Jasikovu i okolina Jasikova. Ima nekih izmena samog sela a ima i nekoliko njih koji dana nisu sa nama.
 
-https://picasaweb.google.com/116722993080592421923/JASIKOVOMAY2000
+https://photos.google.com/u/1/share/AF1QipP1TpqZkySktJLlt2Cmt230ZqZl1p34gFM63Np7lL7AAFrP0xtmFe4IdlBaZPtcBw?key=emdlLUNLNDZNdktBYmwzNGZCQVFTSE9BUnNMRUln

@@ -13,4 +13,4 @@ This is the final album with all the pictures of the monument of the Jasikovac c
 
 Ovo je zavrsni album sa svim slikama spomenika Jasikovackog groblja.
 
-https://goo.gl/photos/rcR9ZqAuRAV6r85YA
+https://photos.google.com/u/1/share/AF1QipOzo4AIJvXY9nlO0uJmUn8dPq6xBrde4CjUPaPzpCzxsTC3UA2QbEn9_3xmOAoaoA?key=Z1pJbnVrV19RMDFhYzlVbjdOUzNMYmR4VGw3MjZn

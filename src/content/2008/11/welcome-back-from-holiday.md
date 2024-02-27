@@ -9,6 +9,6 @@ draft: false
 
 Welcome back from holiday Ljuba and Tanja.
 
-Ljuba i Tanja, vracaju se sa odmora. Bice jos fotosa u Galery-Picasaweb!
+Ljuba i Tanja, vracaju se sa odmora. Bice jos fotosa u Galery!
 
 ![img](img/ljuba-tanja-08.jpg)

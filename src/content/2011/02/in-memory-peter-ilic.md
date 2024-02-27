@@ -13,4 +13,4 @@ PERA ILIC left this world too soon. It remains for us to remember his character 
 
 PERA ILIC napustio je prerano ovaj svet. Ostaje nam da se secamo njegovog lika i njegove trube.
 
-https://picasaweb.google.com/116722993080592421923/INMEMORYPetarPeraILIC19462010
+https://photos.google.com/u/1/share/AF1QipPOqZ0c19OqXHkznIP4AbvLv5WtXsWiBh3E6g_H6dfeRweFpjU3ohYvs1IXJNh7CQ?key=Z2lWRnpjVmw5WnZReGR6Qk5ZTFIxcUw5ZmUxaU1B

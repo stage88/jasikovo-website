@@ -13,4 +13,4 @@ Three days in Condobolin visiting out friend Greg Wheeler.
 
 Tri dana u Condobolin. U poseti mom dragom prijatelju, Gregu Weeleru.
 
-https://picasaweb.google.com/116722993080592421923/Condobolin2010
+https://photos.google.com/u/1/share/AF1QipOVVQ-scBazCwgD36bPBvuhCOdFZnds1mCq9LaFds2eC5m6geObxKQVorCRH5lcSQ?key=MXNCTG5xVTJJRFhlRGY1bE5yanpKTVlwV2R0Q3V3

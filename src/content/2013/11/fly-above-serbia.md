@@ -13,4 +13,4 @@ On a flight from Belgrade to Dubai. We flew east over Homolje.
 
 Na letu iz Beograda za Dubaj. Leteli smo na istok preko Homolja.
 
-https://picasaweb.google.com/116722993080592421923/LetIznatSrbieIstocno
+https://photos.google.com/u/1/share/AF1QipMZfBaTj32cPyn2o6werYZGNEeY2VGdGDrM3K3ail51D1dbs5pGXMlAIjRMApotUg?key=d1lOeGtJejdjRTJiX1BTSnJYeHJuaGlXUkRKRmZR

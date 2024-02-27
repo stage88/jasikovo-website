@@ -13,4 +13,4 @@ Church of the Holy Prophet Elijah in Jasikovo. The church is still under constru
 
 Crkva Svetog Proroka Ilije u Jasikovo. Crkva je jos uvek u izgradnji i verujemo da ce jednog dana biti zavrsena. I pored toga u Hramu se povremeno odrzava sluzba zahvaljujuci odazivu Svestenika iz Vlaola i Hrama Sv. Petra i Pavla.      
 
-https://picasaweb.google.com/116722993080592421923/HramSvProrokIlija
+https://photos.google.com/u/1/share/AF1QipNjgJcfvz2TL3fb7eL8o-riFZ8tEydTOT5qzQLCRo5PQIiXcSqQpx8_Q7m5fHOzPw?key=cHJDYlFuU2xDSmZhM21aRFk0YXUzYk1KWFl1TWd3

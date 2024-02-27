@@ -19,7 +19,7 @@ https://photos.google.com/u/1/share/AF1QipOBvCLp__4km9PJrKCQJhjESzbqlzjDfAIVYViW
 
 Od vasara nista. Zato je uvece bila igranka i gostovanje folklorne grupe iz Krivelja.
 
-Jasikova i Krivelja izveli su bogat program. Vise o tome u Galery-Picasaweb ili klikni na sliku.
+Jasikova i Krivelja izveli su bogat program. Vise o tome u Galery ili klikni na sliku.
 
 ![img](img/domu-2008.jpg)
  

@@ -13,4 +13,4 @@ Click on the link to open the album.
 
 Kliknite na link da biste otvorili album.
 
-https://picasaweb.google.com/116722993080592421923/HOMOLjEBiger2013
+https://photos.google.com/u/1/share/AF1QipMHMj_Plc7hsBwVu_cmokncC-xwckuxHcFNNnBSVJUS54DodzNkPgkoONUXdG1Kzg?key=d0ZRNEpkeGhnTjdQb0NWQ282elI3cnE1UEVMREp3

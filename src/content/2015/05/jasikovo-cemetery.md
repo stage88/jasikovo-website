@@ -21,4 +21,4 @@ Postavicu samo jedan deo koje sam oslikao te godine, a ove godine pokusacu da os
 
 Ovo je pokusaj da se likovi i imena Jasikovcana kojih vise nema medju nama sacuvaju od zaborava.
 
-https://get.google.com/albumarchive/116722993080592421923/album/AF1QipMufjUkNCQsjdvn6k4V6ELI4Uf2Q7m1c3alBSY
+https://photos.google.com/u/1/share/AF1QipOzo4AIJvXY9nlO0uJmUn8dPq6xBrde4CjUPaPzpCzxsTC3UA2QbEn9_3xmOAoaoA?key=Z1pJbnVrV19RMDFhYzlVbjdOUzNMYmR4VGw3MjZn

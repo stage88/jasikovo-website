@@ -21,4 +21,4 @@ Sabor Penzionera koji je odrzan po prvi put u Jasikovo bio je 28.06.1997 godine.
 
 Ako nekoga bude zanimalo, ja mogu da vam posaljem kopiju DVD-ja postom. Slobodno se javite bice mi drago.
 
-https://picasaweb.google.com/116722993080592421923/14ISaborPenzioneraOpstineMajdanpek
+https://photos.google.com/u/1/share/AF1QipNi2SG9KU11MpVM7CFzCXdat5v5tcdA9pIfyguELWy9UJdbB4MKZ7Bafryx4tj8eg?key=MUJPZk5VbWs0dHlrTFBrYnc0a2VPOGRoRk10cDN3

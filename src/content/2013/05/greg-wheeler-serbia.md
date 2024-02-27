@@ -17,4 +17,4 @@ Greg je jula i avgusta meseca prosle godine gostovao u Jasikovo/Srbija, voli ove
 
 Kaze da ce i ubuduce da dolazi. Stekao je puno prijatelja, i dao je donaciju za zavrsetak crkve.
 
-https://picasaweb.google.com/116722993080592421923/MrGregWheelerInSerbia2012
+https://photos.google.com/u/1/share/AF1QipOUq3HXIbnQa9A81amBDH9jZOBlIIAqubalBhJMakjqO4gNXNgUJ9mn6fcA30QuNQ?key=VVZOVFRXZXlSRy1ucV9RZW11TGZlaTJBV2lkSDBR

@@ -17,4 +17,4 @@ Jasikovo 2005. Moje prve slike uslikane sa didjital kamerom. Verovatno da zbog s
 
 Kliknite na link da bi se otvorio album sa 616 fotosa.
 
-https://picasaweb.google.com/116722993080592421923/Jasikovo2005
+https://photos.google.com/u/1/share/AF1QipPYoni_6q4lO_gtuZQhY3BfOacuguj5pZ4KKOfBb4xtymJc4ZCf8fj0R-TUSZWoow?key=ZnRlNTBtVlAwc1d4SlY4RjhPQVFkTlh2VGhIM0d3

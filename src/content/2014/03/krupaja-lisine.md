@@ -13,4 +13,4 @@ Click on the link to open the album.
 
 Kliknite na link da biste otvorili album.
 
-https://picasaweb.google.com/116722993080592421923/KrupajaVelikiBukLisineSrbija2013
+https://photos.google.com/u/1/share/AF1QipMpOv8e_TsH0WwXWLv-qq3QszXKwhtpppjxLXDplYbzNNT70zSlVjTkDtGdPykv8w?key=YTUyZEFYbEtnODdHVlk3b1pJVllOLVRfdXphX3lR

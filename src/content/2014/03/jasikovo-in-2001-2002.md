@@ -13,4 +13,4 @@ Forgotten pictures from the winter period of 2001 and 2002.
 
 Zaboravljene slike iz zimskog perioda 2001 i 2002 godine.
 
-https://picasaweb.google.com/116722993080592421923/JASIKOVO20012002
+https://photos.google.com/u/1/share/AF1QipNbQFti_68GmMLAhGE7NxPr5aHdT_QOZCZ0MDLfwd5Fho3VxqI9azevDY8SH7IQWA?key=TUpXUzlIZ04zTXpuaU1yeDMtRzh3TEtNbk9udFVB

@@ -13,4 +13,4 @@ Along the valley of the Lipa River to the Lipa Mine and beyond. Last year we pla
 
 Dolinom Reke Lipe do Rudnika Lipa i dalje. Jos prosle godine planirali smo da predjemo ovu trasu Rekom Lipom. Ovog leta smo to i ostvarili. Toga dana je takodje u nekadasnjem naselju Lipa bila proslava i druzenje svih onih mestana koji su tu nekada ziveli.
 
-https://picasaweb.google.com/116722993080592421923/Lipa2011
+https://photos.google.com/u/1/share/AF1QipMDhO6JNJjAEx4x7rLEJLl42umZ1cLr7mrZ4H3Q9KFRnVxajPCjiPbS1oeVggLydA?key=c3NBQmJtX2pjUDZFSjRLVDg3SzhFaUdXNGpRU01B

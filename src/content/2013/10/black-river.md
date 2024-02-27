@@ -13,4 +13,4 @@ Click on the link to open the album.
 
 Kliknite na link da biste otvorili album.
 
-https://picasaweb.google.com/116722993080592421923/KANjONCRNEReke2013
+https://photos.google.com/u/1/share/AF1QipMDKUn9jB4V4am9OkxrXI-08K7Ikn5vNIVHOs9SkWIpe4RYbN5pslGopvApHHA0jg?key=NHF4YWlwbXhpbG5UbXBPNzd6MjhFV2w0cVh2ZEJn

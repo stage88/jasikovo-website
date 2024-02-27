@@ -1,5 +1,5 @@
 ---
-title: 'New Pictures in Picasa Web'
+title: 'New Pictures in Galery'
 author: [Ljubomir Ilic]
 tags: [Serbia, General]
 image: img/jas-breg2.jpg

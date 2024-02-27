@@ -13,4 +13,4 @@ Click on the link to open the album.
 
 Kliknite na link da biste otvorili album.
 
-https://picasaweb.google.com/116722993080592421923/ATOMIKInEASTSERBIAJasikovo2012
+https://photos.google.com/u/1/share/AF1QipNDPtFdFmv6k6ffIDC9vEuhhIfX1KV9tw8LL_v7TKTGL4MS4JeCLM-My0X4Trm9Bg?key=ZHJxTG1rZDZab09EcDZFVXpjTlZ2b1h0S1g1OUJ3

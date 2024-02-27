@@ -9,4 +9,4 @@ draft: false
 
 Homoljsko poselo u Zagubici, 30.06.2012.
 
-https://picasaweb.google.com/116722993080592421923/HomoljskoPoselo2012
+https://photos.google.com/u/1/share/AF1QipOnBFa9GA2Mr_MMzsGZZy2z_L2fpCQua6hXNvaf-ds_sj2o4RYWSGeqOtO2B-6m0A?key=ZEF1Ujludkw3WHh3NG5BYk5seXdPc25wTlNoTkNB

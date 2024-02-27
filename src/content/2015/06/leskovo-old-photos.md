@@ -13,4 +13,4 @@ Pictures I copied from Dragi Jankovic a couple of years ago.
 
 Slike koje sam preslikao od Dragija Jankovica pre par godina.
 
-https://picasaweb.google.com/116722993080592421923/6155723269697731153
+https://photos.google.com/u/1/share/AF1QipPpxxCVHadJ17wFAlIbg-DzYsfIjfOIkwV0ECEUPX-INteZhZpXV7Y6qRvRlStk0Q?key=dWdIbUMyY0htZ2F1WmZnRkpZbnZtS04tTTNic3Nn

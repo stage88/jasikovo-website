@@ -17,4 +17,4 @@ I u ovoj dalekoj zemlji, svakog meseca naslikam puno slika. To su vecinom slike 
 
 Pogledajte, ima tu, i poneka slika vredna paznje.
 
-https://picasaweb.google.com/116722993080592421923/Australia2011
+https://photos.google.com/u/1/share/AF1QipP_j39ODjbKyHYx5SIXxfssyvYEaARkp9G77yIPO3wmmcNTBEQJ1GL5ZsJxRFh87w?key=X0FQblFucWNCZDJDTWVXMURnUW12YnpxanRhR3Vn

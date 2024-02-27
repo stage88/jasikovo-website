@@ -13,4 +13,4 @@ Click on the link to open the album.
 
 Kliknite na link da biste otvorili album.
 
-https://picasaweb.google.com/116722993080592421923/BELIZVORACIstocnaSrbija2013
+https://photos.google.com/u/1/share/AF1QipMXwVc1iqm02iKM3qRm5rPi0zP9uqOxCfPCTrdS3Ujn2CKgC4dwB8Ci15pHXaAuYA?key=Y3l0Q0xTRHRfWnRrOEU3MldkTFZOX19lRFZVYWFB

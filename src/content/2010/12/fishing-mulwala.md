@@ -21,4 +21,4 @@ Nagrade su bile primamljive, nazalost nismo imali dovoljno srece da bi nesto i o
 
 Bitno da smo malo prosetali prostransvima Australije i videli nesto novo. Kao i dosad, ja sam naslikao dosta slika. Pogledajte Australiju i njene predele.
 
-https://picasaweb.google.com/116722993080592421923/FishingCompetition2010MulwalaLake
+https://photos.google.com/u/1/share/AF1QipPiNCyFm2CBmLg2YQCDmrkra0SLCf3wNmKRGCTixtzRZWJM7WSpAF4TiLsn4SBGaA?key=WXRwaVAtS2wzelpsZkZ6ZUp6UVZaT2szdzVGNlJB

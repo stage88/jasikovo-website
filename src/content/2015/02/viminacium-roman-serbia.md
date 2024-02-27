@@ -13,4 +13,4 @@ Click on the link to open the album.
 
 Kliknite na link da biste otvorili album.
 
-https://picasaweb.google.com/116722993080592421923/6119729614660911713
+https://photos.google.com/u/1/share/AF1QipNTw2Wcn7KNpd1bYkEUjAfue9wTDsftXGDgP38JE5IOBPw-hMst_49p5Kb-JKUC-w?key=Uk9qRXhtaFJOVnFxemVidlA3MkpsUlFFUlc2Wl9n
