@@ -48,7 +48,7 @@ const Galery: React.FC = () => {
             <Row key={i}>
               <ImageContent>
                 <span>
-                  <a href={album.productUrl} title={album.title} target="_blank">
+                  <a href={album.sharedUrl} title={album.title} target="_blank">
                     <img title={album.title} src={album.coverPhotoBaseUrl} />
                   </a>
                 </span>
@@ -56,7 +56,7 @@ const Galery: React.FC = () => {
               <Description>
                 <div>
                   <div>
-                    <a href={album.productUrl} target="_blank">
+                    <a href={album.sharedUrl} target="_blank">
                       {album.title}
                     </a>
                   </div>

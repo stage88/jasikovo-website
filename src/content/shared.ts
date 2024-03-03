@@ -2,6 +2,7 @@
 // https://developers.google.com/photos/library/reference/rest/v1/sharedAlbums/list
 
 import _ from 'lodash';
+import { albums } from './albums';
 
 export type SharedAlbum = {
   id: string;
@@ -14,11 +15,22 @@ export type SharedAlbum = {
 
 export function getSharedAlbums(): SharedAlbum[] {
   const list = shared.map(x => {
+    const sharedUrl = albums.find(
+      photo =>
+        photo.title?.trim().replace(new RegExp(' ', 'g'), '') ===
+        x.title?.trim().replace(new RegExp(' ', 'g'), ''),
+    )?.url;
+
+    if (!sharedUrl) {
+      console.error('Shared album not found:', x.title);
+    }
+
     const [parts] = x.title.toString().split('.');
     const sort = +parts ?? 1000;
 
     return {
       ...x,
+      sharedUrl,
       sort,
     };
   });
