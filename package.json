@@ -23,7 +23,7 @@
     "date-fns": "4.1.0",
     "emotion": "11.0.0",
     "emotion-server": "11.0.0",
-    "gatsby": "5.14.4",
+    "gatsby": "5.14.5",
     "gatsby-image": "3.11.0",
     "gatsby-plugin-canonical-urls": "5.14.0",
     "gatsby-plugin-emotion": "8.14.0",
@@ -59,8 +59,8 @@
     "rehype-react": "7.2.0"
   },
   "devDependencies": {
-    "@types/lodash": "4.17.17",
-    "@types/node": "24.0.0",
+    "@types/lodash": "4.17.18",
+    "@types/node": "24.0.3",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@types/react-helmet": "6.1.11",
