@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
-    "@emotion/styled": "11.14.0",
+    "@emotion/styled": "11.14.1",
     "cssnano": "7.0.7",
     "date-fns": "4.1.0",
     "emotion": "11.0.0",
@@ -59,8 +59,8 @@
     "rehype-react": "7.2.0"
   },
   "devDependencies": {
-    "@types/lodash": "4.17.18",
-    "@types/node": "24.0.3",
+    "@types/lodash": "4.17.20",
+    "@types/node": "24.0.13",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@types/react-helmet": "6.1.11",
