@@ -13,4 +13,4 @@ Greetings from Jasikovo. There will be more photos from the homeland soon !!
 
 Veliki pozdrav iz Jasikova. Uskoro bice jos fotosa iz zavicaja!!
 
-![img](img/jasikovo.jpg)
+![img](/content/2010/08/img/jasikovo.jpg)

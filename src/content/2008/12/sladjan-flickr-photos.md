@@ -9,7 +9,7 @@ draft: false
 
 This picture below has been taken using a Canon 450D.
 
-![img](img/sladjan-1.jpg)
+![img](/content/2008/12/img/sladjan-1.jpg)
 
 I have a Flickr album where you can see some of these pictures: http://www.flickr.com/photos/stage88/
 

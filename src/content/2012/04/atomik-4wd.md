@@ -13,4 +13,4 @@ A small vehicle with a lot of possibilities. Designed for hilly terrain.
 
 Malo vozilo sa dosta mogucnosti. Predvidjen za brdovite terene.
 
-![img](img/atomik.jpg)
+![img](/content/2012/04/img/atomik.jpg)

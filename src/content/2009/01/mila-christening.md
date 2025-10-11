@@ -12,6 +12,6 @@ Milino Krstenje - 9.11.2008.
 <!-- https://picasaweb.google.com/116722993080592421923/MILASChristening -->
 
 Milin website.
-![img](img/mila-2k.jpg)
+![img](/content/2009/01/img/mila-2k.jpg)
 
 https://babyilic.blogspot.com/

@@ -11,4 +11,4 @@ Happy Birthday Deda from Mila, Tammy, Serge, Maya, Sam and Caki!!!!!!!
 
 Srecan rodjendan Ljubo, od Svetlane, Slavke, Sretena, Zorice, Sneze, Djele i Deda Mite!!!!
 
-![img](img/happy-bday-1.jpg)
+![img](/content/2008/09/img/happy-bday-1.jpg)

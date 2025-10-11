@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 'use client';
 
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 
 import { Footer } from '@/components/Footer';
 import SiteNav from '@/components/header/SiteNav';
@@ -19,9 +19,9 @@ import {
   SiteDescription,
   SiteHeader,
   SiteHeaderContent,
+  SiteHeaderStyles,
   SiteMain,
   SiteTitle,
-  SiteHeaderStyles,
 } from '@/styles/shared';
 
 const siteConfig = getSiteConfig();

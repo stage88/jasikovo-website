@@ -363,6 +363,26 @@ function ensurePostIndex(): Map<string, PostMeta> {
   return postIndexCache;
 }
 
+function collectAuthorsFromPosts(
+  includeDrafts = process.env.NODE_ENV !== 'production'
+): Map<string, AuthorProfile> {
+  const posts = getSortedPostsData(includeDrafts);
+  const authors = new Map<string, AuthorProfile>();
+
+  for (const post of posts) {
+    for (const author of post.authors) {
+      if (!author.slug) {
+        continue;
+      }
+      if (!authors.has(author.slug)) {
+        authors.set(author.slug, author);
+      }
+    }
+  }
+
+  return authors;
+}
+
 function resolveAuthors(authorIds: string[]): AuthorProfile[] {
   const authorsMap = loadAuthors();
 
@@ -526,6 +546,64 @@ export function getAllPaginationParams(
   const allPosts = getSortedPostsData(includeDrafts);
   const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
   return Array.from({ length: totalPages }, (_, index) => index + 1);
+}
+
+export function getPostsByAuthorSlug(
+  slug: string,
+  includeDrafts = process.env.NODE_ENV !== 'production'
+): PostSummary[] {
+  if (!slug) {
+    return [];
+  }
+
+  return getSortedPostsData(includeDrafts).filter(post =>
+    post.authors.some(author => author.slug === slug)
+  );
+}
+
+export function getAuthorProfileBySlug(
+  slug: string,
+  includeDrafts = process.env.NODE_ENV !== 'production'
+): AuthorProfile | undefined {
+  if (!slug) {
+    return undefined;
+  }
+
+  const authorsMap = loadAuthors();
+  let match: AuthorProfile | undefined;
+
+  authorsMap.forEach(author => {
+    if (!match && author.slug === slug) {
+      match = author;
+    }
+  });
+
+  if (match) {
+    return match;
+  }
+
+  const authorsFromPosts = collectAuthorsFromPosts(includeDrafts);
+  return authorsFromPosts.get(slug);
+}
+
+export function getAllAuthorSlugs(
+  includeDrafts = process.env.NODE_ENV !== 'production'
+): string[] {
+  const slugs = new Set<string>();
+  const authorsMap = loadAuthors();
+
+  authorsMap.forEach(author => {
+    if (author.slug) {
+      slugs.add(author.slug);
+    }
+  });
+
+  const authorsFromPosts = collectAuthorsFromPosts(includeDrafts);
+  authorsFromPosts.forEach((_author, slug) => {
+    slugs.add(slug);
+  });
+
+  return Array.from(slugs);
 }
 
 export function getRelatedPosts(
