@@ -148,7 +148,7 @@ function loadAuthors(): Map<string, AuthorProfile> {
   return authors;
 }
 
-function createExcerpt(body: string, limit = 240): string {
+function createExcerpt(body: string, limit = 140): string {
   const cleaned = body
     .replace(/```[\s\S]*?```/g, ' ')
     .replace(/`[^`]*`/g, ' ')
@@ -182,7 +182,10 @@ function normaliseTagName(name: string): string {
   return name.trim().toLowerCase();
 }
 
-function resolvePostImage(image: string | null | undefined, filePath: string): string | null {
+function resolvePostImage(
+  image: string | null | undefined,
+  filePath: string
+): string | null {
   if (!image) {
     return null;
   }
@@ -222,11 +225,9 @@ function extractPostImage(data: unknown): string | undefined {
     return undefined;
   }
 
-  const candidateOrder: Array<keyof { image?: string; feature_image?: string; featureImage?: string }> = [
-    'image',
-    'feature_image',
-    'featureImage',
-  ];
+  const candidateOrder: Array<
+    keyof { image?: string; feature_image?: string; featureImage?: string }
+  > = ['image', 'feature_image', 'featureImage'];
 
   for (const key of candidateOrder) {
     const value = (data as Record<string, unknown>)[key];
@@ -333,7 +334,7 @@ function buildPostIndex(): Map<string, PostMeta> {
 
     const draft = Boolean(data.draft);
     const readingTime = calculateReadingTime(matterResult.content);
-  const image = resolvePostImage(extractPostImage(data) ?? null, filePath);
+    const image = resolvePostImage(extractPostImage(data) ?? null, filePath);
 
     index.set(id, {
       id,
@@ -447,7 +448,7 @@ export async function getPostData(id: string): Promise<PostDetail> {
     html: contentHtml,
     image: resolvePostImage(
       extractPostImage(matterResult.data) ?? meta.image ?? null,
-      meta.filePath,
+      meta.filePath
     ),
   };
 }
@@ -500,7 +501,7 @@ export function getPostIdFromRouteParams(route: PostRouteParams): string {
   return toPostId(slugPath);
 }
 
-export const POSTS_PER_PAGE = 12;
+export const POSTS_PER_PAGE = 13;
 
 export function getPaginatedPosts(
   page: number,

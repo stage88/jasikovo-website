@@ -52,26 +52,31 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
         </Link>
       )}
       <PostCardContent className='post-card-content'>
-        <Link
-          className='post-card-content-link'
-          css={PostCardContentLink}
-          href={postHref}>
-          <PostCardHeader className='post-card-header'>
-            {post.tags && (
-              <PostCardPrimaryTag className='post-card-primary-tag'>
-                <Link href={`/tags/${_.kebabCase(post.tags[0])}/`}>
-                  {post.tags[0]}
-                </Link>
-              </PostCardPrimaryTag>
-            )}
+        <PostCardHeader className='post-card-header'>
+          {post.tags && (
+            <PostCardPrimaryTag className='post-card-primary-tag'>
+              <Link href={`/tags/${_.kebabCase(post.tags[0])}/`}>
+                {post.tags[0]}
+              </Link>
+            </PostCardPrimaryTag>
+          )}
+          <Link
+            className='post-card-title-link'
+            css={PostCardContentLink}
+            href={postHref}>
             <PostCardTitle className='post-card-title'>
               {post.title}
             </PostCardTitle>
-          </PostCardHeader>
-          <PostCardExcerpt className='post-card-excerpt'>
+          </Link>
+        </PostCardHeader>
+        <PostCardExcerpt className='post-card-excerpt'>
+          <Link
+            className='post-card-excerpt-link'
+            css={PostCardContentLink}
+            href={postHref}>
             <p>{post.excerpt}</p>
-          </PostCardExcerpt>
-        </Link>
+          </Link>
+        </PostCardExcerpt>
         <PostCardMeta className='post-card-meta'>
           <AuthorList authors={post.authors} tooltip='small' />
           <PostCardBylineContent className='post-card-byline-content'>
@@ -165,8 +170,13 @@ const PostCardLarge = css`
       padding: 0 0 0 40px;
     }
 
+    .post-card-header {
+      padding-left: 40px;
+    }
+
     .post-card-excerpt p {
       margin-bottom: 1.5em;
+      padding-left: 40px;
       font-size: 1.8rem;
       line-height: 1.5em;
     }
@@ -195,7 +205,9 @@ const PostCardImage = css`
   height: 200px;
   background-position: center;
   background-size: cover;
-  transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+  transition:
+    transform 0.35s ease-in-out,
+    opacity 0.35s ease-in-out;
 
   @media (min-width: 795px) {
     height: 240px;
@@ -205,11 +217,15 @@ const PostCardImage = css`
 const PostCardContentLink = css`
   position: relative;
   display: block;
-  /* color: var(--darkgrey); */
   color: ${colors.darkgrey};
+  text-decoration: none;
 
   :hover {
     text-decoration: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: rgba(255, 255, 255, 0.85);
   }
 `;
 

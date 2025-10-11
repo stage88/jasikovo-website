@@ -91,11 +91,12 @@ export async function generateStaticParams() {
   return files.map(slug => ({ slug }));
 }
 
-export async function GET(_request: NextRequest, context: unknown) {
-  const { params } =
-    (context as { params?: Record<string, string | string[] | undefined> }) ??
-    {};
-  const slugParam = params?.slug;
+export async function GET(
+  _request: NextRequest,
+  { params }: { params: Promise<Record<string, string | string[] | undefined>> }
+) {
+  const resolvedParams = await params;
+  const slugParam = resolvedParams.slug;
   const segments = Array.isArray(slugParam)
     ? slugParam
     : typeof slugParam === 'string'

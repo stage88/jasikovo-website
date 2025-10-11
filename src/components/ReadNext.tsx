@@ -71,7 +71,7 @@ const ReadNextAside = styled.aside`
   .post-card:hover .post-card-image {
     opacity: 1;
   }
-  .post-card-excerpt {
+  .post-card-excerpt, .post-card-excerpt-link {
     color: rgba(255, 255, 255, 0.6);
   }
   .static-avatar {

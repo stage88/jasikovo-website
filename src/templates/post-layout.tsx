@@ -3,7 +3,8 @@
 
 import { format } from 'date-fns';
 import Link from 'next/link';
-import * as _ from 'lodash';
+import Image from 'next/image';
+import _ from 'lodash';
 import { lighten, setLightness } from 'polished';
 import React from 'react';
 
@@ -27,6 +28,7 @@ const siteConfig = getSiteConfig();
 export const PostFull = css`
   position: relative;
   z-index: 50;
+  padding-top: 64px;
 `;
 
 export const NavPost = css`
@@ -80,24 +82,24 @@ const PostFullTags = styled.section`
   text-transform: uppercase;
 `;
 
-const PostFullCustomExcerpt = styled.p`
-  margin: 20px 0 0;
-  color: var(--midgrey);
-  font-family: Georgia, serif;
-  font-size: 2.3rem;
-  line-height: 1.4em;
-  font-weight: 300;
+// const PostFullCustomExcerpt = styled.p`
+//   margin: 20px 0 0;
+//   color: var(--midgrey);
+//   font-family: Georgia, serif;
+//   font-size: 2.3rem;
+//   line-height: 1.4em;
+//   font-weight: 300;
 
-  @media (max-width: 500px) {
-    font-size: 1.9rem;
-    line-height: 1.5em;
-  }
+//   @media (max-width: 500px) {
+//     font-size: 1.9rem;
+//     line-height: 1.5em;
+//   }
 
-  @media (prefers-color-scheme: dark) {
-    /* color: color(var(--midgrey) l(+10%)); */
-    color: ${lighten(0.1, colors.midgrey)};
-  }
-`;
+//   @media (prefers-color-scheme: dark) {
+//     /* color: color(var(--midgrey) l(+10%)); */
+//     color: ${lighten(0.1, colors.midgrey)};
+//   }
+// `;
 
 const PostFullByline = styled.div`
   display: flex;
@@ -194,6 +196,7 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
   const date = new Date(post.date);
   const datetime = format(date, 'yyyy-MM-dd');
   const displayDatetime = format(date, 'dd LLL yyyy');
+  const hasImage = Boolean(post.image);
 
   return (
     <Wrapper>
@@ -206,7 +209,7 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
       </header>
       <main id='site-main' className='site-main' css={[SiteMain, outer]}>
         <div css={inner}>
-          <article css={[PostFull, NoImage]}>
+          <article css={[PostFull, !hasImage && NoImage]}>
             <PostFullHeader className='post-full-header'>
               <PostFullTags className='post-full-tags'>
                 {post.tags && post.tags.length > 0 && (
@@ -218,9 +221,9 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
               <PostFullTitle className='post-full-title'>
                 {post.title}
               </PostFullTitle>
-              <PostFullCustomExcerpt className='post-full-custom-excerpt'>
+              {/* <PostFullCustomExcerpt className='post-full-custom-excerpt'>
                 {post.excerpt}
-              </PostFullCustomExcerpt>
+              </PostFullCustomExcerpt> */}
               <PostFullByline className='post-full-byline'>
                 <section className='post-full-byline-content'>
                   <AuthorList authors={post.authors} tooltip='large' />
@@ -243,6 +246,18 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
                 </section>
               </PostFullByline>
             </PostFullHeader>
+            {post.image && (
+              <PostFullImage>
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={1200}
+                  height={630}
+                  sizes='(max-width: 1170px) 100vw, 1170px'
+                  priority={false}
+                />
+              </PostFullImage>
+            )}
             <PostContent html={post.html} />
 
             {siteConfig.showSubscribe && <Subscribe title={siteConfig.title} />}
@@ -262,3 +277,38 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
     </Wrapper>
   );
 };
+
+const PostFullImage = styled.figure`
+  margin: 25px 0 50px;
+  height: auto;
+  background: ${colors.lightgrey} center center;
+  background-size: cover;
+  border-radius: 5px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1170px) {
+    margin: 25px -6vw 50px;
+    border-radius: 0;
+
+    img {
+      max-width: 1170px;
+      border-radius: 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    height: 100%;
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 4vw;
+    height: 100%;
+  }
+`;

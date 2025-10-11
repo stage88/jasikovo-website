@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { darken, lighten } from 'polished';
 import styled from '@emotion/styled';
-import * as _ from 'lodash';
+import _ from 'lodash';
 import { format } from 'date-fns';
 
 import { PostSummary } from '@/lib/posts';

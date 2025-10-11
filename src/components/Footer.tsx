@@ -21,10 +21,11 @@ export const Footer: React.FC = () => {
           <Link href='/'>{siteConfig.title}</Link> &copy;{' '}
           {new Date().getFullYear()}{' '}
           {siteConfig.footer && (
-            <Link href='/'>
-              | {siteConfig.title}{' '}
+            <>
+              {' | '}
+              <Link href='/'>{siteConfig.title}</Link>{' '}
               <a href={siteConfig.footerLink ?? '/'}>{siteConfig.footer}</a>
-            </Link>
+            </>
           )}
         </section>
         <SiteFooterNav>
@@ -46,11 +47,7 @@ export const Footer: React.FC = () => {
             </a>
           )}
 
-          {/* <a href="https://github.com/scttcper/gatsby-casper" target="_blank" rel="noopener noreferrer">
-            Casper
-          </a> */}
-
-          <a href='/rss.xml'>RSS</a>
+          {/* <a href='/rss.xml'>RSS</a> */}
         </SiteFooterNav>
       </div>
     </footer>
