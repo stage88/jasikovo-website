@@ -2,18 +2,22 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-import { Author } from '../templates/post';
+import { AuthorProfile } from '@/lib/posts';
 import { AuthorListItem } from './AuthorListItem';
 
 interface AuthorListProps {
   tooltip: 'small' | 'large';
-  authors: Author[];
+  authors: AuthorProfile[];
 }
 
 export const AuthorList: React.FC<AuthorListProps> = props => (
-  <AuthorListUl className="author-list">
+  <AuthorListUl className='author-list'>
     {props.authors.map(author => (
-      <AuthorListItem key={author.yamlId} author={author} tooltip={props.tooltip} />
+      <AuthorListItem
+        key={author.slug}
+        author={author}
+        tooltip={props.tooltip}
+      />
     ))}
   </AuthorListUl>
 );

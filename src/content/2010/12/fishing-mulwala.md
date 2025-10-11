@@ -13,7 +13,7 @@ The prizes were tempting, unfortunately we were not lucky enough to win somethin
 
 It is important that we walked around Australia for a while and saw something new. As before, I painted a lot of pictures. Take a look at Australia and its landscapes.
 
---------
+---
 
 Pecarosko takmicenje. John je veliki ljubitelj pecanja, a mi posli sa njim da i mi okusamo srecu u pecanju.
 

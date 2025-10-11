@@ -1,13 +1,17 @@
-import { Link } from 'gatsby';
+/** @jsxImportSource @emotion/react */
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { darken } from 'polished';
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import { css, SerializedStyles } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { colors } from '../../styles/colors';
-import { SocialLink, SocialLinkFb } from '../../styles/shared';
-import config from '../../website-config';
+import { colors } from '@/styles/colors';
+import { SocialLink, SocialLinkFb } from '@/styles/shared';
+import { getSiteConfig } from '@/lib/utils';
 import { Facebook } from '../icons/facebook';
 import { Twitter } from '../icons/twitter';
 import { Hamburger } from '../icons/hamburger';
@@ -15,203 +19,203 @@ import { Close } from '../icons/close';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
+const siteConfig = getSiteConfig();
+
 interface SiteNavProps {
   isHome?: boolean;
   isPost?: boolean;
   post?: any;
 }
 
-interface SiteNavState {
-  showTitle: boolean;
-  isMenuOpen: boolean;
-}
+const MenuItems: React.FC<{ styles: SerializedStyles }> = ({ styles }) => {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
 
-const MenuItems: React.FC<{ styles: SerializedStyles }> = ({ styles }) => (
-  <ul css={styles} role="menu">
-    <li role="menuitem">
-      <Link to="/" activeClassName="nav-current">
-        Home
-      </Link>
-    </li>
-    <li role="menuitem">
-      <Link to="/history" activeClassName="nav-current">
-        History
-      </Link>
-    </li>
-    <li role="menuitem">
-      <Link to="/galery" activeClassName="nav-current">
-        Galery
-      </Link>
-    </li>
-    <li role="menuitem">
-      <Link to="/videos" activeClassName="nav-current">
-        Videos
-      </Link>
-    </li>
-    <li role="menuitem">
-      <Link to="/where-is-jasikovo" activeClassName="nav-current">
-        Where Is Jasikovo
-      </Link>
-    </li>
-    <li role="menuitem">
-      <Link to="/family-tree" activeClassName="nav-current">
-        Family Tree
-      </Link>
-    </li>
-    <li role="menuitem">
-      <Link to="/about" activeClassName="nav-current">
-        About
-      </Link>
-    </li>
-    {/* <li role="menuitem">
-      <Link to="/tags/getting-started/" activeClassName="nav-current">Getting Started</Link>
-    </li> */}
-  </ul>
-);
+  return (
+    <ul css={styles} role='menu'>
+      <li role='menuitem'>
+        <Link href='/' className={isActive('/') ? 'nav-current' : ''}>
+          Home
+        </Link>
+      </li>
+      <li role='menuitem'>
+        <Link
+          href='/history'
+          className={isActive('/history') ? 'nav-current' : ''}>
+          History
+        </Link>
+      </li>
+      <li role='menuitem'>
+        <Link
+          href='/galery'
+          className={isActive('/galery') ? 'nav-current' : ''}>
+          Galery
+        </Link>
+      </li>
+      <li role='menuitem'>
+        <Link
+          href='/videos'
+          className={isActive('/videos') ? 'nav-current' : ''}>
+          Videos
+        </Link>
+      </li>
+      <li role='menuitem'>
+        <Link
+          href='/where-is-jasikovo'
+          className={isActive('/where-is-jasikovo') ? 'nav-current' : ''}>
+          Where Is Jasikovo
+        </Link>
+      </li>
+      <li role='menuitem'>
+        <Link
+          href='/family-tree'
+          className={isActive('/family-tree') ? 'nav-current' : ''}>
+          Family Tree
+        </Link>
+      </li>
+      <li role='menuitem'>
+        <Link href='/about' className={isActive('/about') ? 'nav-current' : ''}>
+          About
+        </Link>
+      </li>
+    </ul>
+  );
+};
 
 const SocialLinkItems: React.FC = () => (
   <>
-    {config.facebook && (
+    {siteConfig.facebook && (
       <a
-        className="social-link social-link-fb"
+        className='social-link social-link-fb'
         css={[SocialLink, SocialLinkFb]}
-        href={config.facebook}
-        target="_blank"
-        title="Facebook"
-        rel="noopener noreferrer"
-      >
+        href={siteConfig.facebook}
+        target='_blank'
+        title='Facebook'
+        rel='noopener noreferrer'>
         <Facebook />
       </a>
     )}
-    {config.twitter && (
+    {siteConfig.twitter && (
       <a
-        className="social-link social-link-twitter"
+        className='social-link social-link-twitter'
         css={SocialLink}
-        href={config.twitter}
-        title="Twitter"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+        href={siteConfig.twitter}
+        title='Twitter'
+        target='_blank'
+        rel='noopener noreferrer'>
         <Twitter />
       </a>
     )}
   </>
 );
 
-class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
-  subscribe = React.createRef<SubscribeModal>();
-  titleRef = React.createRef<HTMLSpanElement>();
-  lastScrollY = 0;
-  ticking = false;
-  state = { showTitle: false, isMenuOpen: false };
+const SiteNav: React.FC<SiteNavProps> = ({ isPost = false, post = {} }) => {
+  const subscribe = useRef<SubscribeModal>(null);
+  const titleRef = useRef<HTMLSpanElement>(null);
+  const [showTitle, setShowTitle] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-  openModal = () => {
-    if (this.subscribe.current) {
-      this.subscribe.current.open();
+  const openModal = () => {
+    if (subscribe.current) {
+      subscribe.current.open();
     }
   };
 
-  componentDidMount(): void {
-    this.lastScrollY = window.scrollY;
-    if (this.props.isPost) {
-      window.addEventListener('scroll', this.onScroll, { passive: true });
-    }
-  }
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
-  componentWillUnmount(): void {
-    window.removeEventListener('scroll', this.onScroll);
-  }
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+      }
+      ticking = true;
+    };
 
-  onScroll = () => {
-    if (!this.titleRef || !this.titleRef.current) {
-      return;
-    }
+    const update = () => {
+      if (!titleRef.current) {
+        return;
+      }
 
-    if (!this.ticking) {
-      requestAnimationFrame(this.update);
-    }
+      lastScrollY = window.scrollY;
 
-    this.ticking = true;
-  };
+      const trigger = titleRef.current.getBoundingClientRect().top;
+      const triggerOffset = titleRef.current.offsetHeight + 35;
 
-  update = () => {
-    if (!this.titleRef || !this.titleRef.current) {
-      return;
-    }
+      // show/hide post title
+      if (lastScrollY >= trigger + triggerOffset) {
+        setShowTitle(true);
+      } else {
+        setShowTitle(false);
+      }
 
-    this.lastScrollY = window.scrollY;
+      ticking = false;
+    };
 
-    const trigger = this.titleRef.current.getBoundingClientRect().top;
-    const triggerOffset = this.titleRef.current.offsetHeight + 35;
-
-    // show/hide post title
-    if (this.lastScrollY >= trigger + triggerOffset) {
-      this.setState({ showTitle: true });
-    } else {
-      this.setState({ showTitle: false });
+    if (isPost) {
+      window.addEventListener('scroll', onScroll, { passive: true });
     }
 
-    this.ticking = false;
-  };
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, [isPost]);
 
-  render() {
-    const { isHome = false, isPost = false, post = {} } = this.props;
-    return (
-      <>
-        {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
-        <nav css={SiteNavStyles}>
-          <SiteNavLeft className="site-nav-left">
-            {!isHome && <SiteNavLogo />}
-            <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
-              <MenuItems styles={NavStyles} />
-              {isPost && (
-                <NavPostTitle ref={this.titleRef} className="nav-post-title">
-                  {post.title}
-                </NavPostTitle>
-              )}
-            </SiteNavContent>
-          </SiteNavLeft>
-          <SiteNavRight>
-            <HamburgerMenu>
-              <a
-                css={HamburgerIcon}
-                onClick={() => {
-                  this.setState(s => ({ isMenuOpen: !s.isMenuOpen }));
-                }}
-              >
-                <Hamburger />
-              </a>
-            </HamburgerMenu>
-            <SocialLinks>
-              <SocialLinkItems />
-            </SocialLinks>
-            {config.showSubscribe && <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>}
-          </SiteNavRight>
-
-          {this.state.isMenuOpen && (
-            <SiteNavOverlay>
-              <div className="top-content">
-                <SiteNavLogo />
-                <a
-                  className="close"
-                  onClick={() => {
-                    this.setState(s => ({ isMenuOpen: !s.isMenuOpen }));
-                  }}
-                >
-                  <Close />
-                </a>
-              </div>
-              <SiteNavContent>
-                <MenuItems styles={NavStylesOverlay} />
-                <SocialLinkItems />
-              </SiteNavContent>
-            </SiteNavOverlay>
+  return (
+    <>
+      {siteConfig.showSubscribe && <SubscribeModal ref={subscribe} />}
+      <nav css={SiteNavStyles}>
+        <SiteNavLeft className='site-nav-left'>
+          <SiteNavLogo />
+          <SiteNavContent css={[showTitle ? HideNav : '']}>
+            <MenuItems styles={NavStyles} />
+            {isPost && (
+              <NavPostTitle ref={titleRef} className='nav-post-title'>
+                {post.title}
+              </NavPostTitle>
+            )}
+          </SiteNavContent>
+        </SiteNavLeft>
+        <SiteNavRight>
+          <HamburgerMenu>
+            <a
+              css={HamburgerIcon}
+              onClick={() => {
+                setMenuOpen(!isMenuOpen);
+              }}>
+              <Hamburger />
+            </a>
+          </HamburgerMenu>
+          <SocialLinks>
+            <SocialLinkItems />
+          </SocialLinks>
+          {siteConfig.showSubscribe && (
+            <SubscribeButton onClick={openModal}>Subscribe</SubscribeButton>
           )}
-        </nav>
-      </>
-    );
-  }
-}
+        </SiteNavRight>
+
+        {isMenuOpen && (
+          <SiteNavOverlay>
+            <div className='top-content'>
+              <SiteNavLogo />
+              <a
+                className='close'
+                onClick={() => {
+                  setMenuOpen(!isMenuOpen);
+                }}>
+                <Close />
+              </a>
+            </div>
+            <SiteNavContent>
+              <MenuItems styles={NavStylesOverlay} />
+              <SocialLinkItems />
+            </SiteNavContent>
+          </SiteNavOverlay>
+        )}
+      </nav>
+    </>
+  );
+};
 
 export const SiteNavMain = css`
   position: fixed;

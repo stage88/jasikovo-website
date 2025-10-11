@@ -9,7 +9,7 @@ draft: false
 
 A few photos of the Spring Fair in Canberra. It is my pleasure to be able to show you a part of what is happening in faraway Australia this spring.
 
---------
+---
 
 Nekoliko fotosa Prolecnog sajma u Kanberi. Meni je zadovoljstvo da mogu da vam prikazem deo onoga sta se desava u dalekoj Australiji ovog proleca.
 

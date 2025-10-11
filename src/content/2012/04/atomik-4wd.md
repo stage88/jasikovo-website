@@ -9,7 +9,7 @@ draft: false
 
 A small vehicle with a lot of possibilities. Designed for hilly terrain.
 
---------
+---
 
 Malo vozilo sa dosta mogucnosti. Predvidjen za brdovite terene.
 

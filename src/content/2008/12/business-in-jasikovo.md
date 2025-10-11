@@ -7,7 +7,7 @@ date: '2008-12-06T10:00:00.000Z'
 draft: false
 ---
 
-Novi i jedini servis u Boru za zamenu i opravku svih vrsta auspuha, za sve tipove automobila.  
+Novi i jedini servis u Boru za zamenu i opravku svih vrsta auspuha, za sve tipove automobila.
 
 Srecno i dobar biznis. Mob: 061 21 86 395.
 

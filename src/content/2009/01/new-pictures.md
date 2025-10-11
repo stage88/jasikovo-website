@@ -12,4 +12,3 @@ draft: false
 
 [Poseta do Italije.](https://photos.google.com/u/1/share/AF1QipOo2GBww2DDkDMoynMNUaB2SIvZVk9QoZ36rfBJwG92eOLEcT-AIc0BgXg6x0OaNg?key=T2Nta2lUeHdOX1htWWU1OTVvSFhGelBRRFdLTFF3)
 [![img](img/jas-breg2.jpg)](https://photos.google.com/u/1/share/AF1QipOo2GBww2DDkDMoynMNUaB2SIvZVk9QoZ36rfBJwG92eOLEcT-AIc0BgXg6x0OaNg?key=T2Nta2lUeHdOX1htWWU1OTVvSFhGelBRRFdLTFF3)
-

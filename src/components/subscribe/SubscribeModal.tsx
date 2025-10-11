@@ -2,9 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { colors } from '../../styles/colors';
-import config from '../../website-config';
+import { getSiteConfig } from '@/lib/utils';
 import { SubscribeForm } from './SubscribeForm';
 import SubscribeLogo from './SubscribeLogo';
+
+const siteConfig = getSiteConfig();
 
 interface SubscribeState {
   isOpen: boolean;
@@ -47,10 +49,12 @@ export class SubscribeModal extends React.Component<any, SubscribeState> {
         <SubscribeOverlayClose onClick={this.close} />
         <SubscribeOverlayContent>
           <SubscribeLogo />
-          <SubscribeOverlayTitle>Subscribe to {config.title}</SubscribeOverlayTitle>
+          <SubscribeOverlayTitle>
+            Subscribe to {siteConfig.title}
+          </SubscribeOverlayTitle>
           <SubscribeOverlayDescription>
-            Stay up to date! Get all the latest &amp; greatest posts delivered straight to your
-            inbox
+            Stay up to date! Get all the latest &amp; greatest posts delivered
+            straight to your inbox
           </SubscribeOverlayDescription>
           <SubscribeForm />
         </SubscribeOverlayContent>
@@ -78,7 +82,8 @@ const SubscribeOverlay = styled.div<SubscribeOverlayProps>`
   opacity: ${(props: SubscribeOverlayProps) => (props.open ? 1 : 0)};
   transition: opacity 0.2s ease-in;
   /* pointer-events: none; */
-  pointer-events: ${(props: SubscribeOverlayProps) => (props.open ? 'auto' : 'none')};
+  pointer-events: ${(props: SubscribeOverlayProps) =>
+    props.open ? 'auto' : 'none'};
 
   button {
     display: inline-block;
@@ -154,7 +159,7 @@ const SubscribeOverlayClose = styled.a`
   height: 40px;
 
   :before {
-    content: "";
+    content: '';
     position: absolute;
     top: 20px;
     right: 4px;
@@ -167,7 +172,7 @@ const SubscribeOverlayClose = styled.a`
   }
 
   :after {
-    content: "";
+    content: '';
     position: absolute;
     top: 20px;
     right: 4px;

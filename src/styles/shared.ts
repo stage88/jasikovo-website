@@ -187,7 +187,9 @@ export const SiteHeaderBackground = css`
   margin-top: 64px;
 `;
 
-export const ResponsiveHeaderBackground = styled.div<{ backgroundImage?: string }>`
+export const ResponsiveHeaderBackground = styled.div<{
+  backgroundImage?: string;
+}>`
   ${p =>
     p.backgroundImage &&
     `

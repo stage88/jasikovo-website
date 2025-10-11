@@ -1,9 +1,11 @@
+/** @jsxImportSource @emotion/react */
+
 import { lighten } from 'polished';
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { colors } from '../../styles/colors';
+import { colors } from '@/styles/colors';
 import { SubscribeForm } from './SubscribeForm';
 
 export interface SubscribeProps {
@@ -24,12 +26,12 @@ const SubscribeFormSection = styled.section`
   margin: 1.5em 0;
   padding: 6.5vw 7vw 8vw;
   /* border: color(var(--lightgrey) l(+10%)) 1px solid; */
-  border: ${lighten('0.1', colors.lightgrey)} 1px solid;
+  border: ${lighten(0.1, colors.lightgrey)} 1px solid;
   text-align: center;
   /* background: linear-gradient(color(var(--whitegrey) l(+6%)), color(var(--whitegrey) l(+4%))); */
   background: linear-gradient(
-    ${lighten('0.06', colors.whitegrey)},
-    ${lighten('0.04', colors.whitegrey)}
+    ${lighten(0.06, colors.whitegrey)},
+    ${lighten(0.04, colors.whitegrey)}
   );
   border-radius: 3px;
 

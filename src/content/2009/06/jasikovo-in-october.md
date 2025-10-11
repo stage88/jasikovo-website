@@ -9,7 +9,7 @@ draft: false
 
 October images arrive with a slight delay. I hope you will find a picture dear to you in this album as well.
 
---------
+---
 
 Octombar slike stizu sa malim zakasnjenjem. Nadam se da cete i u ovom albumu naci neku sliku vama dragu.
 

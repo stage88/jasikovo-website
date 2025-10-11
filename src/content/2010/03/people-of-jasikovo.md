@@ -25,7 +25,7 @@ The site has an average of about 60 visitors a day from currently 49 countries.
 
 Greetings to all the people of Jasikovo around the world.
 
---------
+---
 
 ![img](img/img2.jpg)
 
@@ -37,11 +37,10 @@ Bice mozda malo sporije slati na ovakav nacin posebno za vecu kolicinu fotosa, a
 
 Saljite slike u sto je moguce vecoj rezoluciji zbog boljeg kvaliteta.
 
-Moja email adresa:  jasikovo@jasikovo.com
+Moja email adresa: jasikovo@jasikovo.com
 
 Bice mi drago ako se budete odlucili da svoje fotose postavimo na Jasikivo sait.
 
 Sait ima dnevno u proseku oko 60 posetilaca iz trenutno 49 zemalja.
 
 Pozdrav svim JASIKOVCANIMA sirom sveta.
-

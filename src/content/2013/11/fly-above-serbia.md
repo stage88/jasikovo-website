@@ -9,7 +9,7 @@ draft: false
 
 On a flight from Belgrade to Dubai. We flew east over Homolje.
 
-------
+---
 
 Na letu iz Beograda za Dubaj. Leteli smo na istok preko Homolja.
 

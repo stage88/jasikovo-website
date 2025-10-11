@@ -13,7 +13,7 @@ The Congress of Pensioners, which was held for the first time in Jasikovo, was h
 
 If anyone is interested, I can send you a copy of the DVD by post. Feel free to contact me I will be glad.
 
---------
+---
 
 Po drugi put se u Jasikovo odrzva Sabor Penzionera Opstine Majdanpek. Ja sam se potrudio da vam naslikam dovoljno fotosa, da bi za one koji nisu bili prisutni mogli da pogledaju ovaj Sabor.
 

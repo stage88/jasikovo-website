@@ -11,7 +11,7 @@ Jasikovo 2005. My first pictures taken with a digital camera. Probably because o
 
 Click on the link to open the album with 616 photos.
 
-------
+---
 
 Jasikovo 2005. Moje prve slike uslikane sa didjital kamerom. Verovatno da zbog same prirode maja i juna meseca, neke su prelepe.
 

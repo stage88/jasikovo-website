@@ -1,6 +1,7 @@
+/** @jsxImportSource @emotion/react */
+
 import { format } from 'date-fns';
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import Link from 'next/link';
 import _ from 'lodash';
 import { lighten } from 'polished';
 import React from 'react';
@@ -8,74 +9,84 @@ import React from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { colors } from '../styles/colors';
-import { PageContext } from '../templates/post';
+import { PostSummary } from '@/lib/posts';
+import { colors } from '@/styles/colors';
 import { AuthorList } from './AuthorList';
 
 export interface PostCardProps {
-  post: PageContext;
+  post: PostSummary;
   large?: boolean;
 }
 
 export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
-  const date = new Date(post.frontmatter.date);
+  const date = new Date(post.date);
   // 2018-08-20
   const datetime = format(date, 'yyyy-MM-dd');
   // 20 AUG 2018
   const displayDatetime = format(date, 'dd LLL yyyy');
+  const postHref = `/${post.slug}/`;
+  const hasImage = Boolean(post.image);
+  const articleClassName = [
+    'post-card',
+    hasImage ? '' : 'no-image',
+    large ? 'post-card-large' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <article
-      className={`post-card ${post.frontmatter.image ? '' : 'no-image'} ${
-        large ? 'post-card-large' : ''
-      }`}
-      css={[PostCardStyles, large && PostCardLarge]}
-    >
-      {post.frontmatter.image && (
-        <Link className="post-card-image-link" css={PostCardImageLink} to={post.fields.slug}>
-          <PostCardImage className="post-card-image">
-            {post.frontmatter?.image?.childImageSharp?.fluid && (
-              <Img
-                alt={`${post.frontmatter.title} cover image`}
-                style={{ height: '100%' }}
-                fluid={post.frontmatter.image.childImageSharp.fluid}
-              />
-            )}
-          </PostCardImage>
+      className={articleClassName}
+      css={[PostCardStyles, large && PostCardLarge]}>
+      {hasImage && (
+        <Link
+          className='post-card-image-link'
+          css={PostCardImageLink}
+          href={postHref}
+          aria-label={post.title}>
+          <div
+            className='post-card-image'
+            css={PostCardImage}
+            style={{ backgroundImage: `url('${post.image}')` }}
+          />
         </Link>
       )}
-      <PostCardContent className="post-card-content">
-        <Link className="post-card-content-link" css={PostCardContentLink} to={post.fields.slug}>
-          <PostCardHeader className="post-card-header">
-            {post.frontmatter.tags && (
-              <PostCardPrimaryTag className="post-card-primary-tag">
-                <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
-                  {post.frontmatter.tags[0]}
+      <PostCardContent className='post-card-content'>
+        <Link
+          className='post-card-content-link'
+          css={PostCardContentLink}
+          href={postHref}>
+          <PostCardHeader className='post-card-header'>
+            {post.tags && (
+              <PostCardPrimaryTag className='post-card-primary-tag'>
+                <Link href={`/tags/${_.kebabCase(post.tags[0])}/`}>
+                  {post.tags[0]}
                 </Link>
               </PostCardPrimaryTag>
             )}
-            <PostCardTitle className="post-card-title">{post.frontmatter.title}</PostCardTitle>
+            <PostCardTitle className='post-card-title'>
+              {post.title}
+            </PostCardTitle>
           </PostCardHeader>
-          <PostCardExcerpt className="post-card-excerpt">
-            <p>{post.frontmatter.excerpt || post.excerpt}</p>
+          <PostCardExcerpt className='post-card-excerpt'>
+            <p>{post.excerpt}</p>
           </PostCardExcerpt>
         </Link>
-        <PostCardMeta className="post-card-meta">
-          <AuthorList authors={post.frontmatter.author} tooltip="small" />
-          <PostCardBylineContent className="post-card-byline-content">
+        <PostCardMeta className='post-card-meta'>
+          <AuthorList authors={post.authors} tooltip='small' />
+          <PostCardBylineContent className='post-card-byline-content'>
             <span>
-              {post.frontmatter.author.map((author, index) => {
+              {post.authors.map((author, index) => {
                 return (
-                  <React.Fragment key={author.yamlId}>
-                    <Link to={`/author/${_.kebabCase(author.yamlId)}/`}>{author.yamlId}</Link>
-                    {post.frontmatter.author.length - 1 > index && ', '}
+                  <React.Fragment key={author.slug}>
+                    <Link href={`/author/${author.slug}/`}>{author.name}</Link>
+                    {post.authors.length - 1 > index && ', '}
                   </React.Fragment>
                 );
               })}
             </span>
-            <span className="post-card-byline-date">
-              <time dateTime={datetime}>{displayDatetime}</time>{' '}
-              <span className="bull">&bull;</span> {post.fields.readingTime.text}
+            <span className='post-card-byline-date'>
+              <time dateTime={datetime}>{displayDatetime}</time>
             </span>
           </PostCardBylineContent>
         </PostCardMeta>
@@ -94,6 +105,21 @@ const PostCardStyles = css`
   padding: 0 20px 40px;
   min-height: 220px;
   background-size: cover;
+
+  &.no-image .post-card-content {
+    padding-top: 0;
+  }
+
+  &:not(.no-image) {
+    .post-card-content {
+      padding-top: 25px;
+    }
+
+    &:hover .post-card-image {
+      transform: scale(1.04);
+      opacity: 0.95;
+    }
+  }
 `;
 
 const PostCardLarge = css`
@@ -147,28 +173,33 @@ const PostCardLarge = css`
   }
 `;
 
-const PostCardImageLink = css`
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border-radius: 5px 5px 0 0;
-`;
-
-const PostCardImage = styled.div`
-  width: auto;
-  height: 200px;
-  background: ${colors.lightgrey} no-repeat center center;
-  background-size: cover;
-
-  @media (prefers-color-scheme: dark) {
-    background: ${colors.darkmode};
-  }
-`;
-
 const PostCardContent = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+`;
+
+const PostCardImageLink = css`
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 3px;
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+`;
+
+const PostCardImage = css`
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+
+  @media (min-width: 795px) {
+    height: 240px;
+  }
 `;
 
 const PostCardContentLink = css`
@@ -207,7 +238,7 @@ const PostCardExcerpt = styled.section`
 
   @media (prefers-color-scheme: dark) {
     /* color: color(var(--midgrey) l(+10%)); */
-    color: ${lighten('0.1', colors.midgrey)} !important;
+    color: ${lighten(0.1, colors.midgrey)} !important;
   }
 `;
 
@@ -223,7 +254,7 @@ const PostCardBylineContent = styled.div`
   flex-direction: column;
   margin: 4px 0 0 10px;
   /* color: color(var(--midgrey) l(+10%)); */
-  color: ${lighten('0.1', colors.midgrey)};
+  color: ${lighten(0.1, colors.midgrey)};
   font-size: 1.2rem;
   line-height: 1.4em;
   font-weight: 400;
@@ -236,7 +267,7 @@ const PostCardBylineContent = styled.div`
 
   a {
     /* color: color(var(--darkgrey) l(+20%)); */
-    color: ${lighten('0.2', colors.darkgrey)};
+    color: ${lighten(0.2, colors.darkgrey)};
     font-weight: 600;
   }
 
@@ -262,7 +293,7 @@ export const StaticAvatar = css`
 
   @media (prefers-color-scheme: dark) {
     /* border-color: color(var(--darkgrey) l(+2%)); */
-    border-color: ${lighten('0.02', colors.darkgrey)};
+    border-color: ${lighten(0.02, colors.darkgrey)};
   }
 `;
 
@@ -271,7 +302,7 @@ export const AuthorProfileImage = css`
   width: 100%;
   height: 100%;
   /* background: color(var(--lightgrey) l(+10%)); */
-  background: ${lighten('0.1', colors.lightgrey)};
+  background: ${lighten(0.1, colors.lightgrey)};
   border-radius: 100%;
   object-fit: cover;
 

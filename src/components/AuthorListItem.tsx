@@ -1,70 +1,87 @@
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
-import * as _ from 'lodash';
-import { lighten } from 'polished';
-import React, { useState } from 'react';
+/** @jsxImportSource @emotion/react */
+
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { darken, lighten } from 'polished';
+import React, { useRef, useState } from 'react';
 
 import { css } from '@emotion/react';
-
-import { colors } from '../styles/colors';
-import { Author } from '../templates/post';
-import { AuthorProfileImage } from './PostCard';
 import styled from '@emotion/styled';
+
+import { AuthorProfile } from '@/lib/posts';
+import { colors } from '@/styles/colors';
+import { AuthorProfileImage } from './PostCard';
 
 interface AuthorListItemProps {
   tooltip: 'small' | 'large';
-  author: Author;
+  author: AuthorProfile;
 }
 
-export const AuthorListItem: React.FC<AuthorListItemProps> = props => {
+export const AuthorListItem: React.FC<AuthorListItemProps> = ({
+  author,
+  tooltip,
+}) => {
   const [hovered, setHover] = useState(false);
-  let timeout: ReturnType<typeof setTimeout>;
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   function handleMouseEnter() {
-    if (props.tooltip !== 'large') {
+    if (tooltip !== 'large') {
       return;
     }
 
-    clearTimeout(timeout);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setHover(true);
   }
 
   function handleMouseLeave() {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
       setHover(false);
     }, 600);
   }
 
   return (
     <AuthorListItemLi
-      className="author-list-item"
+      className='author-list-item'
       onMouseEnter={() => {
         handleMouseEnter();
       }}
       onMouseLeave={() => {
         handleMouseLeave();
-      }}
-    >
-      {props.tooltip === 'small' && (
-        <AuthorNameTooltip className="author-name-tooltip">{props.author.yamlId}</AuthorNameTooltip>
+      }}>
+      {tooltip === 'small' && (
+        <AuthorNameTooltip className='author-name-tooltip'>
+          {author.name}
+        </AuthorNameTooltip>
       )}
-      {props.tooltip === 'large' && (
-        <div css={[AuthorCardStyles, hovered && Hovered]} className="author-card">
-          {props.author.avatar.children.length && (
-            <Img
+      {tooltip === 'large' && (
+        <div
+          css={[AuthorCardStyles, hovered && Hovered]}
+          className='author-card'>
+          {author.avatar && (
+            <Image
               css={AuthorProfileImage}
-              className="author-profile-image"
-              fluid={props.author.avatar.children[0].fluid}
-              fadeIn={false}
+              className='author-profile-image'
+              src={author.avatar}
+              alt={author.name}
+              width={60}
+              height={60}
+              sizes='60px'
             />
           )}
-          <div className="author-info">
-            <div className="bio">
-              <h2>{props.author.yamlId}</h2>
-              <p>{props.author.bio}</p>
+          <div className='author-info'>
+            <div className='bio'>
+              <h2>{author.name}</h2>
+              {author.bio && <p>{author.bio}</p>}
               <p>
-                <Link to={`/author/${_.kebabCase(props.author.yamlId)}/`}>More posts</Link> by{' '}
-                {props.author.yamlId}.
+                <Link href={`/author/${author.slug}/`}>More posts</Link> by{' '}
+                {author.name}.
               </p>
             </div>
           </div>
@@ -72,16 +89,21 @@ export const AuthorListItem: React.FC<AuthorListItemProps> = props => {
       )}
       <Link
         css={AuthorAvatar}
-        className="author-avatar"
-        to={`/author/${_.kebabCase(props.author.yamlId)}/`}
-      >
-        <Img
-          css={AuthorProfileImage}
-          className="author-profile-image"
-          fluid={props.author.avatar.children[0].fluid}
-          alt={props.author.yamlId}
-          fadeIn={false}
-        />
+        className='author-avatar'
+        href={`/author/${author.slug}/`}>
+        {author.avatar ? (
+          <Image
+            css={AuthorProfileImage}
+            className='author-profile-image'
+            src={author.avatar}
+            alt={author.name}
+            width={45}
+            height={45}
+            sizes='45px'
+          />
+        ) : (
+          <span className='sr-only'>{author.name}</span>
+        )}
       </Link>
     </AuthorListItemLi>
   );
@@ -118,7 +140,9 @@ const AuthorNameTooltip = styled.div`
   /* background: var(--darkgrey); */
   background: ${colors.darkgrey};
   border-radius: 3px;
-  box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  box-shadow:
+    rgba(39, 44, 49, 0.08) 0 12px 26px,
+    rgba(39, 44, 49, 0.03) 1px 3px 8px;
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: translateY(6px);
@@ -142,7 +166,9 @@ const AuthorCardStyles = css`
   line-height: 1.5em;
   background: white;
   border-radius: 3px;
-  box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.06) 1px 3px 8px;
+  box-shadow:
+    rgba(39, 44, 49, 0.08) 0 12px 26px,
+    rgba(39, 44, 49, 0.06) 1px 3px 8px;
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: scale(0.98) translateY(15px);
@@ -175,7 +201,7 @@ const AuthorCardStyles = css`
 
   .author-info p {
     margin: 4px 0 0;
-    color: color(var(--midgrey) l(-10%));
+    color: ${darken(0.1, colors.midgrey)};
   }
 
   .author-info .bio h2 {
@@ -209,12 +235,12 @@ const AuthorCardStyles = css`
 
   @media (prefers-color-scheme: dark) {
     /* background: color(var(--darkmode) l(+4%)); */
-    background: ${lighten('0.04', colors.darkmode)};
+    background: ${lighten(0.04, colors.darkmode)};
     box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
 
     :before {
       /* border-top-color: color(var(--darkmode) l(+4%)); */
-      border-top-color: ${lighten('0.04', colors.darkmode)};
+      border-top-color: ${lighten(0.04, colors.darkmode)};
     }
   }
 `;
@@ -236,6 +262,6 @@ const AuthorAvatar = css`
 
   @media (prefers-color-scheme: dark) {
     /* border-color: color(var(--darkgrey) l(+2%)); */
-    border-color: ${lighten('0.02', colors.darkgrey)};
+    border-color: ${lighten(0.02, colors.darkgrey)};
   }
 `;

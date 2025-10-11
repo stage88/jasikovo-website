@@ -9,7 +9,7 @@ draft: false
 
 A short walk along the Clyde River. A few photos from this river, which flows into the Pacific.
 
---------
+---
 
 Kratka setnja Rekom Clyde.Nekoliko fotosa sa ove reke, koja se uliva u Pacifik.
 

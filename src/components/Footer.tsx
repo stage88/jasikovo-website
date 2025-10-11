@@ -1,34 +1,47 @@
-import { Link } from 'gatsby';
+/** @jsxImportSource @emotion/react */
+'use client';
+
+import Link from 'next/link';
 import { setLightness } from 'polished';
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { colors } from '../styles/colors';
-import { outer, inner } from '../styles/shared';
-import config from '../website-config';
+import { colors } from '@/styles/colors';
+import { outer, inner } from '@/styles/shared';
+import { getSiteConfig } from '@/lib/utils';
+
+const siteConfig = getSiteConfig();
 
 export const Footer: React.FC = () => {
   return (
     <footer css={[outer, SiteFooter]}>
       <div css={[inner, SiteFooterContent]}>
-        <section className="copyright">
-          <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}{' '}
-          {config.footer && (
-            <Link to="/">
-              | {config.title} <a href={config.footerLink ?? '/'}>{config.footer}</a>
+        <section className='copyright'>
+          <Link href='/'>{siteConfig.title}</Link> &copy;{' '}
+          {new Date().getFullYear()}{' '}
+          {siteConfig.footer && (
+            <Link href='/'>
+              | {siteConfig.title}{' '}
+              <a href={siteConfig.footerLink ?? '/'}>{siteConfig.footer}</a>
             </Link>
           )}
         </section>
         <SiteFooterNav>
-          <Link to="/">Latest Posts</Link>
-          {config.facebook && (
-            <a href={config.facebook} target="_blank" rel="noopener noreferrer">
+          <Link href='/'>Latest Posts</Link>
+          {siteConfig.facebook && (
+            <a
+              href={siteConfig.facebook}
+              target='_blank'
+              rel='noopener noreferrer'>
               Facebook
             </a>
           )}
-          {config.twitter && (
-            <a href={config.twitter} target="_blank" rel="noopener noreferrer">
+          {siteConfig.twitter && (
+            <a
+              href={siteConfig.twitter}
+              target='_blank'
+              rel='noopener noreferrer'>
               Twitter
             </a>
           )}
@@ -37,7 +50,7 @@ export const Footer: React.FC = () => {
             Casper
           </a> */}
 
-          <a href="/rss.xml">RSS</a>
+          <a href='/rss.xml'>RSS</a>
         </SiteFooterNav>
       </div>
     </footer>
@@ -49,7 +62,7 @@ const SiteFooter = css`
   padding-top: 20px;
   padding-bottom: 60px;
   color: #fff;
-  background: ${setLightness('0.0015', colors.darkgrey)};
+  background: ${setLightness(0.0015, colors.darkgrey)};
 `;
 
 const SiteFooterContent = css`
@@ -100,4 +113,3 @@ const SiteFooterNav = styled.nav`
     }
   }
 `;
-

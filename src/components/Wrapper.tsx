@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import styled from '@emotion/styled';
 
@@ -15,4 +17,3 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
 `;
-

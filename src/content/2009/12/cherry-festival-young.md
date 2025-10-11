@@ -13,7 +13,7 @@ The Young (Yang) Shaking Festival is held every year. There are a lot of cherry 
 
 I am not able to offer you these beautiful cherries, but so enjoy these beautiful photos with the landscapes of Australia.
 
---------
+---
 
 Australija je zemlja velikog prostransta. Uvek ima zanimljivih dogadjaja koje ako je moguce treba videti i zabeleziti kamerom.
 

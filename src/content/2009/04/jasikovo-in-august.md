@@ -13,7 +13,7 @@ One part has already been posted on this site.
 
 Avgusta 2008 godine naslikao sam prilicno dosta slika u Jasikovo i okolini.
 
---------
+---
 
 Jedan deo je vec postavljenna ovom saitu.
 

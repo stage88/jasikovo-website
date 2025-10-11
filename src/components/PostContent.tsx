@@ -1,31 +1,19 @@
 import { lighten } from 'polished';
 import React from 'react';
 import styled from '@emotion/styled';
-import RehypeReact from 'rehype-react';
 
-import { colors } from '../styles/colors';
-
-const renderAst = new RehypeReact({
-  createElement: React.createElement,
-  // components: { 'interactive-counter': Counter },
-  components: {},
-}).Compiler;
-
-const Ast = ({ ast, ...props }: any) => {
-  ast.properties = props;
-  return renderAst(ast);
-};
+import { colors } from '@/styles/colors';
 
 export interface PostContentProps {
-  htmlAst: any;
+  html: string;
 }
 
-const PostContent: React.FC<PostContentProps> = ({ htmlAst }) => {
+const PostContent: React.FC<PostContentProps> = ({ html }) => {
   return (
-    <PostFullContent className="post-full-content">
-      {/* TODO: this will apply the class when rehype-react is published https://github.com/rhysd/rehype-react/pull/11 */}
-      <Ast className="post-content" ast={htmlAst} />
-    </PostFullContent>
+    <PostFullContent
+      className='post-full-content'
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   );
 };
 
@@ -259,8 +247,9 @@ export const PostFullContent = styled.section`
   h6 {
     /* color: color(var(--darkgrey) l(-5%)); */
     color: ${lighten('-0.05', colors.darkgrey)};
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   h1 {
@@ -380,8 +369,9 @@ export const PostFullContent = styled.section`
     width: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
     vertical-align: top;
@@ -389,11 +379,23 @@ export const PostFullContent = styled.section`
 
   table {
     -webkit-overflow-scrolling: touch;
-    background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0
-        center,
-      radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+    background:
+      radial-gradient(
+          ellipse at left,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0) 75%
+        )
+        0 center,
+      radial-gradient(
+          ellipse at right,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0) 75%
+        )
+        100% center;
     background-attachment: scroll, scroll;
-    background-size: 10px 100%, 10px 100%;
+    background-size:
+      10px 100%,
+      10px 100%;
     background-repeat: no-repeat;
   }
 
@@ -488,7 +490,11 @@ export const PostFullContent = styled.section`
         var(--darkmode) 50%,
         color(var(--darkmode) a(0%)) 100%
       ); */
-      background-image: linear-gradient(to right, ${colors.darkmode} 50%, ${colors.darkmode} 100%);
+      background-image: linear-gradient(
+        to right,
+        ${colors.darkmode} 50%,
+        ${colors.darkmode} 100%
+      );
     }
 
     table td:last-child {
@@ -497,7 +503,11 @@ export const PostFullContent = styled.section`
         var(--darkmode) 50%,
         color(var(--darkmode) a(0%)) 100%
       ); */
-      background-image: linear-gradient(270deg, #191b1f 50%, rgba(25, 27, 31, 0));
+      background-image: linear-gradient(
+        270deg,
+        #191b1f 50%,
+        rgba(25, 27, 31, 0)
+      );
     }
 
     table th {
@@ -525,7 +535,13 @@ export const PostFullContent = styled.section`
   pre[class*='language-'] {
     color: white;
     background: none;
-    font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+    font-family:
+      Consolas,
+      Menlo,
+      Monaco,
+      source-code-pro,
+      Courier New,
+      monospace;
     font-feature-settings: normal;
     text-align: left;
     white-space: pre;

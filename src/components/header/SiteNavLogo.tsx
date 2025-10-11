@@ -1,44 +1,15 @@
-import { graphql, Link, StaticQuery } from 'gatsby';
+/** @jsxImportSource @emotion/react */
+
+import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
-import { css } from '@emotion/react';
-import { FixedObject } from 'gatsby-image';
+import styled from '@emotion/styled';
 
-import config from '../../website-config';
+import { getSiteConfig } from '@/lib/utils';
 
-interface SiteNavLogoProps {
-  logo?: {
-    childImageSharp: {
-      fixed: FixedObject;
-    };
-  };
-}
+const siteConfig = getSiteConfig();
 
-export const SiteNavLogo = () => (
-  <StaticQuery
-    query={graphql`
-      query HeadingQuery {
-        logo: file(relativePath: { eq: "content/img/site-logo.png" }) {
-          childImageSharp {
-            fixed(quality: 100 width: 500) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `}
-    render={(data: SiteNavLogoProps) => (
-      <Link className="site-nav-logo" css={SiteNavLogoStyles} to="/">
-        {data.logo ? (
-          <img src={data.logo.childImageSharp.fixed.src} alt={config.title} />
-        ) : (
-          config.title
-        )}
-      </Link>
-    )}
-  />
-);
-
-const SiteNavLogoStyles = css`
+const SiteNavLogoLink = styled(Link)`
   position: relative;
   z-index: 100;
   flex-shrink: 0;
@@ -64,3 +35,8 @@ const SiteNavLogoStyles = css`
   }
 `;
 
+export const SiteNavLogo = () => (
+  <SiteNavLogoLink className='site-nav-logo' href='/'>
+    <Image src='/logo.png' width={500} height={88} alt={siteConfig.title} />
+  </SiteNavLogoLink>
+);

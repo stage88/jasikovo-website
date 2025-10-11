@@ -9,7 +9,7 @@ draft: false
 
 Adventures in the Australian mountains with Srdjan, Sladjan, Salet and Deni!!
 
-------
+---
 
 Avanture po Australiskim planinama sa Srdjanom, Sladjanom, Saletom i Deniem!!
 

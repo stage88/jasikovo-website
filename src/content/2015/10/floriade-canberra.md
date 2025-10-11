@@ -9,7 +9,7 @@ draft: false
 
 The Spring Flower Festival is held every year in early October in Canberra.
 
-------
+---
 
 Festival proletnog cveca koji se odrzava svake godine pocetkom octobra u Kanberi.
 
