@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
 import { load as loadYaml } from 'js-yaml';
 import { kebabCase } from 'lodash';
 
@@ -445,7 +446,8 @@ export async function getPostData(id: string): Promise<PostDetail> {
   const fileContents = fs.readFileSync(meta.filePath, 'utf8');
   const matterResult = matter(fileContents);
   const processedContent = await remark()
-    .use(html)
+    .use(remarkGfm)
+    .use(html, { sanitize: false })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
