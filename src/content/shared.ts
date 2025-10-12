@@ -8,6 +8,8 @@ export type SharedAlbum = {
   id: string;
   title: string;
   productUrl: string;
+  sharedUrl?: string;
+  sort?: number;
   mediaItemsCount: string;
   coverPhotoBaseUrl: string;
   coverPhotoMediaItemId: string;
