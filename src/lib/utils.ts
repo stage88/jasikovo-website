@@ -12,6 +12,7 @@ export interface WebsiteConfig {
   twitter?: string;
   footer?: string;
   footerLink?: string;
+  gtmId: string;
 }
 
 const ABSOLUTE_URL_PATTERN = /^https?:\/\//i;
@@ -37,6 +38,7 @@ const SITE_CONFIG: WebsiteConfig = {
   facebook: 'https://www.facebook.com/ljuba.ilic.jasikovo',
   footer: 'theme by Sam Ilic',
   footerLink: 'https://github.com/stage88/jasikovo-website',
+  gtmId: 'G-PLCHSHBZQD',
 };
 
 export function toTitleCase(str: string) {

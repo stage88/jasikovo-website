@@ -1,4 +1,5 @@
 import React from 'react';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 import { getPageMetaData, getSiteConfig } from '@/lib/utils';
 import RootStyleRegistry from './emotion';
@@ -15,6 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={siteConfig.lang}>
+      <GoogleTagManager gtmId={siteConfig.gtmId} />
       <body>
         <RootStyleRegistry>
           <GlobalStylesClient />

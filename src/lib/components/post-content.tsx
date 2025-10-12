@@ -651,7 +651,7 @@ export const PostFullContent = styled.section`
     position: relative;
   }
 
-  .gatsby-highlight-code-line {
+  .highlight-code-line {
     background-color: hsla(207, 95%, 15%, 1);
     display: block;
     margin-right: -1.3125rem;
@@ -661,7 +661,7 @@ export const PostFullContent = styled.section`
     border-left: 0.25em solid #ffa7c4;
   }
 
-  .gatsby-highlight {
+  .highlight {
     margin-bottom: 1.75rem;
     margin-left: -1.3125rem;
     margin-right: -1.3125rem;
@@ -671,7 +671,7 @@ export const PostFullContent = styled.section`
     overflow: auto;
   }
 
-  .gatsby-highlight pre[class*='language-'] {
+  .highlight pre[class*='language-'] {
     float: left;
     min-width: 100%;
   }
