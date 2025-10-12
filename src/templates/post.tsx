@@ -175,7 +175,6 @@ export const PostFullTitle = styled.h1`
   }
 `;
 
-
 const PostFullImage = styled.figure`
   margin: 25px 0 50px;
   height: auto;
@@ -306,4 +305,3 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
     </Wrapper>
   );
 };
-

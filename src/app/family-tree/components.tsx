@@ -159,11 +159,11 @@ export const FamilyTreeContent: React.FC = () => {
         <p>
           Based on some old records from 1818, the first ancestor named BACILO
           came from Krivelj. The surname is not mentioned, he celebrated Saint
-          Olympia like most of today&apos;s Ilica. This information is not shown in
-          the image (found later). He had two sons, the first left branch of his
-          offspring and today they are called Basiloni. Their last name is Ilic,
-          and one of their families after the fifth generation changes their
-          surname to Petrovic in order to preserve the memory of their
+          Olympia like most of today&apos;s Ilica. This information is not shown
+          in the image (found later). He had two sons, the first left branch of
+          his offspring and today they are called Basiloni. Their last name is
+          Ilic, and one of their families after the fifth generation changes
+          their surname to Petrovic in order to preserve the memory of their
           grandfather, that is, great-grandfather Petar. After the name of the
           second heir of Elijah (Ilija), his descendants are later called
           ILJIONJI, which remains to this day.

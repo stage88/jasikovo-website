@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-'use client' ;
+'use client';
 
 import { css } from '@emotion/react';
 import Page from '@/templates/page';
@@ -7,17 +7,17 @@ import Page from '@/templates/page';
 const content = css``;
 
 const videoContainer = css`
-  position: relative; 
-  padding-bottom: 56.25%; 
-  padding-top: 30px; 
-  height: 0; 
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
   overflow: hidden;
 
   iframe {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
   }
 `;

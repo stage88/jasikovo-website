@@ -14,8 +14,8 @@ export default function AboutPage() {
       </p>
 
       <p>
-        We currently live and work in Australia. How long, we don&apos;t know yet.
-        The desire to return is great, so we comfort ourselves - one day!
+        We currently live and work in Australia. How long, we don&apos;t know
+        yet. The desire to return is great, so we comfort ourselves - one day!
       </p>
 
       <p>
