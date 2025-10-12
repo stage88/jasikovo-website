@@ -1,16 +1,16 @@
-import { graphql } from 'gatsby';
-import { FixedObject } from 'gatsby-image';
-import React from 'react';
-import { Helmet } from 'react-helmet';
+/** @jsxImportSource @emotion/react */
+'use client';
 
 import { css } from '@emotion/react';
+import React from 'react';
 
-import { Footer } from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import Pagination from '../components/Pagination';
-import { PostCard } from '../components/PostCard';
-import { Wrapper } from '../components/Wrapper';
-import IndexLayout from '../layouts';
+import { Footer } from '@/lib/components/footer';
+import SiteNav from '@/lib/components/header/site-nav';
+import Pagination from '@/lib/components/pagination';
+import { PostCard } from '@/lib/components/post-card';
+import { Wrapper } from '@/lib/components/wrapper';
+import type { PostSummary } from '@/lib/posts';
+import { getSiteConfig } from '@/lib/utils';
 import {
   inner,
   outer,
@@ -19,200 +19,20 @@ import {
   SiteDescription,
   SiteHeader,
   SiteHeaderContent,
+  SiteHeaderStyles,
   SiteMain,
   SiteTitle,
-  SiteHeaderStyles,
-} from '../styles/shared';
-import config from '../website-config';
-import { PageContext } from './post';
+} from '@/lib/styles/shared';
 
-export interface IndexProps {
-  children: React.ReactNode,
-  pageContext: {
-    currentPage: number;
-    numPages: number;
-  };
-  data: {
-    logo: {
-      childImageSharp: {
-        fixed: FixedObject;
-      };
-    };
-    header: {
-      childImageSharp: {
-        fixed: FixedObject;
-      };
-    };
-    allMarkdownRemark: {
-      edges: Array<{
-        node: PageContext;
-      }>;
-    };
-  };
+const siteConfig = getSiteConfig();
+
+interface IndexTemplateProps {
+  posts: PostSummary[];
+  currentPage: number;
+  numPages: number;
+  heroImage?: string;
+  children?: React.ReactNode;
 }
-
-const IndexPage: React.FC<IndexProps> = props => {
-  const { width, height } = props.data.header.childImageSharp.fixed;
-
-  return (
-    <IndexLayout css={HomePosts}>
-      <Helmet>
-        <html lang={config.lang} />
-        <title>{config.title}</title>
-        <meta name="description" content={config.description} />
-        <meta property="og:site_name" content={config.title} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={config.title} />
-        <meta property="og:description" content={config.description} />
-        <meta property="og:url" content={config.siteUrl} />
-        <meta
-          property="og:image"
-          content={`${config.siteUrl}${props.data.header.childImageSharp.fixed.src}`}
-        />
-        {config.facebook && <meta property="article:publisher" content={config.facebook} />}
-        {config.googleSiteVerification && (
-          <meta name="google-site-verification" content={config.googleSiteVerification} />
-        )}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={config.title} />
-        <meta name="twitter:description" content={config.description} />
-        <meta name="twitter:url" content={config.siteUrl} />
-        <meta
-          name="twitter:image"
-          content={`${config.siteUrl}${props.data.header.childImageSharp.fixed.src}`}
-        />
-        {config.twitter && (
-          <meta
-            name="twitter:site"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
-        <meta property="og:image:width" content={width.toString()} />
-        <meta property="og:image:height" content={height.toString()} />
-      </Helmet>
-      <Wrapper>
-        <div
-          css={[outer, SiteHeader, SiteHeaderStyles]}
-          className="site-header-background"
-          style={{
-            backgroundImage: `url('${props.data.header.childImageSharp.fixed.src}')`,
-          }}
-        >
-          <div css={inner}>
-            <SiteNav isHome={false} />
-            <SiteHeaderContent className="site-header-content">
-              <SiteTitle className="site-title">
-                {props.data.logo ? (
-                  <img
-                    style={{ maxHeight: '55px' }}
-                    src={props.data.logo.childImageSharp.fixed.src}
-                    alt={config.title}
-                  />
-                ) : (
-                  config.title
-                )}
-              </SiteTitle>
-              <SiteDescription>{config.tagline}</SiteDescription>
-            </SiteHeaderContent>
-          </div>
-        </div>
-        <main id="site-main" css={[SiteMain, outer]}>
-          <div css={[inner, Posts]}>
-            <div css={[PostFeed]}>
-              {props.data.allMarkdownRemark.edges.map((post, index) => {
-                // filter out drafts in production
-                return (
-                  (post.node.frontmatter.draft !== true ||
-                    process.env.NODE_ENV !== 'production') && (
-                    <PostCard key={post.node.fields.slug} post={post.node} large={index === 0} />
-                  )
-                );
-              })}
-            </div>
-          </div>
-        </main>
-        {props.children}
-        {props.pageContext.numPages > 1 && (
-          <Pagination
-            currentPage={props.pageContext.currentPage}
-            numPages={props.pageContext.numPages}
-          />
-        )}
-        <Footer />
-      </Wrapper>
-    </IndexLayout>
-  );
-};
-
-export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
-    logo: file(relativePath: { eq: "content/img/site-logo.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    header: file(relativePath: { eq: "img/blog-cover.jpg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 2000, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    allMarkdownRemark(
-      sort: [{ frontmatter: { sticky: ASC } }, { frontmatter: { date: DESC } }]
-      filter: { frontmatter: { draft: { ne: true } } }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-            tags
-            draft
-            excerpt
-            sticky
-            image {
-              childImageSharp {
-                fluid(maxWidth: 3720) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            author {
-              yamlId
-              bio
-              avatar {
-                children {
-                  ... on ImageSharp {
-                    fluid(quality: 100, srcSetBreakpoints: [40, 80, 120]) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-              }
-            }
-          }
-          excerpt
-          fields {
-            readingTime {
-              text
-            }
-            layout
-            slug
-          }
-        }
-      }
-    }
-  }
-`;
 
 const HomePosts = css`
   @media (min-width: 795px) {
@@ -272,4 +92,47 @@ const HomePosts = css`
   }
 `;
 
-export default IndexPage;
+export { HomePosts };
+
+const IndexTemplate: React.FC<IndexTemplateProps> = ({
+  posts,
+  currentPage,
+  numPages,
+  heroImage,
+  children,
+}) => {
+  return (
+    <Wrapper css={HomePosts}>
+      <div
+        css={[outer, SiteHeader, SiteHeaderStyles]}
+        className='site-header-background'
+        style={
+          heroImage ? { backgroundImage: `url('${heroImage}')` } : undefined
+        }>
+        <div css={inner}>
+          <SiteNav isHome />
+          <SiteHeaderContent className='site-header-content'>
+            <SiteTitle className='site-title'>{siteConfig.title}</SiteTitle>
+            <SiteDescription>{siteConfig.tagline}</SiteDescription>
+          </SiteHeaderContent>
+        </div>
+      </div>
+      <main id='site-main' css={[SiteMain, outer]}>
+        <div css={[inner, Posts]}>
+          <div css={PostFeed}>
+            {posts.map((post, index) => (
+              <PostCard key={post.id} post={post} large={index === 0} />
+            ))}
+          </div>
+        </div>
+      </main>
+      {children}
+      {numPages > 1 && (
+        <Pagination currentPage={currentPage} numPages={numPages} />
+      )}
+      <Footer />
+    </Wrapper>
+  );
+};
+
+export default IndexTemplate;

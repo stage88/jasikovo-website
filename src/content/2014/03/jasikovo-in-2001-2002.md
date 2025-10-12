@@ -9,7 +9,7 @@ draft: false
 
 Forgotten pictures from the winter period of 2001 and 2002.
 
-------
+---
 
 Zaboravljene slike iz zimskog perioda 2001 i 2002 godine.
 

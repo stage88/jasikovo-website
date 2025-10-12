@@ -9,7 +9,7 @@ draft: false
 
 Old pictures about Jasikovo and people from Jasikovo.
 
---------
+---
 
 Stare slike o Jasikovu i Jasikovcanima. Jasikovcani, preslikajte svoje stare slike i posaljite, stavicemo ih na ovom prostoru.
 

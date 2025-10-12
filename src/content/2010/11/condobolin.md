@@ -9,7 +9,7 @@ draft: false
 
 Three days in Condobolin visiting out friend Greg Wheeler.
 
---------
+---
 
 Tri dana u Condobolin. U poseti mom dragom prijatelju, Gregu Weeleru.
 

@@ -11,7 +11,7 @@ Baba Milja, as we have all called her here in recent years, passed away on Octob
 
 This album is dedicated to her, so that all of us who knew her would once again remember her dear character.
 
---------
+---
 
 Baba Milja, kako smo je zadnjih godina svi ovde zvali, preminula je 14 Oktobra 2007 godine u Kanberi/Australia.
 

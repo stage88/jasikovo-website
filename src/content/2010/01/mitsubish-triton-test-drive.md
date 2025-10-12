@@ -11,7 +11,7 @@ I would like these to be pictures from our homeland, but I am not in that positi
 
 I am also trying to paint the nature and beauty of this country in this distant land.
 
---------
+---
 
 Voleo bih da ovo budu slike iz naseg zavicaja, ali nisam u toj mogucnosti trenutno.
 

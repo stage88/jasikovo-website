@@ -7,8 +7,8 @@ date: '2008-09-26T10:00:00.000Z'
 draft: false
 ---
 
-Happy Birthday Deda from Mila, Tammy, Serge, Maya, Sam and Caki!!!!!!!                             
+Happy Birthday Deda from Mila, Tammy, Serge, Maya, Sam and Caki!!!!!!!
 
 Srecan rodjendan Ljubo, od Svetlane, Slavke, Sretena, Zorice, Sneze, Djele i Deda Mite!!!!
 
-![img](img/happy-bday-1.jpg)
+![img](/content/2008/09/img/happy-bday-1.jpg)

@@ -11,7 +11,7 @@ After 15 years, Sladjan comes to his native Jasikovo, unfortunately only for a m
 
 We can see on his face that he was very satisfied and that he made new acquaintances, so we hope that in the future he will come to his native Jasikovo much more often.
 
---------
+---
 
 Nakon 15 godina Sladjan dolazi u svoje rodno Jasikovo, nazalost samo na mesec dana.
 

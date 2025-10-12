@@ -11,7 +11,7 @@ Here is another album with OLD pictures about Jasikov and the people of Jasikovc
 
 My wish has always been to preserve the characters of our places for some future generations.
 
-------
+---
 
 Evo jos jednog albuma sa STARIM slikama o Jasikovu i Jasikovcanima.
 

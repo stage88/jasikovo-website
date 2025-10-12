@@ -11,7 +11,7 @@ Fireworks are held in Canberra a couple of times a year (color shooting, as our 
 
 Fireworks, or Fireworks to call it, was held on the occasion of Canberra Day.
 
---------
+---
 
 Par puta godisnje u Kanberi odrzavaju se vatrometi (pucanje u boji, kako to nasi kazu).
 

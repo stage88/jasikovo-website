@@ -9,7 +9,7 @@ draft: false
 
 PERA ILIC left this world too soon. It remains for us to remember his character and his trumpet.
 
---------
+---
 
 PERA ILIC napustio je prerano ovaj svet. Ostaje nam da se secamo njegovog lika i njegove trube.
 

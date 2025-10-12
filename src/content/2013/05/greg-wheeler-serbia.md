@@ -11,7 +11,7 @@ Greg visited Jasikovo / Serbia in July and August last year, he loves our landsc
 
 He says he will come in the future. He made many friends, and made a donation to complete the church.
 
---------
+---
 
 Greg je jula i avgusta meseca prosle godine gostovao u Jasikovo/Srbija, voli ove nase predele, nase obicaje, nase ljude, prase na raznju, rakiju i Zajecarsko pivo.
 

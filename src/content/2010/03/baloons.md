@@ -9,9 +9,9 @@ draft: false
 
 Balloon Festival. Canberra is a city where colorful balloons can be seen in the sky every morning, most of them in March. Many decide to walk over the city for a couple of hours in a balloon.
 
---------
+---
 
-Festival sa Balonima. Canberra je grad gde se svakog jutra na nebu mogu videti sareni baloni. 
+Festival sa Balonima. Canberra je grad gde se svakog jutra na nebu mogu videti sareni baloni.
 
 U Martu najvise ih ima. Mnogi se odlucuju da prosetaju iznad grada par sati u balonu.
 

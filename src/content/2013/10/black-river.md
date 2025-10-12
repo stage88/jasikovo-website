@@ -9,7 +9,7 @@ draft: false
 
 Click on the link to open the album.
 
-------
+---
 
 Kliknite na link da biste otvorili album.
 

@@ -1,12 +1,7 @@
-# =========================
-# Node.js-Specific Ignores
-# =========================
-
-# Build directory
-public/
-
-# Gatsby cache
-.cache/
+# build dirs
+.cache
+.next
+bin
 
 # Logs
 logs
@@ -114,3 +109,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 .vscode
+
+tmp
+next-env.d.ts

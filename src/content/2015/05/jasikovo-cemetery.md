@@ -13,7 +13,7 @@ I will post only one part that I painted that year, and this year I will try to 
 
 This is an attempt to save the characters and names of the people of Jasikovci who are no longer among us from oblivion.
 
-------
+---
 
 Slike sa Jasikovackog Groblja. Godine 2010, zapoceo sam ovaj album i jos uvek nije kompletan.
 

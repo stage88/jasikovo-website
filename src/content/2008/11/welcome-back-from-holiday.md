@@ -11,4 +11,4 @@ Welcome back from holiday Ljuba and Tanja.
 
 Ljuba i Tanja, vracaju se sa odmora. Bice jos fotosa u Galery!
 
-![img](img/ljuba-tanja-08.jpg)
+![img](/content/2008/11/img/ljuba-tanja-08.jpg)

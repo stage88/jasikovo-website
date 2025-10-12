@@ -8,6 +8,8 @@ export type SharedAlbum = {
   id: string;
   title: string;
   productUrl: string;
+  sharedUrl?: string;
+  sort?: number;
   mediaItemsCount: string;
   coverPhotoBaseUrl: string;
   coverPhotoMediaItemId: string;
@@ -18,7 +20,7 @@ export function getSharedAlbums(): SharedAlbum[] {
     const sharedUrl = albums.find(
       photo =>
         photo.title?.trim().replace(new RegExp(' ', 'g'), '') ===
-        x.title?.trim().replace(new RegExp(' ', 'g'), ''),
+        x.title?.trim().replace(new RegExp(' ', 'g'), '')
     )?.url;
 
     if (!sharedUrl) {
@@ -26,7 +28,8 @@ export function getSharedAlbums(): SharedAlbum[] {
     }
 
     const [parts] = x.title.toString().split('.');
-    const sort = +parts ?? 1000;
+    const parsed = Number(parts);
+    const sort = Number.isNaN(parsed) ? 1000 : parsed;
 
     return {
       ...x,
@@ -96,7 +99,8 @@ export const shared: SharedAlbum[] = [
   },
   {
     id: 'ANZZWKjW-_P1xtsH4pJz-GEDpjffGnQWWIZdQsQ7kko5xxb3vuw6sl8',
-    title: '28. - Lazarev Kanjon-dva dana sa prirodom,- Dan prvi.-23.avgust.2008',
+    title:
+      '28. - Lazarev Kanjon-dva dana sa prirodom,- Dan prvi.-23.avgust.2008',
     productUrl:
       'https://photos.google.com/lr/album/ANZZWKjW-_P1xtsH4pJz-GEDpjffGnQWWIZdQsQ7kko5xxb3vuw6sl8',
     mediaItemsCount: '429',
@@ -118,7 +122,8 @@ export const shared: SharedAlbum[] = [
   },
   {
     id: 'ANZZWKiOATniLWyqXTbmRLha7VJy3pnZx_fzgR7i1BhIxHbLFwURoEk',
-    title: '29.- Lazarev Kanjon-dva dana sa prirodom,- Dan drugi.-24.avgust.2008',
+    title:
+      '29.- Lazarev Kanjon-dva dana sa prirodom,- Dan drugi.-24.avgust.2008',
     productUrl:
       'https://photos.google.com/lr/album/ANZZWKiOATniLWyqXTbmRLha7VJy3pnZx_fzgR7i1BhIxHbLFwURoEk',
     mediaItemsCount: '288',
@@ -822,7 +827,8 @@ export const shared: SharedAlbum[] = [
   },
   {
     id: 'ANZZWKjJwiWipUu7vV4rvUoOFDa97TuRyVD74F7rs1knIEzZsfoPWQA',
-    title: '84.-VIMINACIUM - Roman City and Military Camp I-VI Century--Castolatz-Serbia',
+    title:
+      '84.-VIMINACIUM - Roman City and Military Camp I-VI Century--Castolatz-Serbia',
     productUrl:
       'https://photos.google.com/lr/album/ANZZWKjJwiWipUu7vV4rvUoOFDa97TuRyVD74F7rs1knIEzZsfoPWQA',
     mediaItemsCount: '113',

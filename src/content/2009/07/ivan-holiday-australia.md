@@ -11,11 +11,11 @@ Ivan Djelic from Bor Serbia. A month of visiting relatives in Australia. Album n
 
 You can visit Ivana in Bor / Serbia, Nikole Pasica 25 in his Auspuh-Servis.
 
---------
+---
 
 Ivan Djelic iz Bora Serbia. Mesec dana posete rodbini u Australiji. Album br. 1, od 25 aprila do 17 maya 2009.
 
-Ivana mozete posetiti u Boru/Serbia, Nikole Pasica 25 u njegovom Auspuh-Servisu. 
+Ivana mozete posetiti u Boru/Serbia, Nikole Pasica 25 u njegovom Auspuh-Servisu.
 
 Ljuba ILIC
 

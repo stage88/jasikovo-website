@@ -12,8 +12,8 @@ This is a site about Jasikovo. You will find Jasikovo in the mountains of Homolj
 
 You are most welcome to Jasikovo site.
 
-------
+---
 
-Ovo je sajt o selu Jasikovu u Gornjem Peku opstine Majdanpek u Istocnoj Srbiji. Homolje, okruzeno gustom Bukovom sumom, gde lete kukavice i pevaju a zimi vukovi zavijaju. 
+Ovo je sajt o selu Jasikovu u Gornjem Peku opstine Majdanpek u Istocnoj Srbiji. Homolje, okruzeno gustom Bukovom sumom, gde lete kukavice i pevaju a zimi vukovi zavijaju.
 
 Dobrodosli na sajtu Jasikova.

@@ -9,7 +9,7 @@ draft: false
 
 For all those who want to get to know Australia and its landscapes. This is my attempt to show you what its landscapes really look like.
 
---------
+---
 
 Za sve one koji zele da upoznaju Australiu i njene predele. O vo je moj pokusaj da Vam pokazem njene predele kako u stvarnosti izgledaju.
 

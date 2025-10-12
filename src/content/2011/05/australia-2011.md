@@ -11,7 +11,7 @@ And in this distant land, I paint a lot of pictures every month. These are mostl
 
 Have a look, there are some pictures worth noting.
 
---------
+---
 
 I u ovoj dalekoj zemlji, svakog meseca naslikam puno slika. To su vecinom slike iz okoline Kanbere.
 

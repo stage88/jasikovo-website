@@ -9,7 +9,7 @@ draft: false
 
 Pictures I copied from Dragi Jankovic a couple of years ago.
 
-------
+---
 
 Slike koje sam preslikao od Dragija Jankovica pre par godina.
 

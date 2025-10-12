@@ -7,7 +7,7 @@ date: '2009-08-18T10:00:00.000Z'
 draft: false
 ---
 
-Welcome to Condobolin. 
+Welcome to Condobolin.
 
 More pictures from Australia - Condobolin by Ljuba ILIC
 
