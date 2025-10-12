@@ -4,10 +4,10 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
-import { Footer } from '@/components/footer';
-import SiteNav from '@/components/header/site-nav';
-import { Wrapper } from '@/components/wrapper';
-import { colors } from '@/styles/colors';
+import { Footer } from '@/lib/components/footer';
+import SiteNav from '@/lib/components/header/site-nav';
+import { Wrapper } from '@/lib/components/wrapper';
+import { colors } from '@/lib/styles/colors';
 import {
   inner,
   outer,
@@ -15,7 +15,7 @@ import {
   SiteHeader,
   SiteMain,
   SiteNavMain,
-} from '@/styles/shared';
+} from '@/lib/styles/shared';
 
 const PageTemplate = css`
   .site-main {

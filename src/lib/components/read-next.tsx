@@ -4,8 +4,8 @@ import styled from '@emotion/styled';
 import { darken } from 'polished';
 
 import { PostSummary } from '@/lib/posts';
-import { colors } from '@/styles/colors';
-import { inner, outer } from '@/styles/shared';
+import { colors } from '@/lib/styles/colors';
+import { inner, outer } from '@/lib/styles/shared';
 import { PostCard } from './post-card';
 import { ReadNextCard } from './read-next-card';
 

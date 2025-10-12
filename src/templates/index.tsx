@@ -4,11 +4,11 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
-import { Footer } from '@/components/footer';
-import SiteNav from '@/components/header/site-nav';
-import Pagination from '@/components/pagination';
-import { PostCard } from '@/components/post-card';
-import { Wrapper } from '@/components/wrapper';
+import { Footer } from '@/lib/components/footer';
+import SiteNav from '@/lib/components/header/site-nav';
+import Pagination from '@/lib/components/pagination';
+import { PostCard } from '@/lib/components/post-card';
+import { Wrapper } from '@/lib/components/wrapper';
 import type { PostSummary } from '@/lib/posts';
 import { getSiteConfig } from '@/lib/utils';
 import {
@@ -22,7 +22,7 @@ import {
   SiteHeaderStyles,
   SiteMain,
   SiteTitle,
-} from '@/styles/shared';
+} from '@/lib/styles/shared';
 
 const siteConfig = getSiteConfig();
 

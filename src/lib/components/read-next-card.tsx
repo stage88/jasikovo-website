@@ -6,7 +6,7 @@ import { darken, lighten } from 'polished';
 import React from 'react';
 
 import { PostSummary } from '@/lib/posts';
-import { colors } from '@/styles/colors';
+import { colors } from '@/lib/styles/colors';
 
 const ReadNextCardArticle = styled.article`
   position: relative;

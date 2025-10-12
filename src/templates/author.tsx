@@ -6,10 +6,10 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
-import { Footer } from '@/components/footer';
-import SiteNav from '@/components/header/site-nav';
-import { PostCard } from '@/components/post-card';
-import { Wrapper } from '@/components/wrapper';
+import { Footer } from '@/lib/components/footer';
+import SiteNav from '@/lib/components/header/site-nav';
+import { PostCard } from '@/lib/components/post-card';
+import { Wrapper } from '@/lib/components/wrapper';
 import { AuthorProfile, PostSummary } from '@/lib/posts';
 import {
   AuthorProfileImage,
@@ -24,7 +24,7 @@ import {
   SiteMain,
   SiteNavMain,
   SiteTitle,
-} from '@/styles/shared';
+} from '@/lib/styles/shared';
 
 const HiddenMobile = css`
   @media (max-width: 500px) {

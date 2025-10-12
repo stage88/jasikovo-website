@@ -10,15 +10,15 @@ import Link from 'next/link';
 import { lighten, setLightness } from 'polished';
 import React from 'react';
 
-import { AuthorList } from '@/components/author-list';
-import { Footer } from '@/components/footer';
-import SiteNav, { SiteNavMain } from '@/components/header/site-nav';
-import PostContent from '@/components/post-content';
-import { ReadNext } from '@/components/read-next';
-import { Wrapper } from '@/components/wrapper';
+import { AuthorList } from '@/lib/components/author-list';
+import { Footer } from '@/lib/components/footer';
+import SiteNav, { SiteNavMain } from '@/lib/components/header/site-nav';
+import PostContent from '@/lib/components/post-content';
+import { ReadNext } from '@/lib/components/read-next';
+import { Wrapper } from '@/lib/components/wrapper';
 import type { PostDetail, PostSummary } from '@/lib/posts';
-import { colors } from '@/styles/colors';
-import { inner, outer, SiteMain } from '@/styles/shared';
+import { colors } from '@/lib/styles/colors';
+import { inner, outer, SiteMain } from '@/lib/styles/shared';
 
 export const PostFull = css`
   position: relative;

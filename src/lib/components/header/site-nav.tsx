@@ -9,8 +9,8 @@ import { darken } from 'polished';
 import React, { useEffect, useRef, useState } from 'react';
 
 import { getSiteConfig } from '@/lib/utils';
-import { colors } from '@/styles/colors';
-import { SocialLink, SocialLinkFb } from '@/styles/shared';
+import { colors } from '@/lib/styles/colors';
+import { SocialLink, SocialLinkFb } from '@/lib/styles/shared';
 import { Close } from '../icons/close';
 import { Facebook } from '../icons/facebook';
 import { Hamburger } from '../icons/hamburger';

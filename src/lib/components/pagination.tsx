@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { darken } from 'polished';
 import React from 'react';
 
-import { colors } from '@/styles/colors';
+import { colors } from '@/lib/styles/colors';
 
 const navCss = css`
   text-align: center;

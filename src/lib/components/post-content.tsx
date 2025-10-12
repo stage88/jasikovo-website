@@ -2,7 +2,7 @@ import { lighten } from 'polished';
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { colors } from '@/styles/colors';
+import { colors } from '@/lib/styles/colors';
 
 export const PostFullContent = styled.section`
   position: relative;

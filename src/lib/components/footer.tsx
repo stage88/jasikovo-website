@@ -7,8 +7,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { colors } from '@/styles/colors';
-import { outer, inner } from '@/styles/shared';
+import { colors } from '@/lib/styles/colors';
+import { outer, inner } from '@/lib/styles/shared';
 import { getSiteConfig } from '@/lib/utils';
 
 const siteConfig = getSiteConfig();

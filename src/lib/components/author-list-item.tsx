@@ -10,7 +10,7 @@ import { darken, lighten } from 'polished';
 import React, { useRef, useState } from 'react';
 
 import { AuthorProfile } from '@/lib/posts';
-import { colors } from '@/styles/colors';
+import { colors } from '@/lib/styles/colors';
 import { AuthorProfileImage } from './post-card';
 
 const Hovered = css`

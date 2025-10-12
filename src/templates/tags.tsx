@@ -3,10 +3,10 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
-import { Footer } from '@/components/footer';
-import SiteNav from '@/components/header/site-nav';
-import { PostCard } from '@/components/post-card';
-import { Wrapper } from '@/components/wrapper';
+import { Footer } from '@/lib/components/footer';
+import SiteNav from '@/lib/components/header/site-nav';
+import { PostCard } from '@/lib/components/post-card';
+import { Wrapper } from '@/lib/components/wrapper';
 import { PostSummary, TagSummary } from '@/lib/posts';
 import {
   inner,
@@ -21,7 +21,7 @@ import {
   SiteMain,
   SiteNavMain,
   SiteTitle,
-} from '@/styles/shared';
+} from '@/lib/styles/shared';
 
 interface TagTemplateProps {
   tag: TagSummary;
