@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 import { PostLayout } from '@/templates/post-layout';
 import {
@@ -38,7 +39,19 @@ export default async function PostPage({
   };
 
   const postId = getPostIdFromRouteParams(routeParams);
-  const postData = await getPostData(postId);
+
+  let postData:
+    | Awaited<ReturnType<typeof getPostData>>
+    | undefined;
+  try {
+    postData = await getPostData(postId);
+  } catch (_error) {
+    notFound();
+  }
+
+  if (!postData) {
+    notFound();
+  }
   const relatedPosts = getRelatedPosts(postData.id, postData.tags);
   const { previous, next } = getAdjacentPosts(postData.id);
 
@@ -51,8 +64,6 @@ export default async function PostPage({
     />
   );
 }
-
-export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -67,7 +78,18 @@ export async function generateMetadata({
   };
 
   const postId = getPostIdFromRouteParams(routeParams);
-  const postData = await getPostData(postId);
+  let postData:
+    | Awaited<ReturnType<typeof getPostData>>
+    | undefined;
+  try {
+    postData = await getPostData(postId);
+  } catch (_error) {
+    notFound();
+  }
+
+  if (!postData) {
+    notFound();
+  }
 
   return getPageMetaData({
     title: postData.title,

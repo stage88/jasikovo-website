@@ -94,5 +94,3 @@ export function generateStaticParams() {
   const pages = getAllPaginationParams().filter(pageNumber => pageNumber > 1);
   return pages.map(pageNumber => ({ slug: `${PAGE_PREFIX}${pageNumber}` }));
 }
-
-export const dynamicParams = false;
