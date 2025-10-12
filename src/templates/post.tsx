@@ -1,29 +1,24 @@
 /** @jsxImportSource @emotion/react */
 'use client';
 
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { format } from 'date-fns';
-import Link from 'next/link';
-import Image from 'next/image';
 import _ from 'lodash';
+import Image from 'next/image';
+import Link from 'next/link';
 import { lighten, setLightness } from 'polished';
 import React from 'react';
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-
-import { Footer } from '@/components/Footer';
-import SiteNav, { SiteNavMain } from '@/components/header/SiteNav';
-import PostContent from '@/components/PostContent';
-import { ReadNext } from '@/components/ReadNext';
-import { Subscribe } from '@/components/subscribe/Subscribe';
-import { Wrapper } from '@/components/Wrapper';
-import { AuthorList } from '@/components/AuthorList';
+import { AuthorList } from '@/components/author-list';
+import { Footer } from '@/components/footer';
+import SiteNav, { SiteNavMain } from '@/components/header/site-nav';
+import PostContent from '@/components/post-content';
+import { ReadNext } from '@/components/read-next';
+import { Wrapper } from '@/components/wrapper';
 import type { PostDetail, PostSummary } from '@/lib/posts';
-import { getSiteConfig } from '@/lib/utils';
 import { colors } from '@/styles/colors';
 import { inner, outer, SiteMain } from '@/styles/shared';
-
-const siteConfig = getSiteConfig();
 
 export const PostFull = css`
   position: relative;
@@ -180,6 +175,42 @@ export const PostFullTitle = styled.h1`
   }
 `;
 
+
+const PostFullImage = styled.figure`
+  margin: 25px 0 50px;
+  height: auto;
+  background: ${colors.lightgrey} center center;
+  background-size: cover;
+  border-radius: 5px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1170px) {
+    margin: 25px -6vw 50px;
+    border-radius: 0;
+
+    img {
+      max-width: 1170px;
+      border-radius: 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    height: 100%;
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 4vw;
+    height: 100%;
+  }
+`;
+
 interface PostLayoutProps {
   post: PostDetail;
   relatedPosts: PostSummary[];
@@ -259,8 +290,6 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
               </PostFullImage>
             )}
             <PostContent html={post.html} />
-
-            {siteConfig.showSubscribe && <Subscribe title={siteConfig.title} />}
           </article>
         </div>
       </main>
@@ -278,37 +307,3 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
   );
 };
 
-const PostFullImage = styled.figure`
-  margin: 25px 0 50px;
-  height: auto;
-  background: ${colors.lightgrey} center center;
-  background-size: cover;
-  border-radius: 5px;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: inherit;
-    object-fit: cover;
-  }
-
-  @media (max-width: 1170px) {
-    margin: 25px -6vw 50px;
-    border-radius: 0;
-
-    img {
-      max-width: 1170px;
-      border-radius: 0;
-    }
-  }
-
-  @media (max-width: 800px) {
-    height: 100%;
-  }
-
-  @media (max-width: 500px) {
-    margin-bottom: 4vw;
-    height: 100%;
-  }
-`;

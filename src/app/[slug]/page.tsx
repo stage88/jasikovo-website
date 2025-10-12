@@ -13,6 +13,12 @@ const PAGE_PREFIX = 'page-';
 
 const siteConfig = getSiteConfig();
 
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
 function resolveHeroImage(): string | undefined {
   const { coverImage } = siteConfig;
   if (!coverImage) {
@@ -21,10 +27,34 @@ function resolveHeroImage(): string | undefined {
   return resolveSiteAssetPath(coverImage);
 }
 
-interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug: rawSlug } = await params;
+  const slug = rawSlug ?? '';
+
+  if (!slug.startsWith(PAGE_PREFIX)) {
+    return getPageMetaData({ title: siteConfig.title });
+  }
+
+  const pageNumber = Number(slug.slice(PAGE_PREFIX.length));
+  if (
+    !Number.isFinite(pageNumber) ||
+    Number.isNaN(pageNumber) ||
+    pageNumber < 2
+  ) {
+    return getPageMetaData();
+  }
+
+  return getPageMetaData({
+    title: `Page ${pageNumber}`,
+    description: `Browse page ${pageNumber} of articles from ${siteConfig.title}.`,
+  });
+}
+
+export function generateStaticParams() {
+  const pages = getAllPaginationParams().filter(pageNumber => pageNumber > 1);
+  return pages.map(pageNumber => ({ slug: `${PAGE_PREFIX}${pageNumber}` }));
 }
 
 export default async function PaginatedHomePage({ params }: PageProps) {
@@ -63,34 +93,4 @@ export default async function PaginatedHomePage({ params }: PageProps) {
       heroImage={heroImage}
     />
   );
-}
-
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const { slug: rawSlug } = await params;
-  const slug = rawSlug ?? '';
-
-  if (!slug.startsWith(PAGE_PREFIX)) {
-    return getPageMetaData({ title: siteConfig.title });
-  }
-
-  const pageNumber = Number(slug.slice(PAGE_PREFIX.length));
-  if (
-    !Number.isFinite(pageNumber) ||
-    Number.isNaN(pageNumber) ||
-    pageNumber < 2
-  ) {
-    return getPageMetaData();
-  }
-
-  return getPageMetaData({
-    title: `Page ${pageNumber}`,
-    description: `Browse page ${pageNumber} of articles from ${siteConfig.title}.`,
-  });
-}
-
-export function generateStaticParams() {
-  const pages = getAllPaginationParams().filter(pageNumber => pageNumber > 1);
-  return pages.map(pageNumber => ({ slug: `${PAGE_PREFIX}${pageNumber}` }));
 }

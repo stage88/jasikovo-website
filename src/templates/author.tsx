@@ -2,133 +2,29 @@
 
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import Image from 'next/image';
 
-import { Footer } from '@/components/Footer';
-import SiteNav from '@/components/header/SiteNav';
-import { PostCard } from '@/components/PostCard';
-import { Wrapper } from '@/components/Wrapper';
+import { Footer } from '@/components/footer';
+import SiteNav from '@/components/header/site-nav';
+import { PostCard } from '@/components/post-card';
+import { Wrapper } from '@/components/wrapper';
 import { AuthorProfile, PostSummary } from '@/lib/posts';
 import {
   AuthorProfileImage,
   inner,
   outer,
   PostFeed,
-  SiteHeader,
-  SiteHeaderContent,
-  SiteTitle,
-  SiteMain,
-  SiteArchiveHeader,
-  SiteNavMain,
   ResponsiveHeaderBackground,
+  SiteArchiveHeader,
+  SiteHeader,
   SiteHeaderBackground,
+  SiteHeaderContent,
+  SiteMain,
+  SiteNavMain,
+  SiteTitle,
 } from '@/styles/shared';
-
-interface AuthorTemplateProps {
-  author: AuthorProfile;
-  posts: PostSummary[];
-}
-
-const Author = ({ author, posts }: AuthorTemplateProps) => {
-  const totalCount = posts.length;
-
-  return (
-    <Wrapper>
-      <header
-        className='site-archive-header'
-        css={[SiteHeader, SiteArchiveHeader]}>
-        <div css={[outer, SiteNavMain]}>
-          <div css={inner}>
-            <SiteNav isHome={false} />
-          </div>
-        </div>
-
-        <ResponsiveHeaderBackground
-          backgroundImage={author.profileImage ?? undefined}
-          css={[outer, SiteHeaderBackground]}
-          className='site-header-background'>
-          <div css={inner}>
-            <SiteHeaderContent
-              css={AuthorHeader}
-              className='site-header-content author-header'>
-              {author.avatar && (
-                <AuthorAvatar
-                  className='author-profile-image'
-                  src={author.avatar}
-                  alt={author.name}
-                  width={110}
-                  height={110}
-                  unoptimized
-                />
-              )}
-              <AuthHeaderContent className='author-header-content'>
-                <SiteTitle className='site-title'>{author.name}</SiteTitle>
-                {author.bio && (
-                  <AuthorBio className='author-bio'>{author.bio}</AuthorBio>
-                )}
-                <div css={AuthorMeta} className='author-meta'>
-                  {author.location && (
-                    <div className='author-location' css={HiddenMobile}>
-                      {author.location}
-                    </div>
-                  )}
-                  <div className='author-stats' css={HiddenMobile}>
-                    {totalCount > 1 && `${totalCount} posts`}
-                    {totalCount === 1 && '1 post'}
-                    {totalCount === 0 && 'No posts'}
-                  </div>
-                  {author.website && (
-                    <AuthorSocialLink className='author-social-link'>
-                      <AuthorSocialLinkAnchor
-                        href={author.website}
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        Website
-                      </AuthorSocialLinkAnchor>
-                    </AuthorSocialLink>
-                  )}
-                  {author.twitter && (
-                    <AuthorSocialLink className='author-social-link'>
-                      <AuthorSocialLinkAnchor
-                        href={`https://twitter.com/${author.twitter.replace(/^@/, '')}`}
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        Twitter
-                      </AuthorSocialLinkAnchor>
-                    </AuthorSocialLink>
-                  )}
-                  {author.facebook && (
-                    <AuthorSocialLink className='author-social-link'>
-                      <AuthorSocialLinkAnchor
-                        href={`https://www.facebook.com/${author.facebook}`}
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        Facebook
-                      </AuthorSocialLinkAnchor>
-                    </AuthorSocialLink>
-                  )}
-                </div>
-              </AuthHeaderContent>
-            </SiteHeaderContent>
-          </div>
-        </ResponsiveHeaderBackground>
-      </header>
-      <main id='site-main' css={[SiteMain, outer]}>
-        <div css={inner}>
-          <div css={PostFeed}>
-            {posts.map(post => (
-              <PostCard key={post.id} post={post} />
-            ))}
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </Wrapper>
-  );
-};
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -240,5 +136,108 @@ const AuthorSocialLinkAnchor = styled.a`
     opacity: 1;
   }
 `;
+
+interface AuthorTemplateProps {
+  author: AuthorProfile;
+  posts: PostSummary[];
+}
+
+const Author = ({ author, posts }: AuthorTemplateProps) => {
+  const totalCount = posts.length;
+
+  return (
+    <Wrapper>
+      <header
+        className='site-archive-header'
+        css={[SiteHeader, SiteArchiveHeader]}>
+        <div css={[outer, SiteNavMain]}>
+          <div css={inner}>
+            <SiteNav isHome={false} />
+          </div>
+        </div>
+
+        <ResponsiveHeaderBackground
+          backgroundImage={author.profileImage ?? undefined}
+          css={[outer, SiteHeaderBackground]}
+          className='site-header-background'>
+          <div css={inner}>
+            <SiteHeaderContent
+              css={AuthorHeader}
+              className='site-header-content author-header'>
+              {author.avatar && (
+                <AuthorAvatar
+                  className='author-profile-image'
+                  src={author.avatar}
+                  alt={author.name}
+                  width={110}
+                  height={110}
+                  unoptimized
+                />
+              )}
+              <AuthHeaderContent className='author-header-content'>
+                <SiteTitle className='site-title'>{author.name}</SiteTitle>
+                {author.bio && (
+                  <AuthorBio className='author-bio'>{author.bio}</AuthorBio>
+                )}
+                <div css={AuthorMeta} className='author-meta'>
+                  {author.location && (
+                    <div className='author-location' css={HiddenMobile}>
+                      {author.location}
+                    </div>
+                  )}
+                  <div className='author-stats' css={HiddenMobile}>
+                    {totalCount > 1 && `${totalCount} posts`}
+                    {totalCount === 1 && '1 post'}
+                    {totalCount === 0 && 'No posts'}
+                  </div>
+                  {author.website && (
+                    <AuthorSocialLink className='author-social-link'>
+                      <AuthorSocialLinkAnchor
+                        href={author.website}
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        Website
+                      </AuthorSocialLinkAnchor>
+                    </AuthorSocialLink>
+                  )}
+                  {author.twitter && (
+                    <AuthorSocialLink className='author-social-link'>
+                      <AuthorSocialLinkAnchor
+                        href={`https://twitter.com/${author.twitter.replace(/^@/, '')}`}
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        Twitter
+                      </AuthorSocialLinkAnchor>
+                    </AuthorSocialLink>
+                  )}
+                  {author.facebook && (
+                    <AuthorSocialLink className='author-social-link'>
+                      <AuthorSocialLinkAnchor
+                        href={`https://www.facebook.com/${author.facebook}`}
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        Facebook
+                      </AuthorSocialLinkAnchor>
+                    </AuthorSocialLink>
+                  )}
+                </div>
+              </AuthHeaderContent>
+            </SiteHeaderContent>
+          </div>
+        </ResponsiveHeaderBackground>
+      </header>
+      <main id='site-main' css={[SiteMain, outer]}>
+        <div css={inner}>
+          <div css={PostFeed}>
+            {posts.map(post => (
+              <PostCard key={post.id} post={post} />
+            ))}
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </Wrapper>
+  );
+};
 
 export default Author;

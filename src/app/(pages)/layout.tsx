@@ -1,12 +1,13 @@
 /** @jsxImportSource @emotion/react */
 'use client';
 
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 
-import { Footer } from '@/components/Footer';
-import SiteNav from '@/components/header/SiteNav';
-import { Wrapper } from '@/components/Wrapper';
+import { Footer } from '@/components/footer';
+import SiteNav from '@/components/header/site-nav';
+import { Wrapper } from '@/components/wrapper';
+import { colors } from '@/styles/colors';
 import {
   inner,
   outer,
@@ -15,7 +16,6 @@ import {
   SiteMain,
   SiteNavMain,
 } from '@/styles/shared';
-import { colors } from '@/styles/colors';
 
 const PageTemplate = css`
   .site-main {

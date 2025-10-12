@@ -13,22 +13,6 @@ const contentDirectory = path.join(process.cwd(), 'src', 'content');
 const authorsFile = path.join(contentDirectory, 'author.yaml');
 const tagsFile = path.join(contentDirectory, 'tag.yaml');
 
-function listMarkdownFiles(dirPath: string): string[] {
-  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
-  const files: string[] = [];
-
-  for (const entry of entries) {
-    const fullPath = path.join(dirPath, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...listMarkdownFiles(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith('.md')) {
-      files.push(fullPath);
-    }
-  }
-
-  return files;
-}
-
 export interface AuthorProfile {
   id: string;
   slug: string;
@@ -92,9 +76,32 @@ export interface PostDetail extends PostSummary {
   html: string;
 }
 
+export interface TagSummary {
+  name: string;
+  slug: string;
+  description?: string;
+  image?: string | null;
+}
+
 let authorCache: Map<string, AuthorProfile> | null = null;
 let postIndexCache: Map<string, PostMeta> | null = null;
 let tagCache: Map<string, TagSummary> | null = null;
+
+function listMarkdownFiles(dirPath: string): string[] {
+  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+  const files: string[] = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...listMarkdownFiles(fullPath));
+    } else if (entry.isFile() && entry.name.endsWith('.md')) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
 
 export function toPostId(slug: string): string {
   return slug.replace(/[\\/]/g, '--');
@@ -238,13 +245,6 @@ function extractPostImage(data: unknown): string | undefined {
   }
 
   return undefined;
-}
-
-export interface TagSummary {
-  name: string;
-  slug: string;
-  description?: string;
-  image?: string | null;
 }
 
 function loadTags(): Map<string, TagSummary> {

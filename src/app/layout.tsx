@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { getPageMetaData, getSiteConfig } from '@/lib/utils';
-
 import RootStyleRegistry from './emotion';
 import { GlobalStylesClient } from './styles';
 

@@ -2,112 +2,16 @@
 
 'use client';
 
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import Image from 'next/image';
 import Link from 'next/link';
 import { darken, lighten } from 'polished';
 import React, { useRef, useState } from 'react';
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-
 import { AuthorProfile } from '@/lib/posts';
 import { colors } from '@/styles/colors';
-import { AuthorProfileImage } from './PostCard';
-
-interface AuthorListItemProps {
-  tooltip: 'small' | 'large';
-  author: AuthorProfile;
-}
-
-export const AuthorListItem: React.FC<AuthorListItemProps> = ({
-  author,
-  tooltip,
-}) => {
-  const [hovered, setHover] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  function handleMouseEnter() {
-    if (tooltip !== 'large') {
-      return;
-    }
-
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setHover(true);
-  }
-
-  function handleMouseLeave() {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    timeoutRef.current = setTimeout(() => {
-      setHover(false);
-    }, 600);
-  }
-
-  return (
-    <AuthorListItemLi
-      className='author-list-item'
-      onMouseEnter={() => {
-        handleMouseEnter();
-      }}
-      onMouseLeave={() => {
-        handleMouseLeave();
-      }}>
-      {tooltip === 'small' && (
-        <AuthorNameTooltip className='author-name-tooltip'>
-          {author.name}
-        </AuthorNameTooltip>
-      )}
-      {tooltip === 'large' && (
-        <div
-          css={[AuthorCardStyles, hovered && Hovered]}
-          className='author-card'>
-          {author.avatar && (
-            <Image
-              css={AuthorProfileImage}
-              className='author-profile-image'
-              src={author.avatar}
-              alt={author.name}
-              width={60}
-              height={60}
-              sizes='60px'
-            />
-          )}
-          <div className='author-info'>
-            <div className='bio'>
-              <h2>{author.name}</h2>
-              {author.bio && <p>{author.bio}</p>}
-              <p>
-                <Link href={`/author/${author.slug}/`}>More posts</Link> by{' '}
-                {author.name}.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-      <Link
-        css={AuthorAvatar}
-        className='author-avatar'
-        href={`/author/${author.slug}/`}>
-        {author.avatar ? (
-          <Image
-            css={AuthorProfileImage}
-            className='author-profile-image'
-            src={author.avatar}
-            alt={author.name}
-            width={45}
-            height={45}
-            sizes='45px'
-          />
-        ) : (
-          <span className='sr-only'>{author.name}</span>
-        )}
-      </Link>
-    </AuthorListItemLi>
-  );
-};
+import { AuthorProfileImage } from './post-card';
 
 const Hovered = css`
   opacity: 1;
@@ -265,3 +169,98 @@ const AuthorAvatar = css`
     border-color: ${lighten(0.02, colors.darkgrey)};
   }
 `;
+
+interface AuthorListItemProps {
+  tooltip: 'small' | 'large';
+  author: AuthorProfile;
+}
+
+export const AuthorListItem: React.FC<AuthorListItemProps> = ({
+  author,
+  tooltip,
+}) => {
+  const [hovered, setHover] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function handleMouseEnter() {
+    if (tooltip !== 'large') {
+      return;
+    }
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setHover(true);
+  }
+
+  function handleMouseLeave() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setHover(false);
+    }, 600);
+  }
+
+  return (
+    <AuthorListItemLi
+      className='author-list-item'
+      onMouseEnter={() => {
+        handleMouseEnter();
+      }}
+      onMouseLeave={() => {
+        handleMouseLeave();
+      }}>
+      {tooltip === 'small' && (
+        <AuthorNameTooltip className='author-name-tooltip'>
+          {author.name}
+        </AuthorNameTooltip>
+      )}
+      {tooltip === 'large' && (
+        <div
+          css={[AuthorCardStyles, hovered && Hovered]}
+          className='author-card'>
+          {author.avatar && (
+            <Image
+              css={AuthorProfileImage}
+              className='author-profile-image'
+              src={author.avatar}
+              alt={author.name}
+              width={60}
+              height={60}
+              sizes='60px'
+            />
+          )}
+          <div className='author-info'>
+            <div className='bio'>
+              <h2>{author.name}</h2>
+              {author.bio && <p>{author.bio}</p>}
+              <p>
+                <Link href={`/author/${author.slug}/`}>More posts</Link> by{' '}
+                {author.name}.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      <Link
+        css={AuthorAvatar}
+        className='author-avatar'
+        href={`/author/${author.slug}/`}>
+        {author.avatar ? (
+          <Image
+            css={AuthorProfileImage}
+            className='author-profile-image'
+            src={author.avatar}
+            alt={author.name}
+            width={45}
+            height={45}
+            sizes='45px'
+          />
+        ) : (
+          <span className='sr-only'>{author.name}</span>
+        )}
+      </Link>
+    </AuthorListItemLi>
+  );
+};

@@ -1,104 +1,16 @@
 /** @jsxImportSource @emotion/react */
 
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { format } from 'date-fns';
-import Link from 'next/link';
 import _ from 'lodash';
+import Link from 'next/link';
 import { lighten } from 'polished';
 import React from 'react';
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-
 import { PostSummary } from '@/lib/posts';
 import { colors } from '@/styles/colors';
-import { AuthorList } from './AuthorList';
-
-export interface PostCardProps {
-  post: PostSummary;
-  large?: boolean;
-}
-
-export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
-  const date = new Date(post.date);
-  // 2018-08-20
-  const datetime = format(date, 'yyyy-MM-dd');
-  // 20 AUG 2018
-  const displayDatetime = format(date, 'dd LLL yyyy');
-  const postHref = `/${post.slug}/`;
-  const hasImage = Boolean(post.image);
-  const articleClassName = [
-    'post-card',
-    hasImage ? '' : 'no-image',
-    large ? 'post-card-large' : '',
-  ]
-    .filter(Boolean)
-    .join(' ');
-
-  return (
-    <article
-      className={articleClassName}
-      css={[PostCardStyles, large && PostCardLarge]}>
-      {hasImage && (
-        <Link
-          className='post-card-image-link'
-          css={PostCardImageLink}
-          href={postHref}
-          aria-label={post.title}>
-          <div
-            className='post-card-image'
-            css={PostCardImage}
-            style={{ backgroundImage: `url('${post.image}')` }}
-          />
-        </Link>
-      )}
-      <PostCardContent className='post-card-content'>
-        <PostCardHeader className='post-card-header'>
-          {post.tags && (
-            <PostCardPrimaryTag className='post-card-primary-tag'>
-              <Link href={`/tags/${_.kebabCase(post.tags[0])}/`}>
-                {post.tags[0]}
-              </Link>
-            </PostCardPrimaryTag>
-          )}
-          <Link
-            className='post-card-title-link'
-            css={PostCardContentLink}
-            href={postHref}>
-            <PostCardTitle className='post-card-title'>
-              {post.title}
-            </PostCardTitle>
-          </Link>
-        </PostCardHeader>
-        <PostCardExcerpt className='post-card-excerpt'>
-          <Link
-            className='post-card-excerpt-link'
-            css={PostCardContentLink}
-            href={postHref}>
-            <p>{post.excerpt}</p>
-          </Link>
-        </PostCardExcerpt>
-        <PostCardMeta className='post-card-meta'>
-          <AuthorList authors={post.authors} tooltip='small' />
-          <PostCardBylineContent className='post-card-byline-content'>
-            <span>
-              {post.authors.map((author, index) => {
-                return (
-                  <React.Fragment key={author.slug}>
-                    <Link href={`/author/${author.slug}/`}>{author.name}</Link>
-                    {post.authors.length - 1 > index && ', '}
-                  </React.Fragment>
-                );
-              })}
-            </span>
-            <span className='post-card-byline-date'>
-              <time dateTime={datetime}>{displayDatetime}</time>
-            </span>
-          </PostCardBylineContent>
-        </PostCardMeta>
-      </PostCardContent>
-    </article>
-  );
-};
+import { AuthorList } from './author-list';
 
 const PostCardStyles = css`
   position: relative;
@@ -326,3 +238,90 @@ export const AuthorProfileImage = css`
     background: ${colors.darkmode};
   }
 `;
+
+export interface PostCardProps {
+  post: PostSummary;
+  large?: boolean;
+}
+
+export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
+  const date = new Date(post.date);
+  // 2018-08-20
+  const datetime = format(date, 'yyyy-MM-dd');
+  // 20 AUG 2018
+  const displayDatetime = format(date, 'dd LLL yyyy');
+  const postHref = `/${post.slug}/`;
+  const hasImage = Boolean(post.image);
+  const articleClassName = [
+    'post-card',
+    hasImage ? '' : 'no-image',
+    large ? 'post-card-large' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  return (
+    <article
+      className={articleClassName}
+      css={[PostCardStyles, large && PostCardLarge]}>
+      {hasImage && (
+        <Link
+          className='post-card-image-link'
+          css={PostCardImageLink}
+          href={postHref}
+          aria-label={post.title}>
+          <div
+            className='post-card-image'
+            css={PostCardImage}
+            style={{ backgroundImage: `url('${post.image}')` }}
+          />
+        </Link>
+      )}
+      <PostCardContent className='post-card-content'>
+        <PostCardHeader className='post-card-header'>
+          {post.tags && (
+            <PostCardPrimaryTag className='post-card-primary-tag'>
+              <Link href={`/tags/${_.kebabCase(post.tags[0])}/`}>
+                {post.tags[0]}
+              </Link>
+            </PostCardPrimaryTag>
+          )}
+          <Link
+            className='post-card-title-link'
+            css={PostCardContentLink}
+            href={postHref}>
+            <PostCardTitle className='post-card-title'>
+              {post.title}
+            </PostCardTitle>
+          </Link>
+        </PostCardHeader>
+        <PostCardExcerpt className='post-card-excerpt'>
+          <Link
+            className='post-card-excerpt-link'
+            css={PostCardContentLink}
+            href={postHref}>
+            <p>{post.excerpt}</p>
+          </Link>
+        </PostCardExcerpt>
+        <PostCardMeta className='post-card-meta'>
+          <AuthorList authors={post.authors} tooltip='small' />
+          <PostCardBylineContent className='post-card-byline-content'>
+            <span>
+              {post.authors.map((author, index) => {
+                return (
+                  <React.Fragment key={author.slug}>
+                    <Link href={`/author/${author.slug}/`}>{author.name}</Link>
+                    {post.authors.length - 1 > index && ', '}
+                  </React.Fragment>
+                );
+              })}
+            </span>
+            <span className='post-card-byline-date'>
+              <time dateTime={datetime}>{displayDatetime}</time>
+            </span>
+          </PostCardBylineContent>
+        </PostCardMeta>
+      </PostCardContent>
+    </article>
+  );
+};

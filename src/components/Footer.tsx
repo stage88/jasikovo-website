@@ -13,47 +13,6 @@ import { getSiteConfig } from '@/lib/utils';
 
 const siteConfig = getSiteConfig();
 
-export const Footer: React.FC = () => {
-  return (
-    <footer css={[outer, SiteFooter]}>
-      <div css={[inner, SiteFooterContent]}>
-        <section className='copyright'>
-          <Link href='/'>{siteConfig.title}</Link> &copy;{' '}
-          {new Date().getFullYear()}{' '}
-          {siteConfig.footer && (
-            <>
-              {' | '}
-              <Link href='/'>{siteConfig.title}</Link>{' '}
-              <a href={siteConfig.footerLink ?? '/'}>{siteConfig.footer}</a>
-            </>
-          )}
-        </section>
-        <SiteFooterNav>
-          <Link href='/'>Latest Posts</Link>
-          {siteConfig.facebook && (
-            <a
-              href={siteConfig.facebook}
-              target='_blank'
-              rel='noopener noreferrer'>
-              Facebook
-            </a>
-          )}
-          {siteConfig.twitter && (
-            <a
-              href={siteConfig.twitter}
-              target='_blank'
-              rel='noopener noreferrer'>
-              Twitter
-            </a>
-          )}
-
-          {/* <a href='/rss.xml'>RSS</a> */}
-        </SiteFooterNav>
-      </div>
-    </footer>
-  );
-};
-
 const SiteFooter = css`
   position: relative;
   padding-top: 20px;
@@ -110,3 +69,44 @@ const SiteFooterNav = styled.nav`
     }
   }
 `;
+
+export const Footer: React.FC = () => {
+  return (
+    <footer css={[outer, SiteFooter]}>
+      <div css={[inner, SiteFooterContent]}>
+        <section className='copyright'>
+          <Link href='/'>{siteConfig.title}</Link> &copy;{' '}
+          {new Date().getFullYear()}{' '}
+          {siteConfig.footer && (
+            <>
+              {' | '}
+              <Link href='/'>{siteConfig.title}</Link>{' '}
+              <a href={siteConfig.footerLink ?? '/'}>{siteConfig.footer}</a>
+            </>
+          )}
+        </section>
+        <SiteFooterNav>
+          <Link href='/'>Latest Posts</Link>
+          {siteConfig.facebook && (
+            <a
+              href={siteConfig.facebook}
+              target='_blank'
+              rel='noopener noreferrer'>
+              Facebook
+            </a>
+          )}
+          {siteConfig.twitter && (
+            <a
+              href={siteConfig.twitter}
+              target='_blank'
+              rel='noopener noreferrer'>
+              Twitter
+            </a>
+          )}
+
+          {/* <a href='/rss.xml'>RSS</a> */}
+        </SiteFooterNav>
+      </div>
+    </footer>
+  );
+};

@@ -4,11 +4,11 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
-import { Footer } from '@/components/Footer';
-import SiteNav from '@/components/header/SiteNav';
-import Pagination from '@/components/Pagination';
-import { PostCard } from '@/components/PostCard';
-import { Wrapper } from '@/components/Wrapper';
+import { Footer } from '@/components/footer';
+import SiteNav from '@/components/header/site-nav';
+import Pagination from '@/components/pagination';
+import { PostCard } from '@/components/post-card';
+import { Wrapper } from '@/components/wrapper';
 import type { PostSummary } from '@/lib/posts';
 import { getSiteConfig } from '@/lib/utils';
 import {
@@ -33,47 +33,6 @@ interface IndexTemplateProps {
   heroImage?: string;
   children?: React.ReactNode;
 }
-
-const IndexTemplate: React.FC<IndexTemplateProps> = ({
-  posts,
-  currentPage,
-  numPages,
-  heroImage,
-  children,
-}) => {
-  return (
-    <Wrapper css={HomePosts}>
-      <div
-        css={[outer, SiteHeader, SiteHeaderStyles]}
-        className='site-header-background'
-        style={
-          heroImage ? { backgroundImage: `url('${heroImage}')` } : undefined
-        }>
-        <div css={inner}>
-          <SiteNav isHome />
-          <SiteHeaderContent className='site-header-content'>
-            <SiteTitle className='site-title'>{siteConfig.title}</SiteTitle>
-            <SiteDescription>{siteConfig.tagline}</SiteDescription>
-          </SiteHeaderContent>
-        </div>
-      </div>
-      <main id='site-main' css={[SiteMain, outer]}>
-        <div css={[inner, Posts]}>
-          <div css={PostFeed}>
-            {posts.map((post, index) => (
-              <PostCard key={post.id} post={post} large={index === 0} />
-            ))}
-          </div>
-        </div>
-      </main>
-      {children}
-      {numPages > 1 && (
-        <Pagination currentPage={currentPage} numPages={numPages} />
-      )}
-      <Footer />
-    </Wrapper>
-  );
-};
 
 const HomePosts = css`
   @media (min-width: 795px) {
@@ -134,4 +93,46 @@ const HomePosts = css`
 `;
 
 export { HomePosts };
+
+const IndexTemplate: React.FC<IndexTemplateProps> = ({
+  posts,
+  currentPage,
+  numPages,
+  heroImage,
+  children,
+}) => {
+  return (
+    <Wrapper css={HomePosts}>
+      <div
+        css={[outer, SiteHeader, SiteHeaderStyles]}
+        className='site-header-background'
+        style={
+          heroImage ? { backgroundImage: `url('${heroImage}')` } : undefined
+        }>
+        <div css={inner}>
+          <SiteNav isHome />
+          <SiteHeaderContent className='site-header-content'>
+            <SiteTitle className='site-title'>{siteConfig.title}</SiteTitle>
+            <SiteDescription>{siteConfig.tagline}</SiteDescription>
+          </SiteHeaderContent>
+        </div>
+      </div>
+      <main id='site-main' css={[SiteMain, outer]}>
+        <div css={[inner, Posts]}>
+          <div css={PostFeed}>
+            {posts.map((post, index) => (
+              <PostCard key={post.id} post={post} large={index === 0} />
+            ))}
+          </div>
+        </div>
+      </main>
+      {children}
+      {numPages > 1 && (
+        <Pagination currentPage={currentPage} numPages={numPages} />
+      )}
+      <Footer />
+    </Wrapper>
+  );
+};
+
 export default IndexTemplate;

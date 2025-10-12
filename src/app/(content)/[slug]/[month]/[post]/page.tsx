@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { PostLayout } from '@/templates/post-layout';
 import {
   getAdjacentPosts,
   getAllPostRouteParams,
@@ -11,6 +10,13 @@ import {
   type PostRouteParams,
 } from '@/lib/posts';
 import { getPageMetaData } from '@/lib/utils';
+import { PostLayout } from '@/templates/post';
+
+interface RouteParams {
+  slug: string;
+  month: string;
+  post: string;
+}
 
 export async function generateStaticParams() {
   return getAllPostRouteParams().map(({ year, month, slug }) => ({
@@ -20,10 +26,34 @@ export async function generateStaticParams() {
   }));
 }
 
-interface RouteParams {
-  slug: string;
-  month: string;
-  post: string;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<RouteParams>;
+}): Promise<Metadata> {
+  const { slug, month, post } = await params;
+  const routeParams: PostRouteParams = {
+    year: slug,
+    month,
+    slug: post,
+  };
+
+  const postId = getPostIdFromRouteParams(routeParams);
+  let postData: Awaited<ReturnType<typeof getPostData>> | undefined;
+  try {
+    postData = await getPostData(postId);
+  } catch (_error) {
+    notFound();
+  }
+
+  if (!postData) {
+    notFound();
+  }
+
+  return getPageMetaData({
+    title: postData.title,
+    description: postData.excerpt,
+  });
 }
 
 export default async function PostPage({
@@ -40,9 +70,7 @@ export default async function PostPage({
 
   const postId = getPostIdFromRouteParams(routeParams);
 
-  let postData:
-    | Awaited<ReturnType<typeof getPostData>>
-    | undefined;
+  let postData: Awaited<ReturnType<typeof getPostData>> | undefined;
   try {
     postData = await getPostData(postId);
   } catch (_error) {
@@ -63,36 +91,4 @@ export default async function PostPage({
       next={next}
     />
   );
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<RouteParams>;
-}): Promise<Metadata> {
-  const { slug, month, post } = await params;
-  const routeParams: PostRouteParams = {
-    year: slug,
-    month,
-    slug: post,
-  };
-
-  const postId = getPostIdFromRouteParams(routeParams);
-  let postData:
-    | Awaited<ReturnType<typeof getPostData>>
-    | undefined;
-  try {
-    postData = await getPostData(postId);
-  } catch (_error) {
-    notFound();
-  }
-
-  if (!postData) {
-    notFound();
-  }
-
-  return getPageMetaData({
-    title: postData.title,
-    description: postData.excerpt,
-  });
 }

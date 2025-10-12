@@ -4,19 +4,6 @@ import styled from '@emotion/styled';
 
 import { colors } from '@/styles/colors';
 
-export interface PostContentProps {
-  html: string;
-}
-
-const PostContent: React.FC<PostContentProps> = ({ html }) => {
-  return (
-    <PostFullContent
-      className='post-full-content'
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  );
-};
-
 export const PostFullContent = styled.section`
   position: relative;
   margin: 0 auto;
@@ -690,5 +677,18 @@ export const PostFullContent = styled.section`
   }
   /* End Syntax Highlighting */
 `;
+
+export interface PostContentProps {
+  html: string;
+}
+
+const PostContent: React.FC<PostContentProps> = ({ html }) => {
+  return (
+    <PostFullContent
+      className='post-full-content'
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
+};
 
 export default PostContent;

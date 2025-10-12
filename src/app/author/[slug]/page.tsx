@@ -1,7 +1,6 @@
-import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
-import AuthorTemplate from '@/templates/author';
 import {
   getAllAuthorSlugs,
   getAuthorProfileBySlug,
@@ -12,6 +11,7 @@ import {
   getSiteConfig,
   resolveSiteAssetPath,
 } from '@/lib/utils';
+import AuthorTemplate from '@/templates/author';
 
 interface AuthorPageParams {
   slug: string;
@@ -21,18 +21,12 @@ interface PageProps {
   params: Promise<AuthorPageParams>;
 }
 
-export default async function AuthorPage({ params }: PageProps) {
-  const { slug } = await params;
-
-  const author = getAuthorProfileBySlug(slug);
-  if (!author) {
-    notFound();
-  }
-
-  const posts = getPostsByAuthorSlug(slug);
-
-  return <AuthorTemplate author={author} posts={posts} />;
+export function generateStaticParams() {
+  const slugs = getAllAuthorSlugs();
+  return slugs.map(slug => ({ slug }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -78,9 +72,14 @@ export async function generateMetadata({
   });
 }
 
-export function generateStaticParams() {
-  const slugs = getAllAuthorSlugs();
-  return slugs.map(slug => ({ slug }));
-}
+export default async function AuthorPage({ params }: PageProps) {
+  const { slug } = await params;
 
-export const dynamicParams = false;
+  const author = getAuthorProfileBySlug(slug);
+  if (!author) {
+    notFound();
+  }
+
+  const posts = getPostsByAuthorSlug(slug);
+  return <AuthorTemplate author={author} posts={posts} />;
+}

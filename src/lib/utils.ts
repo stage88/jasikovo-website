@@ -10,12 +10,8 @@ export interface WebsiteConfig {
   siteUrl: string;
   facebook?: string;
   twitter?: string;
-  showSubscribe: boolean;
   footer?: string;
   footerLink?: string;
-  mailchimpAction?: string;
-  mailchimpEmailFieldName?: string;
-  mailchimpName?: string;
 }
 
 const ABSOLUTE_URL_PATTERN = /^https?:\/\//i;
@@ -39,7 +35,6 @@ const SITE_CONFIG: WebsiteConfig = {
   lang: 'en',
   siteUrl: 'https://jasikovo.com',
   facebook: 'https://www.facebook.com/ljuba.ilic.jasikovo',
-  showSubscribe: false,
   footer: 'theme by Sam Ilic',
   footerLink: 'https://github.com/stage88/jasikovo-website',
 };

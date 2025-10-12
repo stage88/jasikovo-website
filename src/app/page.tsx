@@ -1,10 +1,10 @@
-import IndexTemplate from '@/templates/index';
 import { getPaginatedPosts } from '@/lib/posts';
 import {
   getPageMetaData,
   getSiteConfig,
   resolveSiteAssetPath,
 } from '@/lib/utils';
+import IndexTemplate from '@/templates/index';
 
 const siteConfig = getSiteConfig();
 

@@ -1,26 +1,26 @@
 /** @jsxImportSource @emotion/react */
 
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 
-import { Footer } from '@/components/Footer';
-import SiteNav from '@/components/header/SiteNav';
-import { PostCard } from '@/components/PostCard';
-import { Wrapper } from '@/components/Wrapper';
+import { Footer } from '@/components/footer';
+import SiteNav from '@/components/header/site-nav';
+import { PostCard } from '@/components/post-card';
+import { Wrapper } from '@/components/wrapper';
 import { PostSummary, TagSummary } from '@/lib/posts';
 import {
   inner,
   outer,
   PostFeed,
+  ResponsiveHeaderBackground,
+  SiteArchiveHeader,
   SiteDescription,
   SiteHeader,
+  SiteHeaderBackground,
   SiteHeaderContent,
   SiteMain,
-  SiteTitle,
   SiteNavMain,
-  SiteArchiveHeader,
-  ResponsiveHeaderBackground,
-  SiteHeaderBackground,
+  SiteTitle,
 } from '@/styles/shared';
 
 interface TagTemplateProps {
