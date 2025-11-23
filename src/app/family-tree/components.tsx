@@ -116,7 +116,6 @@ function PageImage({ name, title, width = 450, height = 450 }: PageImageProps) {
   return (
     <div css={imageContainerStyle(width, height)}>
       <a href={imagePath} target='_blank' rel='noopener noreferrer'>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={imagePath}
           alt={altText}
