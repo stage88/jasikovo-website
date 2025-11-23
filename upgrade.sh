@@ -22,5 +22,5 @@ done
 
 ncu -u
 
-npm install
+npm install --force
 npm run build
